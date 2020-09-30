@@ -1,0 +1,297 @@
+<?xml version="1.0" encoding="UTF-8"?><resources>
+    <!-- XTIT: The title of the create Activity, will appear at the top of the screen -->
+    <string name="title_create_fragment">"%1$s アイテムの登録"</string>
+
+    <!-- XTIT: The title of the update Activity, will appear at the top of the screen -->
+    <string name="title_update_fragment">"更新"</string>
+
+    <!-- XMSG: Error message for the mandatory input fields, will appear in the edit field left empty -->
+    <string name="mandatory_warning">"これは、必須項目です"</string>
+
+    <!-- XTIT: The title of the welcome screen, will appear at the top of the screen -->
+    <string name="welcome_screen_headline_label">"ようこそ"</string>
+
+    <!-- YINS: Short description on the welcome screen -->
+    <string name="welcome_screen_detail_label">"この生成されたアプリで、SAP Cloud Platform SDK for Android をご覧ください"</string>
+
+    <!-- XFLD: label at the bottom of the welcome screen -->
+    <string name="welcome_screen_footnote_label">"SDK 機能をデモモードで試すことができます。"</string>
+
+    <!-- XFLD: label of the primary button on the welcome screen -->
+    <string name="welcome_screen_primary_button_label">"開始"</string>
+
+    <!-- XBUT: Text of the Save button -->
+    <string name="save">"保存"</string>
+
+    <!-- XBUT: Text of the Update button -->
+    <string name="update">"更新"</string>
+
+    <!-- XBUT: Text of the Delete button -->
+    <string name="delete">"削除"</string>
+
+    <!-- XBUT: Text of the Cancel button -->
+    <string name="cancel">"キャンセル"</string>
+
+    <!-- XBUT: Text of the OK button -->
+    <string name="ok">"OK"</string>
+
+    <!-- XBUT: Text of the Delete button -->
+    <string name="yes">"はい"</string>
+
+    <!-- XTIT: The title of the delete dialog -->
+    <string name="delete_dialog_title">"削除"</string>
+
+    <!-- XMSG: The message of the delete dialog -->
+    <string name="delete_one_item">"選択したアイテムを削除しますか。"</string>
+
+    <!-- XMSG: The message of the delete dialog in case of multiple selection -->
+    <string name="delete_more_items">"選択したアイテムを削除しますか。"</string>
+
+    <!-- XMSG: Error message, can be presented in a Toast or Dialog -->
+    <string name="entity_download_error">"バックグラウンド操作の際にエラーが発生しました。"</string>
+
+    <!-- XMIT: Refresh menu item -->
+    <string name="menu_refresh">"リフレッシュ"</string>
+
+    <!-- XMIT: Refresh menu item -->
+    <string name="menu_home">"ホーム"</string>
+
+    <!-- XMIT: Update menu item -->
+    <string name="menu_update">"更新"</string>
+
+    <!-- XMIT: Delete menu item -->
+    <string name="menu_delete">"削除"</string>
+
+    <!-- NOTR: No translation needed, just placeholder text -->
+    <string name="object_header_headline">"Headline"</string>
+
+    <!-- NOTR: No translation needed, just placeholder text -->
+    <string name="object_header_subheadline">"Subheadline"</string>
+
+    <!-- NOTR: No translation needed, just placeholder text -->
+    <string name="object_header_body">"Body text"</string>
+
+    <!-- NOTR: No translation needed, just placeholder text -->
+    <string name="object_header_footnote">"Footnote"</string>
+
+    <!-- NOTR: No translation needed, just placeholder text -->
+    <string name="object_header_tag1">"TAG1"</string>
+
+    <!-- NOTR: No translation needed, just placeholder text -->
+    <string name="object_header_tag2">"TAG2"</string>
+
+    <!-- NOTR: No translation needed, just placeholder text -->
+    <string name="object_header_tag3">"TAG3"</string>
+
+    <!-- NOTR: No translation needed, just placeholder text -->
+    <string name="object_header_description">"Item description"</string>
+
+    <!-- NOTR: No translation needed, just placeholder text -->
+    <string name="object_header_status">"Status"</string>
+
+    <!-- NOTR: No translation needed, just placeholder text -->
+    <string name="error">"Error"</string>
+
+    <!-- error messages -->
+
+    <!-- XTIT: The title of the delete dialog -->
+    <string name="read_failed">"ダウンロード失敗"</string>
+
+    <!-- XMSG: Detailed error description -->
+    <string name="format_error">"データ型には不適切な入力です"</string>
+
+    <!-- XMSG: Detailed error description -->
+    <string name="read_failed_detail">"ダウンロード操作に失敗しました。アプリケーションの再起動を試してください。"</string>
+
+    <!-- XTIT: The title of the delete dialog -->
+    <string name="create_failed">"登録失敗"</string>
+
+    <!-- XMSG: Detailed error description -->
+    <string name="create_failed_detail">"登録操作に失敗しました。時間をおいてもう一度実行してください。"</string>
+
+    <!-- XTIT: The title of the delete dialog -->
+    <string name="update_failed">"更新失敗"</string>
+    <string name="update_failed_detail">"更新操作に失敗しました。ローカルデータをリフレッシュし、時間をおいてもう一度実行してください。"</string>
+
+    <!-- XTIT: The title of the delete dialog -->
+    <string name="delete_failed">"削除失敗"</string>
+
+    <!-- XMSG: Detailed error description -->
+    <string name="delete_failed_detail">"削除操作に失敗しました。ローカルデータをリフレッシュし、時間をおいてもう一度実行してください。"</string>
+
+    <!-- XTIT: The message of the upload toast in case of success -->
+    <string name="log_upload_ok">"ログがサーバにアップロードされました。"</string>
+
+    <!-- XTIT: The message of the upload toast in case of failing -->
+    <string name="log_upload_failed">"ログのアップロード失敗"</string>
+
+    <!-- XMSG: Detailed error description -->
+    <string name="log_upload_failed_detail">"ログアップロードにとって不正な URL を受信しました。アプリケーションは引き続き動作する可能性がありますが、ログはサーバにアップロードされません。"</string>
+
+    <!-- XTIT: The message of the upload toast in case of success -->
+    <string name="usage_upload_ok">"用途がサーバにアップロードされました。"</string>
+
+    <!-- XTIT: The message of the upload toast in case of failing -->
+    <string name="usage_upload_failed">"用途のアップロード失敗"</string>
+
+    <!-- XMSG: Detailed error description -->
+    <string name="usage_init_failed">"用途を初期化できませんでした"</string>
+
+    <!-- XTIT: The title of the delete dialog -->
+    <string name="push_error">"プッシュエラー"</string>
+
+    <!-- XTIT: The title of the delete dialog -->
+    <string name="push_message">"プッシュメッセージを受信しました"</string>
+
+    <!-- XTIT: The Notification Text -->
+    <string name="push_text">"通知"</string>
+
+    <!-- XMSG: Detailed error description -->
+    <string name="push_token_upload_failed_detail">"プッシュトークンを SAP サーバにアップロードできませんでした。プッシュ機能は動作しません。プッシュメッセージも受信しません。"</string>
+
+    <!-- XMSG: Detailed error description -->
+    <string name="push_invalid_push_format">"プッシュメッセージを受信しましたが、その書式が無効であるため、処理できませんでした。"</string>
+
+    <!-- XMSG: AlertDialog before navigation - Title -->
+    <string name="before_navigation_dialog_title">"データ消失の可能性"</string>
+
+    <!-- XMSG: AlertDialog before navigation - Message -->
+    <string name="before_navigation_dialog_message">"このページから移ると、データはどれも保存されません。"</string>
+
+    <!-- XMSG: AlertDialog before navigation - Positive button (navigation occurs) -->
+    <string name="before_navigation_dialog_positive_button">"移動する"</string>
+
+    <!-- XMSG: AlertDialog before navigation - Negative button (cancelled navigation) -->
+    <string name="before_navigation_dialog_negative_button">"移動しない"</string>
+
+    <!-- XMSG: Detailed error description -->
+    <string name="server_auth_not_supported_saml">"エラー: このアプリケーションでは SAML 認証がサポートされていません。"</string>
+
+	<!-- XTIT: The title of the error dialog -->
+	<string name="bind_error">"バインドエラー"</string>
+	
+	<!-- XMSG: Detailed error description -->
+    <string name="bind_error_detail">"オフライン OData 同期サービスにバインドできませんでした。"</string>
+    
+	<!-- XTIT: The title of the error dialog -->
+	<string name="offline_provider_error">"オフライン初期化エラー"</string>
+	
+ 	<!-- XMSG: Detailed error description -->   
+	<string name="offline_provider_error_detail">"オフライン OData プロバイダを初期化できませんでした。"</string>
+
+    <!-- XTIT: The title of the error dialog -->
+    <string name="offline_initial_open_error">"オフライン初期開始エラー"</string>
+
+    <!-- XMSG: Detailed error description -->
+    <string name="offline_initial_open_error_detail">"オフラインストアの初期開始を完了できませんでした。"</string>
+
+    <!-- XMSG: Detailed error description -->
+    <string name="offline_backend_big_data_error_detail">"バックエンドからのペイロードが大きすぎます。CPMS ペイロード限度の初期サイズは 64M です。以下のいずれかの解決方法で、この修正を試みることができます。\n\t1) offline.ini にあるサイズ限度を増やす。\n\t2) サーバ側ページ数を実装し、大きいデータセットのチャンク単位の同期を可能にする。\n\t3) クエリまたはフィルタの定義時に $top requests を使用して、クライアントによってダウンロードされるデータの合計量を制限する。"</string>
+
+    <!-- XMSG: Detailed error description -->
+    <string name="offline_backend_time_out_error_detail">"CPMS でこのアプリケーションのバックエンド接続タイムアウトを延長し、再び試してください。"</string>
+
+    <!-- XTIT: The title of the error dialog -->
+	<string name="synchronize_failure">"同期失敗"</string>
+	
+	<!-- XMSG: Detailed error description -->    
+	<string name="synchronize_failure_detail">"モバイルサービスと同期できませんでした。"</string>
+
+    <!-- XTIT: The title of the error dialog -->
+    <string name="offline_reset_store_error">"オフラインストアのリセット失敗"</string>
+
+    <!-- XMSG: Detailed error description -->
+    <string name="offline_reset_store_error_detail">"オフラインデータストアをリセット/削除できませんでした。"</string>
+    <!-- error messages -->
+
+    <!-- offline -->	
+	
+	<!-- XMSG: Advise user of delay when performing initial opening of offline store -->
+	<string name="initializing_offline_store">"オフラインストアを初期化しています。お待ちください。"</string>
+	
+    <!-- NOTR: No translation needed, Label for entity state in offline -->	
+	<string name="local_state">"Local"</string>
+	
+    <!-- NOTR: No translation needed, Label for entity state in offline -->	
+	<string name="error_state">"Error"</string>
+    
+	<!-- NOTR: No translation needed, Label for entity state in offline -->	
+	<string name="updated_state">"Updated"</string>
+    
+	<!-- NOTR: No translation needed, Label for entity state in offline -->	
+	<string name="download_state">"Download"</string>
+    
+    <!-- XMIT: Menu item to trigger synchronization -->
+	<string name="synchronize_action">"同期"</string>
+	
+    <!-- offline -->
+	
+    <!-- XTIT: The title of the settings dialog -->
+    <string name="settings_activity_name">"設定"</string>
+    <!-- XTIT: The title of the settings menu -->
+    <string name="menu_item_settings">"設定"</string>
+
+    <!-- XTIT: The title of the passcode group -->
+    <string name="passcode">"パスコード"</string>
+    <!-- XTIT: The title of the change passcode menu item -->
+    <string name="manage_passcode">"パスコード変更"</string>
+    <!-- XTIT: The title of the reset group -->
+    <string name="reset">"アプリケーションリセット"</string>
+    <!-- XTIT: The title of the reset app menu item -->
+    <string name="reset_app">"アプリ設定をクリア"</string>
+    <!-- XTIT: The title of a confirmation dialog -->
+    <string name="reset_app_confirmation">"このアプリケーションと関連する、すべての情報が削除されます。続行しますか。"</string>
+    <!-- XMSG: The message of reset client -->
+    <string name="reset_client">"クライアントリセット"</string>
+
+    <!-- XTIT: The title of a menu item -->
+    <string name="upload_usage">"用途データのアップロード"</string>
+    <!-- XTIT: The title of a menu item -->
+    <string name="set_usage_consent">"用途収集の承諾"</string>
+
+    <!-- XTIT: The title of a menu group -->
+    <string name="usage">"用途"</string>
+    <!-- XTIT: The title of a menu group -->
+    <string name="logging">"ロギング"</string>
+    <!-- XTIT: The title of a menu item -->
+    <string name="upload_log">"ログのアップロード"</string>
+    <!-- XTIT: The description of a menu item -->
+    <string name="upload_log_summary">"ログがサーバにアップロードされます。"</string>
+    <!-- XMSG: The message of a log level toast -->
+    <string name="log_level_changed">"デフォルトログレベルがサーバポリシーから %s に変更されました"</string>
+    <!-- XMSG: The message of a log level toast -->
+    <string name="log_level_default">"ログポリシーがサーバに設定されていません。デフォルトログレベルが %s に設定されます"</string>
+    <!-- XTIT: The title of a menu item -->
+    <string name="log_level">"ログレベル"</string>
+    <!-- XTIT: The title of a menu item -->
+    <string name="dialog_title_choose_log_level">"ログレベルの選択"</string>
+    <!-- XTIT: Log level title -->
+    <string name="log_level_none">"なし"</string>
+    <!-- XTIT: Log level title -->
+    <string name="log_level_fatal">"致命的"</string>
+    <!-- XTIT: Log level title -->
+    <string name="log_level_error">"エラー"</string>
+    <!-- XTIT: Log level title -->
+    <string name="log_level_warning">"警告"</string>
+    <!-- XTIT: Log level title -->
+    <string name="log_level_info">"情報"</string>
+    <!-- XTIT: Log level title -->
+    <string name="log_level_debug">"デバッグ"</string>
+    <!-- XTIT: Log level title -->
+    <string name="log_level_path">"パス"</string>
+    <!-- XMSG: Authentication error message -->
+    <string name="authentication_failed">"認証失敗"</string>
+
+    <!-- restrictions -->
+
+    <!-- XTIT: The title of the error dialog -->
+    <string name="restriction_service_url_title">"サービス URL"</string>
+
+    <!-- XMSG: Detailed error description -->
+    <string name="restriction_service_url_description">"OData サービスの URL です。"</string>
+    <!-- restrictions -->
+
+    <!-- XMSG: Detailed error description -->
+    <string name="error_back_navigation">"このアプリケーションはパスコードで保護されています。適切なパスコードを入力しないと、起動しません。"</string>
+
+</resources>

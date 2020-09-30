@@ -1,0 +1,297 @@
+<?xml version="1.0" encoding="UTF-8"?><resources>
+    <!-- XTIT: The title of the create Activity, will appear at the top of the screen -->
+    <string name="title_create_fragment">"创建 %1$s 项目"</string>
+
+    <!-- XTIT: The title of the update Activity, will appear at the top of the screen -->
+    <string name="title_update_fragment">"更新"</string>
+
+    <!-- XMSG: Error message for the mandatory input fields, will appear in the edit field left empty -->
+    <string name="mandatory_warning">"此为必填字段"</string>
+
+    <!-- XTIT: The title of the welcome screen, will appear at the top of the screen -->
+    <string name="welcome_screen_headline_label">"欢迎"</string>
+
+    <!-- YINS: Short description on the welcome screen -->
+    <string name="welcome_screen_detail_label">"使用这个生成的应用探索面向安卓系统的 SAP Cloud Platform 软件开发工具包"</string>
+
+    <!-- XFLD: label at the bottom of the welcome screen -->
+    <string name="welcome_screen_footnote_label">"您可以在演示模式中尝试软件开发工具包的功能。"</string>
+
+    <!-- XFLD: label of the primary button on the welcome screen -->
+    <string name="welcome_screen_primary_button_label">"开始使用"</string>
+
+    <!-- XBUT: Text of the Save button -->
+    <string name="save">"保存"</string>
+
+    <!-- XBUT: Text of the Update button -->
+    <string name="update">"更新"</string>
+
+    <!-- XBUT: Text of the Delete button -->
+    <string name="delete">"删除"</string>
+
+    <!-- XBUT: Text of the Cancel button -->
+    <string name="cancel">"取消"</string>
+
+    <!-- XBUT: Text of the OK button -->
+    <string name="ok">"确定"</string>
+
+    <!-- XBUT: Text of the Delete button -->
+    <string name="yes">"是"</string>
+
+    <!-- XTIT: The title of the delete dialog -->
+    <string name="delete_dialog_title">"删除"</string>
+
+    <!-- XMSG: The message of the delete dialog -->
+    <string name="delete_one_item">"是否确实要删除所选项目？"</string>
+
+    <!-- XMSG: The message of the delete dialog in case of multiple selection -->
+    <string name="delete_more_items">"是否确实要删除所选项目？"</string>
+
+    <!-- XMSG: Error message, can be presented in a Toast or Dialog -->
+    <string name="entity_download_error">"在后台操作过程中出现错误。"</string>
+
+    <!-- XMIT: Refresh menu item -->
+    <string name="menu_refresh">"刷新"</string>
+
+    <!-- XMIT: Refresh menu item -->
+    <string name="menu_home">"主页"</string>
+
+    <!-- XMIT: Update menu item -->
+    <string name="menu_update">"更新"</string>
+
+    <!-- XMIT: Delete menu item -->
+    <string name="menu_delete">"删除"</string>
+
+    <!-- NOTR: No translation needed, just placeholder text -->
+    <string name="object_header_headline">"Headline"</string>
+
+    <!-- NOTR: No translation needed, just placeholder text -->
+    <string name="object_header_subheadline">"Subheadline"</string>
+
+    <!-- NOTR: No translation needed, just placeholder text -->
+    <string name="object_header_body">"Body text"</string>
+
+    <!-- NOTR: No translation needed, just placeholder text -->
+    <string name="object_header_footnote">"Footnote"</string>
+
+    <!-- NOTR: No translation needed, just placeholder text -->
+    <string name="object_header_tag1">"TAG1"</string>
+
+    <!-- NOTR: No translation needed, just placeholder text -->
+    <string name="object_header_tag2">"TAG2"</string>
+
+    <!-- NOTR: No translation needed, just placeholder text -->
+    <string name="object_header_tag3">"TAG3"</string>
+
+    <!-- NOTR: No translation needed, just placeholder text -->
+    <string name="object_header_description">"Item description"</string>
+
+    <!-- NOTR: No translation needed, just placeholder text -->
+    <string name="object_header_status">"Status"</string>
+
+    <!-- NOTR: No translation needed, just placeholder text -->
+    <string name="error">"Error"</string>
+
+    <!-- error messages -->
+
+    <!-- XTIT: The title of the delete dialog -->
+    <string name="read_failed">"下载失败"</string>
+
+    <!-- XMSG: Detailed error description -->
+    <string name="format_error">"输入不适用于该数据类型"</string>
+
+    <!-- XMSG: Detailed error description -->
+    <string name="read_failed_detail">"下载操作失败，请尝试重新启动应用程序。"</string>
+
+    <!-- XTIT: The title of the delete dialog -->
+    <string name="create_failed">"创建失败"</string>
+
+    <!-- XMSG: Detailed error description -->
+    <string name="create_failed_detail">"创建操作失败，请稍后尝试重新执行创建。"</string>
+
+    <!-- XTIT: The title of the delete dialog -->
+    <string name="update_failed">"更新失败"</string>
+    <string name="update_failed_detail">"更新操作失败，请刷新本地数据并稍后重新执行更新。"</string>
+
+    <!-- XTIT: The title of the delete dialog -->
+    <string name="delete_failed">"删除失败"</string>
+
+    <!-- XMSG: Detailed error description -->
+    <string name="delete_failed_detail">"删除操作失败，请刷新本地数据并稍后重新执行删除。"</string>
+
+    <!-- XTIT: The message of the upload toast in case of success -->
+    <string name="log_upload_ok">"日志已上传到服务器。"</string>
+
+    <!-- XTIT: The message of the upload toast in case of failing -->
+    <string name="log_upload_failed">"日志上传失败"</string>
+
+    <!-- XMSG: Detailed error description -->
+    <string name="log_upload_failed_detail">"上传日志的 URL 格式错误。应用程序仍会继续工作，但不会将日志上传到服务器中。"</string>
+
+    <!-- XTIT: The message of the upload toast in case of success -->
+    <string name="usage_upload_ok">"使用已上传到服务器"</string>
+
+    <!-- XTIT: The message of the upload toast in case of failing -->
+    <string name="usage_upload_failed">"使用上传失败"</string>
+
+    <!-- XMSG: Detailed error description -->
+    <string name="usage_init_failed">"使用无法初始化"</string>
+
+    <!-- XTIT: The title of the delete dialog -->
+    <string name="push_error">"推送错误"</string>
+
+    <!-- XTIT: The title of the delete dialog -->
+    <string name="push_message">"已收到推送消息"</string>
+
+    <!-- XTIT: The Notification Text -->
+    <string name="push_text">"通知"</string>
+
+    <!-- XMSG: Detailed error description -->
+    <string name="push_token_upload_failed_detail">"无法将推送令牌上传至 SAP 服务器，推送功能无法使用。您无法接收推送消息。"</string>
+
+    <!-- XMSG: Detailed error description -->
+    <string name="push_invalid_push_format">"收到推送消息，但消息格式无效，因此无法进行处理。"</string>
+
+    <!-- XMSG: AlertDialog before navigation - Title -->
+    <string name="before_navigation_dialog_title">"潜在数据丢失"</string>
+
+    <!-- XMSG: AlertDialog before navigation - Message -->
+    <string name="before_navigation_dialog_message">"离开此页面，将不会保存任何数据。"</string>
+
+    <!-- XMSG: AlertDialog before navigation - Positive button (navigation occurs) -->
+    <string name="before_navigation_dialog_positive_button">"离开"</string>
+
+    <!-- XMSG: AlertDialog before navigation - Negative button (cancelled navigation) -->
+    <string name="before_navigation_dialog_negative_button">"停留"</string>
+
+    <!-- XMSG: Detailed error description -->
+    <string name="server_auth_not_supported_saml">"错误：此应用程序不支持 SAML 验证。"</string>
+
+	<!-- XTIT: The title of the error dialog -->
+	<string name="bind_error">"绑定错误"</string>
+	
+	<!-- XMSG: Detailed error description -->
+    <string name="bind_error_detail">"无法绑定到离线 OData 同步服务。"</string>
+    
+	<!-- XTIT: The title of the error dialog -->
+	<string name="offline_provider_error">"离线初始化错误"</string>
+	
+ 	<!-- XMSG: Detailed error description -->   
+	<string name="offline_provider_error_detail">"无法初始化离线 OData 提供者。"</string>
+
+    <!-- XTIT: The title of the error dialog -->
+    <string name="offline_initial_open_error">"离线初始打开错误"</string>
+
+    <!-- XMSG: Detailed error description -->
+    <string name="offline_initial_open_error_detail">"无法完成离线存储的初始打开。"</string>
+
+    <!-- XMSG: Detailed error description -->
+    <string name="offline_backend_big_data_error_detail">"后端的有效负载太大，CPms 有效负载限制的缺省大小为 64M。您可以尝试使用以下解决方案之一修复它：\n\t1) 增加 offline.ini 中的大小限制；\n\t2) 实施服务器端分页，以使大数据集能够成块同步；\n\t3) 使用 $top 请求来定义查询或过滤器，以限制客户端下载的数据总量。"</string>
+
+    <!-- XMSG: Detailed error description -->
+    <string name="offline_backend_time_out_error_detail">"在 CPms 中增加此应用程序的后端连接超时，然后重试。"</string>
+
+    <!-- XTIT: The title of the error dialog -->
+	<string name="synchronize_failure">"同步失败"</string>
+	
+	<!-- XMSG: Detailed error description -->    
+	<string name="synchronize_failure_detail">"与移动服务同步失败"</string>
+
+    <!-- XTIT: The title of the error dialog -->
+    <string name="offline_reset_store_error">"离线存储重置失败"</string>
+
+    <!-- XMSG: Detailed error description -->
+    <string name="offline_reset_store_error_detail">"无法重置/移除离线数据存储。"</string>
+    <!-- error messages -->
+
+    <!-- offline -->	
+	
+	<!-- XMSG: Advise user of delay when performing initial opening of offline store -->
+	<string name="initializing_offline_store">"正在初始化离线存储。请稍候。"</string>
+	
+    <!-- NOTR: No translation needed, Label for entity state in offline -->	
+	<string name="local_state">"Local"</string>
+	
+    <!-- NOTR: No translation needed, Label for entity state in offline -->	
+	<string name="error_state">"Error"</string>
+    
+	<!-- NOTR: No translation needed, Label for entity state in offline -->	
+	<string name="updated_state">"Updated"</string>
+    
+	<!-- NOTR: No translation needed, Label for entity state in offline -->	
+	<string name="download_state">"Download"</string>
+    
+    <!-- XMIT: Menu item to trigger synchronization -->
+	<string name="synchronize_action">"同步"</string>
+	
+    <!-- offline -->
+	
+    <!-- XTIT: The title of the settings dialog -->
+    <string name="settings_activity_name">"设置"</string>
+    <!-- XTIT: The title of the settings menu -->
+    <string name="menu_item_settings">"设置"</string>
+
+    <!-- XTIT: The title of the passcode group -->
+    <string name="passcode">"密码"</string>
+    <!-- XTIT: The title of the change passcode menu item -->
+    <string name="manage_passcode">"更改密码"</string>
+    <!-- XTIT: The title of the reset group -->
+    <string name="reset">"重置应用程序"</string>
+    <!-- XTIT: The title of the reset app menu item -->
+    <string name="reset_app">"清除应用设置"</string>
+    <!-- XTIT: The title of a confirmation dialog -->
+    <string name="reset_app_confirmation">"将移除与此应用程序相关的所有信息。是否要继续？"</string>
+    <!-- XMSG: The message of reset client -->
+    <string name="reset_client">"重置客户端"</string>
+
+    <!-- XTIT: The title of a menu item -->
+    <string name="upload_usage">"上传使用数据"</string>
+    <!-- XTIT: The title of a menu item -->
+    <string name="set_usage_consent">"同意使用集合"</string>
+
+    <!-- XTIT: The title of a menu group -->
+    <string name="usage">"使用"</string>
+    <!-- XTIT: The title of a menu group -->
+    <string name="logging">"日志记录"</string>
+    <!-- XTIT: The title of a menu item -->
+    <string name="upload_log">"上传日志"</string>
+    <!-- XTIT: The description of a menu item -->
+    <string name="upload_log_summary">"将日志上传到服务器。"</string>
+    <!-- XMSG: The message of a log level toast -->
+    <string name="log_level_changed">"缺省日志级别已从服务器策略更改为：%s"</string>
+    <!-- XMSG: The message of a log level toast -->
+    <string name="log_level_default">"未在服务器上设置日志策略，缺省日志级别已设置为：%s"</string>
+    <!-- XTIT: The title of a menu item -->
+    <string name="log_level">"日志级别"</string>
+    <!-- XTIT: The title of a menu item -->
+    <string name="dialog_title_choose_log_level">"选择日志级别"</string>
+    <!-- XTIT: Log level title -->
+    <string name="log_level_none">"无"</string>
+    <!-- XTIT: Log level title -->
+    <string name="log_level_fatal">"致命错误"</string>
+    <!-- XTIT: Log level title -->
+    <string name="log_level_error">"错误"</string>
+    <!-- XTIT: Log level title -->
+    <string name="log_level_warning">"警告"</string>
+    <!-- XTIT: Log level title -->
+    <string name="log_level_info">"信息"</string>
+    <!-- XTIT: Log level title -->
+    <string name="log_level_debug">"调试"</string>
+    <!-- XTIT: Log level title -->
+    <string name="log_level_path">"路径"</string>
+    <!-- XMSG: Authentication error message -->
+    <string name="authentication_failed">"验证失败"</string>
+
+    <!-- restrictions -->
+
+    <!-- XTIT: The title of the error dialog -->
+    <string name="restriction_service_url_title">"服务 URL"</string>
+
+    <!-- XMSG: Detailed error description -->
+    <string name="restriction_service_url_description">"OData 服务的 URL。"</string>
+    <!-- restrictions -->
+
+    <!-- XMSG: Detailed error description -->
+    <string name="error_back_navigation">"该应用程序受密码保护，未提供正确密码时将不会启动。"</string>
+
+</resources>

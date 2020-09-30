@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- App Name -->
+    <!-- XTIT: The title of the welcome screen, will appear at the top of the screen -->
+    <string name="welcome_screen_headline_label">"Benvenuto"</string>
+
+    <!-- YINS: Short description on the welcome screen -->
+    <string name="welcome_screen_detail_label">Questa applicazione è creata con SAP Cloud Platform SDK per aiutare le aziende nel crowd monitoring, contact tracing e gestire il social distancing</string>
+
+    <!-- XFLD: label at the bottom of the welcome screen -->
+    <string name="welcome_screen_footnote_label">"You can try out the SDK features in demo mode."</string>
+
+    <!-- XFLD: label of the primary button on the welcome screen -->
+    <string name="welcome_screen_primary_button_label">"Iniziamo!"</string>
+
+    <!-- Onboarding: Titel oben -->
+    <string name="onboarding_prinzip_heading">"Lo scopo"</string>
+
+    <!-- Onboarding: Titel -->
+    <string name="onboarding_prinzip_title">"Anticipare il virus"</string>
+
+    <!-- Onboarding Prinzip Text -->
+    <string name="onboarding_prinzip_text1">"Con l'app Safety@Work tutti possono contribuire a contenere la diffusione del nuovo coronavirus."</string>
+
+    <!-- Onboarding Prinzip Text -->
+    <string name="onboarding_prinzip_text2">"L'app ti informa se sei stato potenzialmente esposto al nuovo coronavirus."</string>
+
+    <!-- Onboarding Privacy: Titel oben -->
+    <string name="onboarding_privacy_heading">"Privacy by Design"</string>
+
+    <!-- Onboarding Privacy: Titel -->
+    <string name="onboarding_privacy_title">"Protezione della sfera privata"</string>
+
+    <!-- Onboarding Privacy: Text -->
+    <string name="onboarding_privacy_text1">"Fra i telefoni cellulari vengono scambiati soltanto ID casuali. L'app non raccoglie dati né sulla posizione né sull'identità dell'utente."</string>
+
+    <!-- Onboarding Privacy: Text -->
+    <string name="onboarding_privacy_text2">"Gli ID casuali salvati restano sul tuo telefono cellulare e vengono eliminati dopo 14 giorni."</string>
+
+    <!-- Onboarding Begegnungen: Titel oben -->
+    <string name="onboarding_begegnungen_heading">"Come funziona l'app?"</string>
+
+    <!-- Onboarding Begegnungen: Titel -->
+    <string name="onboarding_begegnungen_title">"Riconosce gli incontri
+grazie a Bluetooth"</string>
+
+    <!-- Onboarding Begegnungen: Text -->
+    <string name="onboarding_begegnungen_text1">"L'app riconosce automaticamente quando due utenti sono stati uno vicino all'altro per un certo tempo."</string>
+
+    <!-- Onboarding Begegnungen: Text -->
+    <string name="onboarding_begegnungen_text2">"L'app utilizza soltanto Bluetooth Low Energy (BLE). Nessun dato GPS, di telefonia mobile, del Wi-Fi o altri dati sulla posizione."</string>
+
+    <!-- Onboarding Meldung: Text oben -->
+    <string name="onboarding_meldung_heading">"Cosa fa l'app?"</string>
+
+    <!-- Onboarding Meldung: Titel -->
+    <string name="onboarding_meldung_title">"Segnalazione in caso di
+possibile contagio"</string>
+
+    <!-- Onboarding Meldung: Text -->
+    <string name="onboarding_meldung_text1">"L'app ti informa se sei stato potenzialmente esposto al nuovo coronavirus."</string>
+
+    <!-- Onboarding Meldung: Text -->
+    <string name="onboarding_meldung_text2">"Con il comportamento giusto puoi interrompere le catene di infezione e proteggere gli altri."</string>
+
+    <!-- Onboarding Bluetooth: Titel -->
+    <string name="onboarding_bluetooth_title">"Consenti Bluetooth"</string>
+
+    <!-- Onboarding Bluetooth: Text -->
+    <string name="onboarding_bluetooth_text">"Per poter utilizzare l'app devi consentire Bluetooth."</string>
+
+    <!-- Onboarding Bluetooth: Button -->
+    <string name="onboarding_bluetooth_button">"Consenti Bluetooth"</string>
+
+    <!-- Onboarding: Untetitel unten -->
+    <string name="onboarding_good_to_know">"Buono a sapersi:"</string>
+
+    <!-- Onboarding Bluetooth: Titel unten -->
+    <string name="onboarding_bluetooth_gtk_title1">"L'anonimato è garantito"</string>
+
+    <!-- Onboarding Bluetooth: Text unten -->
+    <string name="onboarding_bluetooth_gtk_text1">"Bluetooth non permette la visualizzazione di dati personali."</string>
+
+    <!-- Onboarding Bluetooth: Titel unten -->
+    <string name="onboarding_bluetooth_gtk_title2">"Il consumo della batteria aumenta leggermente"</string>
+
+    <!-- Onboarding Bluetooth: Text unten -->
+    <string name="onboarding_bluetooth_gtk_text2">"L'app è stata realizzata per funzionare con il massimo risparmio energetico. Il consumo della batteria aumenta soltanto leggermente."</string>
+
+    <!-- Onboarding Mitteilungen: Titel -->
+    <string name="onboarding_push_title">"Consenti messaggi"</string>
+
+    <!-- Onboarding Mitteilungen: Text -->
+    <string name="onboarding_push_text">"Per poter essere informato dall'app, devi consentire i messaggi."</string>
+
+    <!-- Onboarding Mitteilungen: Button -->
+    <string name="onboarding_push_button">"Consenti messaggi"</string>
+
+    <!-- Onboarding Mitteilungen: Titel Unten -->
+    <string name="onboarding_push_gtk_title1">"Informazioni in tempo reale"</string>
+
+    <!-- Onboarding Mitteilungen: Text unten -->
+    <string name="onboarding_push_gtk_text1">"Un messaggio sulla schermata di blocco ti informa in caso di possibile contagio."</string>
+
+
+
+    <!-- Titel auf Location-Permission Screen -->
+    <string name="android_onboarding_bt_permission_title">"Consenti posizione per Bluetooth"</string>
+
+    <!-- Text auf Location-Permission Screen -->
+    <string name="android_onboarding_bt_permission_text">"Affinché l'app funzioni e abbia accesso a Bluetooth, devi consentire la posizione."</string>
+
+    <!-- Button-Text auf Location-Permission Screen -->
+    <string name="android_onboarding_bt_permission_button">"Consenti"</string>
+
+    <!-- Label für Info-Section -->
+    <string name="android_onboarding_bt_permission_goodtoknow">"Buono a sapersi:"</string>
+
+    <!-- Info-Titel 1 auf Location-Permission Screen -->
+    <string name="android_onboarding_bt_permission_info_1_title">"La tua posizione rimane segreta"</string>
+
+    <!-- Info-Text 1 auf Location-Permission Screen -->
+    <string name="android_onboarding_bt_permission_info_1_text">"Nei dispositivi Android l'autorizzazione di Bluetooth è associata all'autorizzazione della posizione. Per questo occorre attivare la relativa funzione, anche se l'app non accede mai alla posizione dell'utente."</string>
+
+    <!-- Info-Titel 2 auf Location-Permission Screen -->
+    <string name="android_onboarding_bt_permission_info_2_title">"L'anonimato è garantito"</string>
+
+    <!-- Info-Text 2 auf Location-Permission Screen -->
+    <string name="android_onboarding_bt_permission_info_2_text">"Bluetooth non permette la visualizzazione di dati personali."</string>
+
+
+    <!-- Button-Text auf Location-Permission Screen - Zugelassen -->
+    <string name="android_onboarding_bt_permission_button_allowed">"Autorizzata"</string>
+
+    <!-- Titel auf dem letzen Onboarding Screen -->
+    <string name="onboarding_go_title">"L'app è installata"</string>
+
+    <!-- Text auf dem letzten Onboarding Screen -->
+    <string name="onboarding_go_text">"Grazie che ci aiuti a proteggere te e gli altri."</string>
+
+    <string name="android_onboarding_battery_permission_title">"Ignora l'ottimizzazione della batteria"</string>
+    <string name="android_onboarding_battery_permission_text">"Per poter riconoscere sempre gli incontri, l'ottimizzazione della batteria deve essere disattivata per questa app."</string>
+    <string name="android_onboarding_battery_permission_button">"Consenti"</string>
+    <string name="android_onboarding_battery_permission_button_deactivated">"OK"</string>
+    <string name="android_onboarding_battery_permission_info_1_title">"Solo per questa app"</string>
+    <string name="android_onboarding_battery_permission_info_1_text">"Per funzionare, l'app deve poter essere eseguita anche in background. Affinché ciò sia possibile, l'ottimizzazione della batteria può essere disattivata per le singole app."</string>
+    <string name="android_onboarding_battery_permission_info_2_title">"Il consumo della batteria aumenta leggermente"</string>
+    <string name="android_onboarding_battery_permission_info_2_text">"L'app è stata realizzata per funzionare con il massimo risparmio energetico. Il consumo della batteria aumenta soltanto leggermente."</string>
+    <string name="android_foreground_service_notification_error_battery_optimization">"Per un funzionamento preciso del tracciamento, l'app deve essere eseguita anche in background. Il consumo della batteria aumenta solo leggermente."</string>
+
+
+</resources>

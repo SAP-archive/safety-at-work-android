@@ -1,0 +1,297 @@
+<?xml version="1.0" encoding="UTF-8"?><resources>
+    <!-- XTIT: The title of the create Activity, will appear at the top of the screen -->
+    <string name="title_create_fragment">"Vytvořit %1$s položku"</string>
+
+    <!-- XTIT: The title of the update Activity, will appear at the top of the screen -->
+    <string name="title_update_fragment">"Aktualizovat"</string>
+
+    <!-- XMSG: Error message for the mandatory input fields, will appear in the edit field left empty -->
+    <string name="mandatory_warning">"Toto je povinné pole"</string>
+
+    <!-- XTIT: The title of the welcome screen, will appear at the top of the screen -->
+    <string name="welcome_screen_headline_label">"Vítejte"</string>
+
+    <!-- YINS: Short description on the welcome screen -->
+    <string name="welcome_screen_detail_label">"Prozkoumat SAP Cloud Platform SDK pro Android s touto vygenerovanou aplikací"</string>
+
+    <!-- XFLD: label at the bottom of the welcome screen -->
+    <string name="welcome_screen_footnote_label">"Funkce SDK můžete vyzkoušet v demo režimu."</string>
+
+    <!-- XFLD: label of the primary button on the welcome screen -->
+    <string name="welcome_screen_primary_button_label">"Začínáme"</string>
+
+    <!-- XBUT: Text of the Save button -->
+    <string name="save">"Uložit"</string>
+
+    <!-- XBUT: Text of the Update button -->
+    <string name="update">"Aktualizovat"</string>
+
+    <!-- XBUT: Text of the Delete button -->
+    <string name="delete">"Odstranit"</string>
+
+    <!-- XBUT: Text of the Cancel button -->
+    <string name="cancel">"Zrušit"</string>
+
+    <!-- XBUT: Text of the OK button -->
+    <string name="ok">"OK"</string>
+
+    <!-- XBUT: Text of the Delete button -->
+    <string name="yes">"Ano"</string>
+
+    <!-- XTIT: The title of the delete dialog -->
+    <string name="delete_dialog_title">"ODSTRANIT"</string>
+
+    <!-- XMSG: The message of the delete dialog -->
+    <string name="delete_one_item">"Chcete opravdu odstranit vybranou položku?"</string>
+
+    <!-- XMSG: The message of the delete dialog in case of multiple selection -->
+    <string name="delete_more_items">"Chcete opravdu odstranit vybrané položky?"</string>
+
+    <!-- XMSG: Error message, can be presented in a Toast or Dialog -->
+    <string name="entity_download_error">"Při operaci na pozadí došlo k chybě."</string>
+
+    <!-- XMIT: Refresh menu item -->
+    <string name="menu_refresh">"Aktualizovat"</string>
+
+    <!-- XMIT: Refresh menu item -->
+    <string name="menu_home">"Domů"</string>
+
+    <!-- XMIT: Update menu item -->
+    <string name="menu_update">"Aktualizovat"</string>
+
+    <!-- XMIT: Delete menu item -->
+    <string name="menu_delete">"Odstranit"</string>
+
+    <!-- NOTR: No translation needed, just placeholder text -->
+    <string name="object_header_headline">"Headline"</string>
+
+    <!-- NOTR: No translation needed, just placeholder text -->
+    <string name="object_header_subheadline">"Subheadline"</string>
+
+    <!-- NOTR: No translation needed, just placeholder text -->
+    <string name="object_header_body">"Body text"</string>
+
+    <!-- NOTR: No translation needed, just placeholder text -->
+    <string name="object_header_footnote">"Footnote"</string>
+
+    <!-- NOTR: No translation needed, just placeholder text -->
+    <string name="object_header_tag1">"TAG1"</string>
+
+    <!-- NOTR: No translation needed, just placeholder text -->
+    <string name="object_header_tag2">"TAG2"</string>
+
+    <!-- NOTR: No translation needed, just placeholder text -->
+    <string name="object_header_tag3">"TAG3"</string>
+
+    <!-- NOTR: No translation needed, just placeholder text -->
+    <string name="object_header_description">"Item description"</string>
+
+    <!-- NOTR: No translation needed, just placeholder text -->
+    <string name="object_header_status">"Status"</string>
+
+    <!-- NOTR: No translation needed, just placeholder text -->
+    <string name="error">"Error"</string>
+
+    <!-- error messages -->
+
+    <!-- XTIT: The title of the delete dialog -->
+    <string name="read_failed">"Stažení se nezdařilo"</string>
+
+    <!-- XMSG: Detailed error description -->
+    <string name="format_error">"Vstup není vhodný pro datový typ"</string>
+
+    <!-- XMSG: Detailed error description -->
+    <string name="read_failed_detail">"Operace stažení se nezdařila, pokuste se restartovat aplikaci."</string>
+
+    <!-- XTIT: The title of the delete dialog -->
+    <string name="create_failed">"Vytvoření se nezdařilo"</string>
+
+    <!-- XMSG: Detailed error description -->
+    <string name="create_failed_detail">"Operace vytvoření se nezdařila, pokuste se ji provést znovu později."</string>
+
+    <!-- XTIT: The title of the delete dialog -->
+    <string name="update_failed">"Aktualizace se nezdařila"</string>
+    <string name="update_failed_detail">"Operace aktualizace se nezdařila, aktualizujte lokální data a pokuste se ji provést znovu později."</string>
+
+    <!-- XTIT: The title of the delete dialog -->
+    <string name="delete_failed">"Odstranění se nezdařilo"</string>
+
+    <!-- XMSG: Detailed error description -->
+    <string name="delete_failed_detail">"Operace odstranění se nezdařila, aktualizujte lokální data a pokuste se ji provést znovu později."</string>
+
+    <!-- XTIT: The message of the upload toast in case of success -->
+    <string name="log_upload_ok">"Protokol je odeslán na server."</string>
+
+    <!-- XTIT: The message of the upload toast in case of failing -->
+    <string name="log_upload_failed">"Odeslání protokolu se nezdařilo"</string>
+
+    <!-- XMSG: Detailed error description -->
+    <string name="log_upload_failed_detail">"Pro odeslání protokolu byl obdržen zdeformovaný URL. Aplikace možná stále funguje, ale protokoly nebudou odeslány na server."</string>
+
+    <!-- XTIT: The message of the upload toast in case of success -->
+    <string name="usage_upload_ok">"Použití je odesláno na server."</string>
+
+    <!-- XTIT: The message of the upload toast in case of failing -->
+    <string name="usage_upload_failed">"Použití se nezdařilo odeslat"</string>
+
+    <!-- XMSG: Detailed error description -->
+    <string name="usage_init_failed">"Použití nelze inicializovat"</string>
+
+    <!-- XTIT: The title of the delete dialog -->
+    <string name="push_error">"Chyba push"</string>
+
+    <!-- XTIT: The title of the delete dialog -->
+    <string name="push_message">"Obdržena zpráva push"</string>
+
+    <!-- XTIT: The Notification Text -->
+    <string name="push_text">"Oznámení"</string>
+
+    <!-- XMSG: Detailed error description -->
+    <string name="push_token_upload_failed_detail">"Token push nebylo možné odeslat na server SAP, funkce push nebude fungovat. Neobdržíte zprávy push."</string>
+
+    <!-- XMSG: Detailed error description -->
+    <string name="push_invalid_push_format">"Zpráva push obdržena, ale její formát byl neplatný, takže ji nebylo možné zpracovat."</string>
+
+    <!-- XMSG: AlertDialog before navigation - Title -->
+    <string name="before_navigation_dialog_title">"Potenciální ztráta dat"</string>
+
+    <!-- XMSG: AlertDialog before navigation - Message -->
+    <string name="before_navigation_dialog_message">"Když opustíte tuto stránku, žádná data se neuloží"</string>
+
+    <!-- XMSG: AlertDialog before navigation - Positive button (navigation occurs) -->
+    <string name="before_navigation_dialog_positive_button">"Opustit"</string>
+
+    <!-- XMSG: AlertDialog before navigation - Negative button (cancelled navigation) -->
+    <string name="before_navigation_dialog_negative_button">"Zůstat"</string>
+
+    <!-- XMSG: Detailed error description -->
+    <string name="server_auth_not_supported_saml">"Chyba: Tato aplikace nepodporuje autentizaci SAML."</string>
+
+	<!-- XTIT: The title of the error dialog -->
+	<string name="bind_error">"Chyba vazby"</string>
+	
+	<!-- XMSG: Detailed error description -->
+    <string name="bind_error_detail">"Nezdařilo se připojit ke službě synchronizace OData offline."</string>
+    
+	<!-- XTIT: The title of the error dialog -->
+	<string name="offline_provider_error">"Chyba inicializace offline"</string>
+	
+ 	<!-- XMSG: Detailed error description -->   
+	<string name="offline_provider_error_detail">"Nezdařilo se inicializovat poskytovatele OData offline."</string>
+
+    <!-- XTIT: The title of the error dialog -->
+    <string name="offline_initial_open_error">"Chyba iniciálního otevření offline"</string>
+
+    <!-- XMSG: Detailed error description -->
+    <string name="offline_initial_open_error_detail">"Nezdařilo se dokončit iniciální otevření offline úložiště."</string>
+
+    <!-- XMSG: Detailed error description -->
+    <string name="offline_backend_big_data_error_detail">"Datová část z backendu, standardní velikost omezení datové části CPms je 64M. O opravu se můžete pokusit pomocí některého z následujících řešení:\n\t1) Zvětšit velikost limitu v offline.ini;\n\t2) Na straně serveru implementovat stránkování, aby se aktivovala synchronizace velkých datových sad v blocích;\n\t3) Použít požadavky $top v definování dotazů nebo filtrů pro omezení celkového počtu dat stažených klientem."</string>
+
+    <!-- XMSG: Detailed error description -->
+    <string name="offline_backend_time_out_error_detail">"Zvyšte pro tuto aplikaci v CPms překročení času pro připojení backendu a pokuste se znovu."</string>
+
+    <!-- XTIT: The title of the error dialog -->
+	<string name="synchronize_failure">"Selhání synchronizace"</string>
+	
+	<!-- XMSG: Detailed error description -->    
+	<string name="synchronize_failure_detail">"Synchronizace s mobilními službami se nezdařila"</string>
+
+    <!-- XTIT: The title of the error dialog -->
+    <string name="offline_reset_store_error">"Selhání resetování offline úložiště"</string>
+
+    <!-- XMSG: Detailed error description -->
+    <string name="offline_reset_store_error_detail">"Nezdařilo se resetovat/odebrat data offline úložiště."</string>
+    <!-- error messages -->
+
+    <!-- offline -->	
+	
+	<!-- XMSG: Advise user of delay when performing initial opening of offline store -->
+	<string name="initializing_offline_store">"Inicializace offline úložiště. Čekejte."</string>
+	
+    <!-- NOTR: No translation needed, Label for entity state in offline -->	
+	<string name="local_state">"Local"</string>
+	
+    <!-- NOTR: No translation needed, Label for entity state in offline -->	
+	<string name="error_state">"Error"</string>
+    
+	<!-- NOTR: No translation needed, Label for entity state in offline -->	
+	<string name="updated_state">"Updated"</string>
+    
+	<!-- NOTR: No translation needed, Label for entity state in offline -->	
+	<string name="download_state">"Download"</string>
+    
+    <!-- XMIT: Menu item to trigger synchronization -->
+	<string name="synchronize_action">"Synchronizovat"</string>
+	
+    <!-- offline -->
+	
+    <!-- XTIT: The title of the settings dialog -->
+    <string name="settings_activity_name">"Nastavení"</string>
+    <!-- XTIT: The title of the settings menu -->
+    <string name="menu_item_settings">"Nastavení"</string>
+
+    <!-- XTIT: The title of the passcode group -->
+    <string name="passcode">"Přístupový kód"</string>
+    <!-- XTIT: The title of the change passcode menu item -->
+    <string name="manage_passcode">"Změnit přístupový kód"</string>
+    <!-- XTIT: The title of the reset group -->
+    <string name="reset">"Resetovat aplikaci"</string>
+    <!-- XTIT: The title of the reset app menu item -->
+    <string name="reset_app">"Vymazat nastavení aplikace"</string>
+    <!-- XTIT: The title of a confirmation dialog -->
+    <string name="reset_app_confirmation">"Všechny informace vztahující se k této aplikaci budou odebrány. Chcete pokračovat?"</string>
+    <!-- XMSG: The message of reset client -->
+    <string name="reset_client">"Resetovat klienta"</string>
+
+    <!-- XTIT: The title of a menu item -->
+    <string name="upload_usage">"Odeslat data použití"</string>
+    <!-- XTIT: The title of a menu item -->
+    <string name="set_usage_consent">"Souhlas se sběrem použití"</string>
+
+    <!-- XTIT: The title of a menu group -->
+    <string name="usage">"Použití"</string>
+    <!-- XTIT: The title of a menu group -->
+    <string name="logging">"Protokolování"</string>
+    <!-- XTIT: The title of a menu item -->
+    <string name="upload_log">"Odeslat protokol"</string>
+    <!-- XTIT: The description of a menu item -->
+    <string name="upload_log_summary">"Odešlete protokol na server."</string>
+    <!-- XMSG: The message of a log level toast -->
+    <string name="log_level_changed">"Standardní úroveň protokolu se ze zásad serveru změnila na: %s"</string>
+    <!-- XMSG: The message of a log level toast -->
+    <string name="log_level_default">"Zásady protokolu nejsou nastaveny na server, standardní úroveň protokolu je nastavena na: %s"</string>
+    <!-- XTIT: The title of a menu item -->
+    <string name="log_level">"Úroveň protokolu"</string>
+    <!-- XTIT: The title of a menu item -->
+    <string name="dialog_title_choose_log_level">"Zvolit úroveň protokolu"</string>
+    <!-- XTIT: Log level title -->
+    <string name="log_level_none">"Nic"</string>
+    <!-- XTIT: Log level title -->
+    <string name="log_level_fatal">"Fatální"</string>
+    <!-- XTIT: Log level title -->
+    <string name="log_level_error">"Chyba"</string>
+    <!-- XTIT: Log level title -->
+    <string name="log_level_warning">"Upozornění"</string>
+    <!-- XTIT: Log level title -->
+    <string name="log_level_info">"Informace"</string>
+    <!-- XTIT: Log level title -->
+    <string name="log_level_debug">"Ladění"</string>
+    <!-- XTIT: Log level title -->
+    <string name="log_level_path">"Cesta"</string>
+    <!-- XMSG: Authentication error message -->
+    <string name="authentication_failed">"Autentizace se nezdařila"</string>
+
+    <!-- restrictions -->
+
+    <!-- XTIT: The title of the error dialog -->
+    <string name="restriction_service_url_title">"URL služby"</string>
+
+    <!-- XMSG: Detailed error description -->
+    <string name="restriction_service_url_description">"URL služby OData."</string>
+    <!-- restrictions -->
+
+    <!-- XMSG: Detailed error description -->
+    <string name="error_back_navigation">"Tato aplikace je chráněna přístupovým kódem, nespustí se bez zadání správného přístupového kódu."</string>
+
+</resources>

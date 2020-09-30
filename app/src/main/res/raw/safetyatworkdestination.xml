@@ -1,0 +1,263 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<edmx:Edmx Version="1.0" xmlns:edmx="http://schemas.microsoft.com/ado/2007/06/edmx" xmlns:sap="http://www.sap.com/Protocols/SAPData">
+    <edmx:DataServices m:DataServiceVersion="2.0" xmlns:m="http://schemas.microsoft.com/ado/2007/08/dataservices/metadata">
+        <Schema Namespace="default" xmlns:d="http://schemas.microsoft.com/ado/2007/08/dataservices" xmlns:m="http://schemas.microsoft.com/ado/2007/08/dataservices/metadata" xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
+            <EntityType Name="DeviceSetType">
+                <Key>
+                    <PropertyRef Name="DeviceID"/>
+                </Key>
+                <Property Name="DeviceID" Type="Edm.String" Nullable="false" MaxLength="100"/>
+                <Property Name="Type" Type="Edm.String" Nullable="false" MaxLength="50"/>
+                <Property Name="Description" Type="Edm.String" MaxLength="200"/>
+                <Property Name="OwnedBy" Type="Edm.String" MaxLength="100"/>
+                <Property Name="CreatedAt" Type="Edm.DateTime"/>
+                <Property Name="CreatedBy" Type="Edm.String" MaxLength="100"/>
+                <Property Name="UpdatedAt" Type="Edm.DateTime"/>
+                <Property Name="UpdatedBy" Type="Edm.String" MaxLength="100"/>
+                <Property Name="Capacity" Type="Edm.Int32"/>
+                <Property Name="Major" Type="Edm.String" MaxLength="5"/>
+                <Property Name="Minor" Type="Edm.String" MaxLength="5"/>
+                <NavigationProperty Name="ownedBy" Relationship="default.Device_OwnerType" FromRole="DeviceSetPrincipal" ToRole="DeviceSetDependent" sap:creatable="false" sap:filterable="false"/>
+                <NavigationProperty Name="toEIDs" Relationship="default.Device_EphemeralIDType" FromRole="DeviceSetPrincipal" ToRole="EphemeralIDSetDependent" sap:creatable="false" sap:filterable="false"/>
+                <NavigationProperty Name="toInfections" Relationship="default.Device_InfectedType" FromRole="DeviceSetPrincipal" ToRole="InfectedSetDependent" sap:creatable="false" sap:filterable="false"/>
+                <NavigationProperty Name="toTags" Relationship="default.Device_TagsType" FromRole="DeviceSetPrincipal" ToRole="DeviceTagSetDependent" sap:creatable="false" sap:filterable="false"/>
+            </EntityType>
+            <EntityType Name="DeviceTagSetType">
+                <Key>
+                    <PropertyRef Name="DeviceID"/>
+                    <PropertyRef Name="TagKey"/>
+                </Key>
+                <Property Name="DeviceID" Type="Edm.String" Nullable="false" MaxLength="100"/>
+                <Property Name="TagKey" Type="Edm.String" Nullable="false" MaxLength="100"/>
+            </EntityType>
+            <EntityType Name="EphemeralIDSetType">
+                <Key>
+                    <PropertyRef Name="EID"/>
+                </Key>
+                <Property Name="EID" Type="Edm.String" Nullable="false" MaxLength="50"/>
+                <Property Name="DeviceID" Type="Edm.String" Nullable="false" MaxLength="100"/>
+                <Property Name="CreatedAt" Type="Edm.DateTime" Nullable="false"/>
+                <NavigationProperty Name="toDevice" Relationship="default.EphemeralID_DeviceType" FromRole="EphemeralIDSetPrincipal" ToRole="DeviceSetDependent" sap:creatable="false" sap:filterable="false"/>
+            </EntityType>
+            <EntityType Name="EventSetType">
+                <Key>
+                    <PropertyRef Name="SourceEID"/>
+                    <PropertyRef Name="TargetIED"/>
+                    <PropertyRef Name="CreatedAt"/>
+                </Key>
+                <Property Name="SourceEID" Type="Edm.String" Nullable="false" MaxLength="50"/>
+                <Property Name="TargetIED" Type="Edm.String" Nullable="false" MaxLength="50"/>
+                <Property Name="Distance" Type="Edm.Decimal" Precision="34"/>
+                <Property Name="CreatedAt" Type="Edm.DateTime" Nullable="false"/>
+            </EntityType>
+            <EntityType Name="InfectedSetType">
+                <Key>
+                    <PropertyRef Name="ID"/>
+                </Key>
+                <Property Name="ID" Type="Edm.String" Nullable="false" MaxLength="50"/>
+                <Property Name="DeviceID" Type="Edm.String" Nullable="false" MaxLength="100"/>
+                <Property Name="CreatedAt" Type="Edm.DateTime"/>
+                <Property Name="Attrib1" Type="Edm.String" MaxLength="200"/>
+                <Property Name="Attrib2" Type="Edm.String" MaxLength="200"/>
+                <Property Name="Notes" Type="Edm.String" MaxLength="2000"/>
+                <Property Name="Attrib3" Type="Edm.String" MaxLength="200"/>
+                <NavigationProperty Name="toDevice" Relationship="default.Infected_DeviceType" FromRole="InfectedSetPrincipal" ToRole="DeviceSetDependent" sap:creatable="false" sap:filterable="false"/>
+                <NavigationProperty Name="toInfectedEIDs" Relationship="default.Infected_EphemeralIDInfectedType" FromRole="InfectedSetPrincipal" ToRole="EphemeralIDInfectedSetDependent" sap:creatable="false" sap:filterable="false"/>
+            </EntityType>
+            <EntityType Name="EphemeralIDInfectedSetType">
+                <Key>
+                    <PropertyRef Name="EID"/>
+                    <PropertyRef Name="InfectedID"/>
+                </Key>
+                <Property Name="EID" Type="Edm.String" Nullable="false" MaxLength="50"/>
+                <Property Name="InfectedID" Type="Edm.String" Nullable="false" MaxLength="40"/>
+                <NavigationProperty Name="toPotentialInfectedEIDs" Relationship="default.Infected_ProximityDetectedType" FromRole="EphemeralIDInfectedSetPrincipal" ToRole="ProximityDetectedSetDependent" sap:creatable="false" sap:filterable="false"/>
+            </EntityType>
+            <EntityType Name="ProximityDetectedSetType">
+                <Key>
+                    <PropertyRef Name="CreatedAt"/>
+                    <PropertyRef Name="EIDInfected"/>
+                    <PropertyRef Name="EIDMatched"/>
+                    <PropertyRef Name="EventTS"/>
+                </Key>
+                <Property Name="CreatedAt" Type="Edm.DateTime" Nullable="false"/>
+                <Property Name="EIDInfected" Type="Edm.String" Nullable="false" MaxLength="50"/>
+                <Property Name="EIDMatched" Type="Edm.String" Nullable="false" MaxLength="50"/>
+                <Property Name="EventTS" Type="Edm.DateTime" Nullable="false"/>
+                <NavigationProperty Name="toPotentialInfectedEID" Relationship="default.ProximityDetected_EphemeralIDType" FromRole="ProximityDetectedSetPrincipal" ToRole="EphemeralIDSetDependent" sap:creatable="false" sap:filterable="false"/>
+            </EntityType>
+            <EntityType Name="TagSetType">
+                <Key>
+                    <PropertyRef Name="Key"/>
+                </Key>
+                <Property Name="Key" Type="Edm.String" Nullable="false" MaxLength="100"/>
+                <Property Name="Type" Type="Edm.String" Nullable="false" MaxLength="100"/>
+                <Property Name="Value" Type="Edm.String" Nullable="false" MaxLength="100"/>
+            </EntityType>
+            <EntityType Name="RealTimeRoomStatusType" sap:semantics="aggregate">
+                <Key>
+                    <PropertyRef Name="TimeFrameInMinutes"/>
+                    <PropertyRef Name="DeviceID"/>
+                </Key>
+                <Property Name="TimeFrameInMinutes" Type="Edm.Int32" Nullable="false" sap:parameter="optional" sap:label="Minute from now to use for the ananlysis" sap:filter-restriction="single-value"/>
+                <Property Name="DeviceID" Type="Edm.String" MaxLength="100" sap:label="DeviceID" sap:aggregation-role="dimension"/>
+                <Property Name="Type" Type="Edm.String" MaxLength="50" sap:label="Type" sap:aggregation-role="dimension"/>
+                <Property Name="Description" Type="Edm.String" MaxLength="200" sap:label="Description" sap:aggregation-role="dimension"/>
+                <Property Name="OwnedBy" Type="Edm.String" MaxLength="100" sap:label="OwnedBy" sap:aggregation-role="dimension"/>
+                <Property Name="Capacity" Type="Edm.Int32" sap:label="Capacity" sap:aggregation-role="dimension"/>
+                <Property Name="Distance" Type="Edm.Decimal" Precision="34" sap:label="Distance" sap:aggregation-role="dimension"/>
+                <Property Name="CreatedAt" Type="Edm.DateTime" sap:label="CreatedAt" sap:aggregation-role="dimension"/>
+                <Property Name="TagsString" Type="Edm.String" MaxLength="2000" sap:label="TagsString" sap:aggregation-role="dimension"/>
+                <Property Name="MeasuredPercentage" Type="Edm.Int32" sap:label="MeasuredPercentage" sap:aggregation-role="dimension"/>
+                <Property Name="Measured" Type="Edm.Int32" sap:label="Counter" sap:aggregation-role="measure" sap:filterable="false"/>
+                <NavigationProperty Name="toTags" Relationship="default.RaltimeStatus_TagsType" FromRole="RealTimeRoomStatusPrincipal" ToRole="TagSetDependent" sap:creatable="false" sap:filterable="false"/>
+            </EntityType>
+            <EntityType Name="HistoryDevicesStatusType" sap:semantics="aggregate">
+                <Key>
+                    <PropertyRef Name="GenID"/>
+                </Key>
+                <Property Name="GenID" Type="Edm.String" Nullable="false" MaxLength="2147483647" sap:filterable="false"/>
+                <Property Name="DeviceID" Type="Edm.String" MaxLength="100" sap:label="DeviceID" sap:aggregation-role="dimension"/>
+                <Property Name="Description" Type="Edm.String" MaxLength="200" sap:label="Description" sap:aggregation-role="dimension"/>
+                <Property Name="Capacity" Type="Edm.Int32" sap:label="Capacity" sap:aggregation-role="dimension"/>
+                <Property Name="TimeFrame" Type="Edm.String" MaxLength="30" sap:label="TimeFrame" sap:aggregation-role="dimension"/>
+                <Property Name="TagsString" Type="Edm.String" MaxLength="2000" sap:label="TagsString" sap:aggregation-role="dimension"/>
+                <Property Name="Avg" Type="Edm.Decimal" Precision="16" Scale="6" sap:label="Counter" sap:aggregation-role="measure" sap:filterable="false"/>
+            </EntityType>
+            <EntityType Name="DeviceUserViewSetType">
+                <Key>
+                    <PropertyRef Name="DeviceID"/>
+                </Key>
+                <Property Name="DeviceID" Type="Edm.String" Nullable="false" MaxLength="100"/>
+                <Property Name="Description" Type="Edm.String" MaxLength="200"/>
+            </EntityType>
+            <EntityType Name="RealTimeRoomStatusParametersType" sap:semantics="parameters">
+                <Key>
+                    <PropertyRef Name="TimeFrameInMinutes"/>
+                </Key>
+                <Property Name="TimeFrameInMinutes" Type="Edm.Int32" Nullable="false" sap:parameter="optional" sap:label="Minute from now to use for the ananlysis" sap:filter-restriction="single-value"/>
+                <NavigationProperty Name="Results" Relationship="default.RealTimeRoomStatusParameters_to_RealTimeRoomStatusType" FromRole="RealTimeRoomStatusParametersPrincipal" ToRole="RealTimeRoomStatusDependent" sap:creatable="false" sap:filterable="false"/>
+            </EntityType>
+            <EntityType Name="HistoryDevicesStatusParametersType" sap:semantics="parameters">
+                <Key>
+                    <PropertyRef Name="StartDate"/>
+                    <PropertyRef Name="EndDate"/>
+                </Key>
+                <Property Name="StartDate" Type="Edm.DateTime" Nullable="false" sap:parameter="mandatory" sap:filter-restriction="single-value"/>
+                <Property Name="EndDate" Type="Edm.DateTime" Nullable="false" sap:parameter="mandatory" sap:filter-restriction="single-value"/>
+                <NavigationProperty Name="Results" Relationship="default.HistoryDevicesStatusParameters_to_HistoryDevicesStatusType" FromRole="HistoryDevicesStatusParametersPrincipal" ToRole="HistoryDevicesStatusDependent" sap:creatable="false" sap:filterable="false"/>
+            </EntityType>
+            <Association Name="Device_TagsType">
+                <End Type="default.DeviceSetType" Role="DeviceSetPrincipal" Multiplicity="1"/>
+                <End Type="default.DeviceTagSetType" Role="DeviceTagSetDependent" Multiplicity="*"/>
+            </Association>
+            <Association Name="RaltimeStatus_TagsType">
+                <End Type="default.RealTimeRoomStatusType" Role="RealTimeRoomStatusPrincipal" Multiplicity="*"/>
+                <End Type="default.TagSetType" Role="TagSetDependent" Multiplicity="*"/>
+            </Association>
+            <Association Name="Device_OwnerType">
+                <End Type="default.DeviceSetType" Role="DeviceSetPrincipal" Multiplicity="1"/>
+                <End Type="default.DeviceSetType" Role="DeviceSetDependent" Multiplicity="1"/>
+            </Association>
+            <Association Name="Device_EphemeralIDType">
+                <End Type="default.DeviceSetType" Role="DeviceSetPrincipal" Multiplicity="1"/>
+                <End Type="default.EphemeralIDSetType" Role="EphemeralIDSetDependent" Multiplicity="*"/>
+            </Association>
+            <Association Name="EphemeralID_DeviceType">
+                <End Type="default.EphemeralIDSetType" Role="EphemeralIDSetPrincipal" Multiplicity="1"/>
+                <End Type="default.DeviceSetType" Role="DeviceSetDependent" Multiplicity="1"/>
+            </Association>
+            <Association Name="Infected_DeviceType">
+                <End Type="default.InfectedSetType" Role="InfectedSetPrincipal" Multiplicity="1"/>
+                <End Type="default.DeviceSetType" Role="DeviceSetDependent" Multiplicity="1"/>
+            </Association>
+            <Association Name="Device_InfectedType">
+                <End Type="default.DeviceSetType" Role="DeviceSetPrincipal" Multiplicity="1"/>
+                <End Type="default.InfectedSetType" Role="InfectedSetDependent" Multiplicity="*"/>
+            </Association>
+            <Association Name="Infected_EphemeralIDInfectedType">
+                <End Type="default.InfectedSetType" Role="InfectedSetPrincipal" Multiplicity="1"/>
+                <End Type="default.EphemeralIDInfectedSetType" Role="EphemeralIDInfectedSetDependent" Multiplicity="*"/>
+            </Association>
+            <Association Name="Infected_ProximityDetectedType">
+                <End Type="default.EphemeralIDInfectedSetType" Role="EphemeralIDInfectedSetPrincipal" Multiplicity="1"/>
+                <End Type="default.ProximityDetectedSetType" Role="ProximityDetectedSetDependent" Multiplicity="*"/>
+            </Association>
+            <Association Name="ProximityDetected_EphemeralIDType">
+                <End Type="default.ProximityDetectedSetType" Role="ProximityDetectedSetPrincipal" Multiplicity="1"/>
+                <End Type="default.EphemeralIDSetType" Role="EphemeralIDSetDependent" Multiplicity="1"/>
+            </Association>
+            <Association Name="RealTimeRoomStatusParameters_to_RealTimeRoomStatusType">
+                <End Type="default.RealTimeRoomStatusParametersType" Role="RealTimeRoomStatusParametersPrincipal" Multiplicity="1"/>
+                <End Type="default.RealTimeRoomStatusType" Role="RealTimeRoomStatusDependent" Multiplicity="*"/>
+            </Association>
+            <Association Name="HistoryDevicesStatusParameters_to_HistoryDevicesStatusType">
+                <End Type="default.HistoryDevicesStatusParametersType" Role="HistoryDevicesStatusParametersPrincipal" Multiplicity="1"/>
+                <End Type="default.HistoryDevicesStatusType" Role="HistoryDevicesStatusDependent" Multiplicity="*"/>
+            </Association>
+            <EntityContainer Name="v2" m:IsDefaultEntityContainer="true">
+                <EntitySet Name="DeviceSet" EntityType="default.DeviceSetType"/>
+                <EntitySet Name="DeviceTagSet" EntityType="default.DeviceTagSetType"/>
+                <EntitySet Name="EphemeralIDSet" EntityType="default.EphemeralIDSetType"/>
+                <EntitySet Name="EventSet" EntityType="default.EventSetType"/>
+                <EntitySet Name="InfectedSet" EntityType="default.InfectedSetType"/>
+                <EntitySet Name="EphemeralIDInfectedSet" EntityType="default.EphemeralIDInfectedSetType"/>
+                <EntitySet Name="ProximityDetectedSet" EntityType="default.ProximityDetectedSetType"/>
+                <EntitySet Name="TagSet" EntityType="default.TagSetType"/>
+                <EntitySet Name="RealTimeRoomStatus" EntityType="default.RealTimeRoomStatusType" sap:addressable="false" sap:creatable="false" sap:updatable="false" sap:deletable="false"/>
+                <EntitySet Name="HistoryDevicesStatus" EntityType="default.HistoryDevicesStatusType" sap:addressable="false" sap:creatable="false" sap:updatable="false" sap:deletable="false"/>
+                <EntitySet Name="DeviceUserViewSet" EntityType="default.DeviceUserViewSetType" sap:creatable="false" sap:updatable="false" sap:deletable="false"/>
+                <EntitySet Name="RealTimeRoomStatusParameters" EntityType="default.RealTimeRoomStatusParametersType" sap:addressable="false" sap:creatable="false" sap:updatable="false" sap:deletable="false"/>
+                <EntitySet Name="HistoryDevicesStatusParameters" EntityType="default.HistoryDevicesStatusParametersType" sap:addressable="false" sap:creatable="false" sap:updatable="false" sap:deletable="false"/>
+                <AssociationSet Name="Device_Tags" Association="default.Device_TagsType">
+                    <End Role="DeviceSetPrincipal" EntitySet="DeviceSet"/>
+                    <End Role="DeviceTagSetDependent" EntitySet="DeviceTagSet"/>
+                </AssociationSet>
+                <AssociationSet Name="RaltimeStatus_Tags" Association="default.RaltimeStatus_TagsType">
+                    <End Role="RealTimeRoomStatusPrincipal" EntitySet="RealTimeRoomStatus"/>
+                    <End Role="TagSetDependent" EntitySet="TagSet"/>
+                </AssociationSet>
+                <AssociationSet Name="Device_Owner" Association="default.Device_OwnerType">
+                    <End Role="DeviceSetPrincipal" EntitySet="DeviceSet"/>
+                    <End Role="DeviceSetDependent" EntitySet="DeviceSet"/>
+                </AssociationSet>
+                <AssociationSet Name="Device_EphemeralID" Association="default.Device_EphemeralIDType">
+                    <End Role="DeviceSetPrincipal" EntitySet="DeviceSet"/>
+                    <End Role="EphemeralIDSetDependent" EntitySet="EphemeralIDSet"/>
+                </AssociationSet>
+                <AssociationSet Name="EphemeralID_Device" Association="default.EphemeralID_DeviceType">
+                    <End Role="EphemeralIDSetPrincipal" EntitySet="EphemeralIDSet"/>
+                    <End Role="DeviceSetDependent" EntitySet="DeviceSet"/>
+                </AssociationSet>
+                <AssociationSet Name="Infected_Device" Association="default.Infected_DeviceType">
+                    <End Role="InfectedSetPrincipal" EntitySet="InfectedSet"/>
+                    <End Role="DeviceSetDependent" EntitySet="DeviceSet"/>
+                </AssociationSet>
+                <AssociationSet Name="Device_Infected" Association="default.Device_InfectedType">
+                    <End Role="DeviceSetPrincipal" EntitySet="DeviceSet"/>
+                    <End Role="InfectedSetDependent" EntitySet="InfectedSet"/>
+                </AssociationSet>
+                <AssociationSet Name="Infected_EphemeralIDInfected" Association="default.Infected_EphemeralIDInfectedType">
+                    <End Role="InfectedSetPrincipal" EntitySet="InfectedSet"/>
+                    <End Role="EphemeralIDInfectedSetDependent" EntitySet="EphemeralIDInfectedSet"/>
+                </AssociationSet>
+                <AssociationSet Name="Infected_ProximityDetected" Association="default.Infected_ProximityDetectedType">
+                    <End Role="EphemeralIDInfectedSetPrincipal" EntitySet="EphemeralIDInfectedSet"/>
+                    <End Role="ProximityDetectedSetDependent" EntitySet="ProximityDetectedSet"/>
+                </AssociationSet>
+                <AssociationSet Name="ProximityDetected_EphemeralID" Association="default.ProximityDetected_EphemeralIDType">
+                    <End Role="ProximityDetectedSetPrincipal" EntitySet="ProximityDetectedSet"/>
+                    <End Role="EphemeralIDSetDependent" EntitySet="EphemeralIDSet"/>
+                </AssociationSet>
+                <AssociationSet Name="RealTimeRoomStatusParameters_to_RealTimeRoomStatus" Association="default.RealTimeRoomStatusParameters_to_RealTimeRoomStatusType" sap:creatable="false" sap:updatable="false" sap:deletable="false">
+                    <End Role="RealTimeRoomStatusParametersPrincipal" EntitySet="RealTimeRoomStatusParameters"/>
+                    <End Role="RealTimeRoomStatusDependent" EntitySet="RealTimeRoomStatus"/>
+                </AssociationSet>
+                <AssociationSet Name="HistoryDevicesStatusParameters_to_HistoryDevicesStatus" Association="default.HistoryDevicesStatusParameters_to_HistoryDevicesStatusType" sap:creatable="false" sap:updatable="false" sap:deletable="false">
+                    <End Role="HistoryDevicesStatusParametersPrincipal" EntitySet="HistoryDevicesStatusParameters"/>
+                    <End Role="HistoryDevicesStatusDependent" EntitySet="HistoryDevicesStatus"/>
+                </AssociationSet>
+            </EntityContainer>
+        </Schema>
+    </edmx:DataServices>
+</edmx:Edmx>

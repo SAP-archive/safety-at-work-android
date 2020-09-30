@@ -1,0 +1,297 @@
+<?xml version="1.0" encoding="UTF-8"?><resources>
+    <!-- XTIT: The title of the create Activity, will appear at the top of the screen -->
+    <string name="title_create_fragment">"Criar item de %1$s"</string>
+
+    <!-- XTIT: The title of the update Activity, will appear at the top of the screen -->
+    <string name="title_update_fragment">"Atualizar"</string>
+
+    <!-- XMSG: Error message for the mandatory input fields, will appear in the edit field left empty -->
+    <string name="mandatory_warning">"Campo obrigatório"</string>
+
+    <!-- XTIT: The title of the welcome screen, will appear at the top of the screen -->
+    <string name="welcome_screen_headline_label">"Bem-vindo"</string>
+
+    <!-- YINS: Short description on the welcome screen -->
+    <string name="welcome_screen_detail_label">"Explore o SAP Cloud Platform SDK para Android com este app gerado"</string>
+
+    <!-- XFLD: label at the bottom of the welcome screen -->
+    <string name="welcome_screen_footnote_label">"Você pode experimentar os recursos do SDK no modo de demonstração."</string>
+
+    <!-- XFLD: label of the primary button on the welcome screen -->
+    <string name="welcome_screen_primary_button_label">"Iniciar"</string>
+
+    <!-- XBUT: Text of the Save button -->
+    <string name="save">"Salvar"</string>
+
+    <!-- XBUT: Text of the Update button -->
+    <string name="update">"Atualizar"</string>
+
+    <!-- XBUT: Text of the Delete button -->
+    <string name="delete">"Excluir"</string>
+
+    <!-- XBUT: Text of the Cancel button -->
+    <string name="cancel">"Cancelar"</string>
+
+    <!-- XBUT: Text of the OK button -->
+    <string name="ok">"OK"</string>
+
+    <!-- XBUT: Text of the Delete button -->
+    <string name="yes">"Sim"</string>
+
+    <!-- XTIT: The title of the delete dialog -->
+    <string name="delete_dialog_title">"EXCLUIR"</string>
+
+    <!-- XMSG: The message of the delete dialog -->
+    <string name="delete_one_item">"Tem certeza de que deseja excluir o item selecionado?"</string>
+
+    <!-- XMSG: The message of the delete dialog in case of multiple selection -->
+    <string name="delete_more_items">"Tem certeza de que deseja excluir os itens selecionados?"</string>
+
+    <!-- XMSG: Error message, can be presented in a Toast or Dialog -->
+    <string name="entity_download_error">"Erro durante a operação em background."</string>
+
+    <!-- XMIT: Refresh menu item -->
+    <string name="menu_refresh">"Recarregar"</string>
+
+    <!-- XMIT: Refresh menu item -->
+    <string name="menu_home">"Página inicial"</string>
+
+    <!-- XMIT: Update menu item -->
+    <string name="menu_update">"Atualizar"</string>
+
+    <!-- XMIT: Delete menu item -->
+    <string name="menu_delete">"Excluir"</string>
+
+    <!-- NOTR: No translation needed, just placeholder text -->
+    <string name="object_header_headline">"Headline"</string>
+
+    <!-- NOTR: No translation needed, just placeholder text -->
+    <string name="object_header_subheadline">"Subheadline"</string>
+
+    <!-- NOTR: No translation needed, just placeholder text -->
+    <string name="object_header_body">"Body text"</string>
+
+    <!-- NOTR: No translation needed, just placeholder text -->
+    <string name="object_header_footnote">"Footnote"</string>
+
+    <!-- NOTR: No translation needed, just placeholder text -->
+    <string name="object_header_tag1">"TAG1"</string>
+
+    <!-- NOTR: No translation needed, just placeholder text -->
+    <string name="object_header_tag2">"TAG2"</string>
+
+    <!-- NOTR: No translation needed, just placeholder text -->
+    <string name="object_header_tag3">"TAG3"</string>
+
+    <!-- NOTR: No translation needed, just placeholder text -->
+    <string name="object_header_description">"Item description"</string>
+
+    <!-- NOTR: No translation needed, just placeholder text -->
+    <string name="object_header_status">"Status"</string>
+
+    <!-- NOTR: No translation needed, just placeholder text -->
+    <string name="error">"Error"</string>
+
+    <!-- error messages -->
+
+    <!-- XTIT: The title of the delete dialog -->
+    <string name="read_failed">"Falha no download"</string>
+
+    <!-- XMSG: Detailed error description -->
+    <string name="format_error">"A entrada não é compatível com o tipo de dados"</string>
+
+    <!-- XMSG: Detailed error description -->
+    <string name="read_failed_detail">"Falha no download; tente reiniciar o aplicativo."</string>
+
+    <!-- XTIT: The title of the delete dialog -->
+    <string name="create_failed">"Falha na criação"</string>
+
+    <!-- XMSG: Detailed error description -->
+    <string name="create_failed_detail">"Falha na criação; tente executá-la novamente mais tarde."</string>
+
+    <!-- XTIT: The title of the delete dialog -->
+    <string name="update_failed">"Falha na atualização"</string>
+    <string name="update_failed_detail">"Falha na atualização; recarregue os dados locais e tente executá-la novamente mais tarde."</string>
+
+    <!-- XTIT: The title of the delete dialog -->
+    <string name="delete_failed">"Falha na exclusão"</string>
+
+    <!-- XMSG: Detailed error description -->
+    <string name="delete_failed_detail">"Falha na exclusão; recarregue os dados locais e tente executá-la novamente mais tarde."</string>
+
+    <!-- XTIT: The message of the upload toast in case of success -->
+    <string name="log_upload_ok">"Log carregado no servidor."</string>
+
+    <!-- XTIT: The message of the upload toast in case of failing -->
+    <string name="log_upload_failed">"Falha no upload de logs"</string>
+
+    <!-- XMSG: Detailed error description -->
+    <string name="log_upload_failed_detail">"Foi recebido um URL malformado para o upload de logs. O aplicativo pode continuar funcionando, mas os logs não serão carregados no servidor."</string>
+
+    <!-- XTIT: The message of the upload toast in case of success -->
+    <string name="usage_upload_ok">"Utilização carregada no servidor"</string>
+
+    <!-- XTIT: The message of the upload toast in case of failing -->
+    <string name="usage_upload_failed">"Falha no upload da utilização"</string>
+
+    <!-- XMSG: Detailed error description -->
+    <string name="usage_init_failed">"Não foi possível inicializar a utilização"</string>
+
+    <!-- XTIT: The title of the delete dialog -->
+    <string name="push_error">"Erro de push"</string>
+
+    <!-- XTIT: The title of the delete dialog -->
+    <string name="push_message">"Mensagem por push recebida"</string>
+
+    <!-- XTIT: The Notification Text -->
+    <string name="push_text">"Notificação"</string>
+
+    <!-- XMSG: Detailed error description -->
+    <string name="push_token_upload_failed_detail">"Como não foi possível carregar o token de push no servidor da SAP, o recurso não funcionará e, consequentemente, você não receberá mensagens push."</string>
+
+    <!-- XMSG: Detailed error description -->
+    <string name="push_invalid_push_format">"Foi recebida uma mensagem push, mas não foi possível processá-la, pois ela tinha um formato inválido."</string>
+
+    <!-- XMSG: AlertDialog before navigation - Title -->
+    <string name="before_navigation_dialog_title">"Possível perda de dados"</string>
+
+    <!-- XMSG: AlertDialog before navigation - Message -->
+    <string name="before_navigation_dialog_message">"Quando você sair desta página, nenhum dado será salvo."</string>
+
+    <!-- XMSG: AlertDialog before navigation - Positive button (navigation occurs) -->
+    <string name="before_navigation_dialog_positive_button">"Sair"</string>
+
+    <!-- XMSG: AlertDialog before navigation - Negative button (cancelled navigation) -->
+    <string name="before_navigation_dialog_negative_button">"Ficar"</string>
+
+    <!-- XMSG: Detailed error description -->
+    <string name="server_auth_not_supported_saml">"Erro: este aplicativo não aceita autenticação SAML."</string>
+
+	<!-- XTIT: The title of the error dialog -->
+	<string name="bind_error">"Erro de vinculação"</string>
+	
+	<!-- XMSG: Detailed error description -->
+    <string name="bind_error_detail">"Falha ao vincular com o serviço de sincronização OData offline."</string>
+    
+	<!-- XTIT: The title of the error dialog -->
+	<string name="offline_provider_error">"Erro na inicialização offline"</string>
+	
+ 	<!-- XMSG: Detailed error description -->   
+	<string name="offline_provider_error_detail">"Falha ao inicializar o provedor de OData offline."</string>
+
+    <!-- XTIT: The title of the error dialog -->
+    <string name="offline_initial_open_error">"Erro na abertura inicial offline"</string>
+
+    <!-- XMSG: Detailed error description -->
+    <string name="offline_initial_open_error_detail">"Falha ao concluir a abertura inicial do repositório offline."</string>
+
+    <!-- XMSG: Detailed error description -->
+    <string name="offline_backend_big_data_error_detail">"O payload do back-end é muito alto. O tamanho padrão da limitação de payload do CPms é 64M. Você pode tentar corrigir isso com uma destas resoluções:\n\t1) Aumentar o limite de tamanho no offline.ini;\n\t2) Implementar paginação no servidor para permitir a sincronização de grandes conjuntos de dados em chunks;\n\t3) Utilizar solicitações $top ao definir consultas ou filtros para limitar o volume total de dados que o cliente baixa."</string>
+
+    <!-- XMSG: Detailed error description -->
+    <string name="offline_backend_time_out_error_detail">"Aumente o tempo de espera da conexão do back-end para este aplicativo no CPms e tente novamente."</string>
+
+    <!-- XTIT: The title of the error dialog -->
+	<string name="synchronize_failure">"Falha na sincronização"</string>
+	
+	<!-- XMSG: Detailed error description -->    
+	<string name="synchronize_failure_detail">"Falha na sincronização com os serviços móveis"</string>
+
+    <!-- XTIT: The title of the error dialog -->
+    <string name="offline_reset_store_error">"Falha na reinicialização do repositório offline"</string>
+
+    <!-- XMSG: Detailed error description -->
+    <string name="offline_reset_store_error_detail">"Falha ao reinicializar/remover o repositório de dados offline."</string>
+    <!-- error messages -->
+
+    <!-- offline -->	
+	
+	<!-- XMSG: Advise user of delay when performing initial opening of offline store -->
+	<string name="initializing_offline_store">"Inicializando o repositório offline. Aguarde."</string>
+	
+    <!-- NOTR: No translation needed, Label for entity state in offline -->	
+	<string name="local_state">"Local"</string>
+	
+    <!-- NOTR: No translation needed, Label for entity state in offline -->	
+	<string name="error_state">"Error"</string>
+    
+	<!-- NOTR: No translation needed, Label for entity state in offline -->	
+	<string name="updated_state">"Updated"</string>
+    
+	<!-- NOTR: No translation needed, Label for entity state in offline -->	
+	<string name="download_state">"Download"</string>
+    
+    <!-- XMIT: Menu item to trigger synchronization -->
+	<string name="synchronize_action">"Sincronizar"</string>
+	
+    <!-- offline -->
+	
+    <!-- XTIT: The title of the settings dialog -->
+    <string name="settings_activity_name">"Configurações"</string>
+    <!-- XTIT: The title of the settings menu -->
+    <string name="menu_item_settings">"Configurações"</string>
+
+    <!-- XTIT: The title of the passcode group -->
+    <string name="passcode">"Código de segurança"</string>
+    <!-- XTIT: The title of the change passcode menu item -->
+    <string name="manage_passcode">"Alterar código de segurança"</string>
+    <!-- XTIT: The title of the reset group -->
+    <string name="reset">"Reinicializar aplicativo"</string>
+    <!-- XTIT: The title of the reset app menu item -->
+    <string name="reset_app">"Limpar configurações do app"</string>
+    <!-- XTIT: The title of a confirmation dialog -->
+    <string name="reset_app_confirmation">"Todas as informações associadas com esse aplicativo serão removidas. Continuar?"</string>
+    <!-- XMSG: The message of reset client -->
+    <string name="reset_client">"Reinicializar mandante"</string>
+
+    <!-- XTIT: The title of a menu item -->
+    <string name="upload_usage">"Carregar dados de utilização"</string>
+    <!-- XTIT: The title of a menu item -->
+    <string name="set_usage_consent">"Permitir coleta de dados de utilização"</string>
+
+    <!-- XTIT: The title of a menu group -->
+    <string name="usage">"Utilização"</string>
+    <!-- XTIT: The title of a menu group -->
+    <string name="logging">"Registro em log"</string>
+    <!-- XTIT: The title of a menu item -->
+    <string name="upload_log">"Carregar log"</string>
+    <!-- XTIT: The description of a menu item -->
+    <string name="upload_log_summary">"Carregue o log no servidor."</string>
+    <!-- XMSG: The message of a log level toast -->
+    <string name="log_level_changed">"O nível de log padrão foi alterado da política de servidor para: %s"</string>
+    <!-- XMSG: The message of a log level toast -->
+    <string name="log_level_default">"A política de log não está definida no servidor; nível de log padrão definido como: %s"</string>
+    <!-- XTIT: The title of a menu item -->
+    <string name="log_level">"Nível de log"</string>
+    <!-- XTIT: The title of a menu item -->
+    <string name="dialog_title_choose_log_level">"Escolher nível de log"</string>
+    <!-- XTIT: Log level title -->
+    <string name="log_level_none">"Nenhum"</string>
+    <!-- XTIT: Log level title -->
+    <string name="log_level_fatal">"Fatal"</string>
+    <!-- XTIT: Log level title -->
+    <string name="log_level_error">"Erro"</string>
+    <!-- XTIT: Log level title -->
+    <string name="log_level_warning">"Aviso"</string>
+    <!-- XTIT: Log level title -->
+    <string name="log_level_info">"Informação"</string>
+    <!-- XTIT: Log level title -->
+    <string name="log_level_debug">"Depuração"</string>
+    <!-- XTIT: Log level title -->
+    <string name="log_level_path">"Caminho"</string>
+    <!-- XMSG: Authentication error message -->
+    <string name="authentication_failed">"Falha na autenticação"</string>
+
+    <!-- restrictions -->
+
+    <!-- XTIT: The title of the error dialog -->
+    <string name="restriction_service_url_title">"URL do serviço"</string>
+
+    <!-- XMSG: Detailed error description -->
+    <string name="restriction_service_url_description">"O URL do serviço OData."</string>
+    <!-- restrictions -->
+
+    <!-- XMSG: Detailed error description -->
+    <string name="error_back_navigation">"O aplicativo está protegido por um código de segurança, ele só será iniciado se você fornecer o código adequado."</string>
+
+</resources>

@@ -1,0 +1,140 @@
+apply plugin: 'com.android.application'
+apply plugin: 'com.sap.odata.android'
+
+buildscript {
+
+    repositories rootProject.ext.repos
+
+    dependencies {
+        classpath group: 'com.sap.cloud.android', name: 'odata-android-gradle-plugin', version: sdkVersion
+
+    }
+}
+
+
+odata {
+    verbose true
+    services {
+        // connection id: safetyatworkdestination
+        v2 {
+            schemaFile file("src/main/res/raw/safetyatworkdestination.xml")
+            packageName "com.sap.cloud.android.odata.v2"
+            serviceClass "v2"
+        }
+    }
+}
+
+
+android {
+    compileSdkVersion 29
+    defaultConfig {
+        multiDexEnabled true
+        applicationId "demo.sap.safetyandroid"
+        minSdkVersion 23
+        targetSdkVersion 29
+        versionCode 1
+        versionName "1.0"
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        testInstrumentationRunnerArguments clearPackageData: 'true'
+        dataBinding.enabled = true
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+
+    testOptions {
+        execution 'ANDROIDX_TEST_ORCHESTRATOR'
+    }
+}
+
+configurations {
+    all {
+        exclude module: 'httpclient'
+        exclude module: 'commons-logging'
+        exclude module: 'opengl-api'
+        exclude module: 'xmlParserAPIs'
+        exclude module: 'xpp3'
+        exclude module: 'android'
+    }
+}
+
+dependencies {
+    // Android framework dependencies
+    implementation group: 'androidx.appcompat', name: 'appcompat', version: '1.1.0'
+    implementation group: 'androidx.legacy', name: 'legacy-support-v4', version: '1.0.0'
+    implementation group: 'androidx.recyclerview', name: 'recyclerview', version: '1.1.0'
+    implementation group: 'com.google.android.material', name: 'material', version: '1.1.0'
+    implementation group: 'androidx.preference', name: 'preference', version: '1.1.1'
+    implementation group: 'androidx.constraintlayout', name: 'constraintlayout', version: '1.1.3'
+    implementation group: 'com.google.guava', name: 'guava', version: '14.0'
+
+
+    // Android Architecture Components
+    implementation group: 'androidx.lifecycle', name: 'lifecycle-common-java8', version: '2.2.0'
+    implementation group: 'androidx.lifecycle', name: 'lifecycle-extensions', version: '2.2.0'
+
+    // JUnit dependency
+    implementation 'androidx.appcompat:appcompat:1.2.0'
+    implementation 'androidx.constraintlayout:constraintlayout:2.0.1'
+    testImplementation 'junit:junit:4.13'
+
+    // SAP Cloud Android SDK dependencies
+    implementation group: 'com.sap.cloud.android', name: 'fiori', version: sdkVersion
+    implementation group: 'com.sap.cloud.android', name: 'onboarding', version: sdkVersion
+    implementation group: 'com.sap.cloud.android', name: 'flowsv2', version: sdkVersion
+    implementation group: 'com.sap.cloud.android', name: 'odata', version: sdkVersion
+    implementation group: 'com.sap.cloud.android', name: 'foundation', version: sdkVersion
+
+    // Logging dependency
+    implementation 'org.slf4j:slf4j-api:1.7.30'
+    implementation 'com.github.tony19:logback-android:2.0.0'
+
+    // Glide for loading of Media Resources
+    implementation 'com.github.bumptech.glide:glide:4.9.0'
+    implementation 'com.github.bumptech.glide:okhttp3-integration:4.9.0'
+
+    // Workaround for Glide and AndroidX
+    implementation 'com.android.support:support-annotations:28.0.0'
+    annotationProcessor 'com.android.support:support-annotations:28.0.0'
+    annotationProcessor 'com.github.bumptech.glide:compiler:4.9.0'
+
+    androidTestImplementation 'androidx.test:rules:1.2.0'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'
+    androidTestImplementation 'androidx.test.espresso:espresso-contrib:3.2.0'
+
+    // For UI testing
+    androidTestImplementation 'com.pgs-soft:espressodoppio:1.0.0'
+    androidTestImplementation 'androidx.test.uiautomator:uiautomator:2.2.0'
+    androidTestUtil 'androidx.test:orchestrator:1.2.0'
+
+    //Java code also need this library to convert java class to kotlin class
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
+
+    //per sdk
+    implementation 'com.squareup.retrofit2:retrofit:2.8.1'
+    implementation 'com.squareup.retrofit2:converter-gson:2.8.1'
+    implementation('com.squareup.retrofit2:converter-protobuf:2.8.1') {
+        exclude group: 'com.google.protobuf', module: 'protobuf-java'
+    }
+
+    implementation 'io.jsonwebtoken:jjwt-api:0.11.1'
+    runtimeOnly 'io.jsonwebtoken:jjwt-impl:0.11.1'
+    runtimeOnly('io.jsonwebtoken:jjwt-orgjson:0.11.1') {
+        exclude group: 'org.json', module: 'json'
+    }
+    implementation 'androidx.security:security-crypto:1.0.0-rc01'
+    implementation 'com.google.protobuf:protobuf-javalite:3.11.4'
+
+    implementation 'androidx.core:core:1.2.0'
+    implementation 'androidx.work:work-runtime:2.3.4'
+
+
+}

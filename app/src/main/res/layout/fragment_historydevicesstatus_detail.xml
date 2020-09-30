@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        tools:context=".mdui.historydevicesstatus.HistoryDevicesStatusActivity">
+    <data>
+        <import type = "com.sap.cloud.android.odata.v2.HistoryDevicesStatusType" />
+        <variable name="historyDevicesStatusType" type="HistoryDevicesStatusType"/>
+        <variable name="handler" type="demo.sap.safetyandroid.mdui.historydevicesstatus.HistoryDevicesStatusDetailFragment" />
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <androidx.coordinatorlayout.widget.CoordinatorLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <androidx.core.widget.NestedScrollView
+                android:id="@+id/item_detail_container"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:fillViewport="true"
+                app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <com.sap.cloud.mobile.fiori.misc.KeyValueCell
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:keyText="GenID"
+                        app:valueText="@{historyDevicesStatusType.getOptionalValue(HistoryDevicesStatusType.genID).toString()}" />
+
+                    <com.sap.cloud.mobile.fiori.misc.KeyValueCell
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:keyText="DeviceID"
+                        app:valueText="@{historyDevicesStatusType.getOptionalValue(HistoryDevicesStatusType.deviceID).toString()}" />
+
+                    <com.sap.cloud.mobile.fiori.misc.KeyValueCell
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:keyText="Description"
+                        app:valueText="@{historyDevicesStatusType.getOptionalValue(HistoryDevicesStatusType.description).toString()}" />
+
+                    <com.sap.cloud.mobile.fiori.misc.KeyValueCell
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:keyText="Capacity"
+                        app:valueText="@{historyDevicesStatusType.getOptionalValue(HistoryDevicesStatusType.capacity).toString()}" />
+
+                    <com.sap.cloud.mobile.fiori.misc.KeyValueCell
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:keyText="TimeFrame"
+                        app:valueText="@{historyDevicesStatusType.getOptionalValue(HistoryDevicesStatusType.timeFrame).toString()}" />
+
+                    <com.sap.cloud.mobile.fiori.misc.KeyValueCell
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:keyText="TagsString"
+                        app:valueText="@{historyDevicesStatusType.getOptionalValue(HistoryDevicesStatusType.tagsString).toString()}" />
+
+                    <com.sap.cloud.mobile.fiori.misc.KeyValueCell
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:keyText="Avg"
+                        app:valueText="@{historyDevicesStatusType.getOptionalValue(HistoryDevicesStatusType.avg).toString()}" />
+
+                </LinearLayout>
+            </androidx.core.widget.NestedScrollView>
+        </androidx.coordinatorlayout.widget.CoordinatorLayout>
+    </LinearLayout>
+</layout>

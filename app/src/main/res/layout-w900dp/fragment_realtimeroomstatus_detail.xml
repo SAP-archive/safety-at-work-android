@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        tools:context=".mdui.realtimeroomstatus.RealTimeRoomStatusActivity">
+    <data>
+        <import type = "com.sap.cloud.android.odata.v2.RealTimeRoomStatusType" />
+        <variable name="realTimeRoomStatusType" type="RealTimeRoomStatusType"/>
+        <variable name="handler" type="demo.sap.safetyandroid.mdui.realtimeroomstatus.RealTimeRoomStatusDetailFragment" />
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <com.sap.cloud.mobile.fiori.misc.KeyValueCell
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:keyText="TimeFrameInMinutes"
+            app:valueText="@{realTimeRoomStatusType.getOptionalValue(RealTimeRoomStatusType.timeFrameInMinutes).toString()}" />
+
+        <com.sap.cloud.mobile.fiori.misc.KeyValueCell
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:keyText="DeviceID"
+            app:valueText="@{realTimeRoomStatusType.getOptionalValue(RealTimeRoomStatusType.deviceID).toString()}" />
+
+        <com.sap.cloud.mobile.fiori.misc.KeyValueCell
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:keyText="Type_"
+            app:valueText="@{realTimeRoomStatusType.getOptionalValue(RealTimeRoomStatusType.type_).toString()}" />
+
+        <com.sap.cloud.mobile.fiori.misc.KeyValueCell
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:keyText="Description"
+            app:valueText="@{realTimeRoomStatusType.getOptionalValue(RealTimeRoomStatusType.description).toString()}" />
+
+        <com.sap.cloud.mobile.fiori.misc.KeyValueCell
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:keyText="OwnedBy"
+            app:valueText="@{realTimeRoomStatusType.getOptionalValue(RealTimeRoomStatusType.ownedBy).toString()}" />
+
+        <com.sap.cloud.mobile.fiori.misc.KeyValueCell
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:keyText="Capacity"
+            app:valueText="@{realTimeRoomStatusType.getOptionalValue(RealTimeRoomStatusType.capacity).toString()}" />
+
+        <com.sap.cloud.mobile.fiori.misc.KeyValueCell
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:keyText="Distance"
+            app:valueText="@{realTimeRoomStatusType.getOptionalValue(RealTimeRoomStatusType.distance).toString()}" />
+
+        <com.sap.cloud.mobile.fiori.misc.KeyValueCell
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:keyText="CreatedAt"
+            app:valueText="@{realTimeRoomStatusType.getOptionalValue(RealTimeRoomStatusType.createdAt).toString()}" />
+
+        <com.sap.cloud.mobile.fiori.misc.KeyValueCell
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:keyText="TagsString"
+            app:valueText="@{realTimeRoomStatusType.getOptionalValue(RealTimeRoomStatusType.tagsString).toString()}" />
+
+        <com.sap.cloud.mobile.fiori.misc.KeyValueCell
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:keyText="MeasuredPercentage"
+            app:valueText="@{realTimeRoomStatusType.getOptionalValue(RealTimeRoomStatusType.measuredPercentage).toString()}" />
+
+        <com.sap.cloud.mobile.fiori.misc.KeyValueCell
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:keyText="Measured"
+            app:valueText="@{realTimeRoomStatusType.getOptionalValue(RealTimeRoomStatusType.measured).toString()}" />
+
+        <RelativeLayout
+            style="@style/FioriButton.Flat"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/activity_horizontal_margin"
+            android:onClick="@{handler::onNavigationClickedToTagSet_toTags}"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/link_label_to_totags"
+                style="@style/FioriButton.Flat"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_centerInParent="true"
+                android:clickable="false"
+                android:focusable="false"
+                android:paddingLeft="16dp"
+                android:text="TagSet" />
+
+            <Button
+                android:id="@+id/link_button_to_totags"
+                style="@style/FioriButton.Flat"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerInParent="true"
+                android:clickable="false"
+                android:drawableStart="@drawable/ic_arrow_forward_black_24dp"
+                android:enabled="true"
+                android:visibility="invisible"
+                android:focusable="false" />
+        </RelativeLayout>
+
+    </LinearLayout>
+</layout>

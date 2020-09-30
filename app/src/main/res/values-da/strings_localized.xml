@@ -1,0 +1,297 @@
+<?xml version="1.0" encoding="UTF-8"?><resources>
+    <!-- XTIT: The title of the create Activity, will appear at the top of the screen -->
+    <string name="title_create_fragment">"Opret %1$s element"</string>
+
+    <!-- XTIT: The title of the update Activity, will appear at the top of the screen -->
+    <string name="title_update_fragment">"Opdater"</string>
+
+    <!-- XMSG: Error message for the mandatory input fields, will appear in the edit field left empty -->
+    <string name="mandatory_warning">"Dette er et obligatorisk felt"</string>
+
+    <!-- XTIT: The title of the welcome screen, will appear at the top of the screen -->
+    <string name="welcome_screen_headline_label">"Velkommen"</string>
+
+    <!-- YINS: Short description on the welcome screen -->
+    <string name="welcome_screen_detail_label">"Udforsk SAP Cloud Platform SDK for Android med denne genererede app"</string>
+
+    <!-- XFLD: label at the bottom of the welcome screen -->
+    <string name="welcome_screen_footnote_label">"Du kan prøve SDK-funktionerne i demotilstand."</string>
+
+    <!-- XFLD: label of the primary button on the welcome screen -->
+    <string name="welcome_screen_primary_button_label">"Kom godt i gang"</string>
+
+    <!-- XBUT: Text of the Save button -->
+    <string name="save">"Gem"</string>
+
+    <!-- XBUT: Text of the Update button -->
+    <string name="update">"Opdater"</string>
+
+    <!-- XBUT: Text of the Delete button -->
+    <string name="delete">"Slet"</string>
+
+    <!-- XBUT: Text of the Cancel button -->
+    <string name="cancel">"Annuller"</string>
+
+    <!-- XBUT: Text of the OK button -->
+    <string name="ok">"OK"</string>
+
+    <!-- XBUT: Text of the Delete button -->
+    <string name="yes">"Ja"</string>
+
+    <!-- XTIT: The title of the delete dialog -->
+    <string name="delete_dialog_title">"SLET"</string>
+
+    <!-- XMSG: The message of the delete dialog -->
+    <string name="delete_one_item">"Vil du slette det valgte element?"</string>
+
+    <!-- XMSG: The message of the delete dialog in case of multiple selection -->
+    <string name="delete_more_items">"Vil du slette de valgte elementer?"</string>
+
+    <!-- XMSG: Error message, can be presented in a Toast or Dialog -->
+    <string name="entity_download_error">"Der opstod en fejl under en baggrundshandling."</string>
+
+    <!-- XMIT: Refresh menu item -->
+    <string name="menu_refresh">"Opdater"</string>
+
+    <!-- XMIT: Refresh menu item -->
+    <string name="menu_home">"Startside"</string>
+
+    <!-- XMIT: Update menu item -->
+    <string name="menu_update">"Opdater"</string>
+
+    <!-- XMIT: Delete menu item -->
+    <string name="menu_delete">"Slet"</string>
+
+    <!-- NOTR: No translation needed, just placeholder text -->
+    <string name="object_header_headline">"Headline"</string>
+
+    <!-- NOTR: No translation needed, just placeholder text -->
+    <string name="object_header_subheadline">"Subheadline"</string>
+
+    <!-- NOTR: No translation needed, just placeholder text -->
+    <string name="object_header_body">"Body text"</string>
+
+    <!-- NOTR: No translation needed, just placeholder text -->
+    <string name="object_header_footnote">"Footnote"</string>
+
+    <!-- NOTR: No translation needed, just placeholder text -->
+    <string name="object_header_tag1">"TAG1"</string>
+
+    <!-- NOTR: No translation needed, just placeholder text -->
+    <string name="object_header_tag2">"TAG2"</string>
+
+    <!-- NOTR: No translation needed, just placeholder text -->
+    <string name="object_header_tag3">"TAG3"</string>
+
+    <!-- NOTR: No translation needed, just placeholder text -->
+    <string name="object_header_description">"Item description"</string>
+
+    <!-- NOTR: No translation needed, just placeholder text -->
+    <string name="object_header_status">"Status"</string>
+
+    <!-- NOTR: No translation needed, just placeholder text -->
+    <string name="error">"Error"</string>
+
+    <!-- error messages -->
+
+    <!-- XTIT: The title of the delete dialog -->
+    <string name="read_failed">"Download mislykkedes"</string>
+
+    <!-- XMSG: Detailed error description -->
+    <string name="format_error">"Input er ikke passende for datatypen"</string>
+
+    <!-- XMSG: Detailed error description -->
+    <string name="read_failed_detail">"Downloadhandlingen mislykkedes. Prøv at genstarte applikationen."</string>
+
+    <!-- XTIT: The title of the delete dialog -->
+    <string name="create_failed">"Oprettelse mislykkedes"</string>
+
+    <!-- XMSG: Detailed error description -->
+    <string name="create_failed_detail">"Oprettelseshandlingen mislykkedes. Prøv at udføre den igen senere."</string>
+
+    <!-- XTIT: The title of the delete dialog -->
+    <string name="update_failed">"Opdatering mislykkedes"</string>
+    <string name="update_failed_detail">"Opdateringshandlingen mislykkedes. Opdater de lokale data, og prøv at udføre den igen senere."</string>
+
+    <!-- XTIT: The title of the delete dialog -->
+    <string name="delete_failed">"Sletning mislykkedes"</string>
+
+    <!-- XMSG: Detailed error description -->
+    <string name="delete_failed_detail">"Sletningshandlingen mislykkedes. Opdater de lokale data, og prøv at udføre den igen senere."</string>
+
+    <!-- XTIT: The message of the upload toast in case of success -->
+    <string name="log_upload_ok">"Protokol uploades til serveren."</string>
+
+    <!-- XTIT: The message of the upload toast in case of failing -->
+    <string name="log_upload_failed">"Upload af protokol mislykkedes"</string>
+
+    <!-- XMSG: Detailed error description -->
+    <string name="log_upload_failed_detail">"Forkert udformet URL blev modtaget til upload af protokol. Applikationen virker muligvis stadig, men protokoller uploades ikke til serveren."</string>
+
+    <!-- XTIT: The message of the upload toast in case of success -->
+    <string name="usage_upload_ok">"Anvendelse uploades til serveren"</string>
+
+    <!-- XTIT: The message of the upload toast in case of failing -->
+    <string name="usage_upload_failed">"Upload af anvendelse mislykkedes"</string>
+
+    <!-- XMSG: Detailed error description -->
+    <string name="usage_init_failed">"Anvendelse kunne ikke initialisere"</string>
+
+    <!-- XTIT: The title of the delete dialog -->
+    <string name="push_error">"Fejl ved push"</string>
+
+    <!-- XTIT: The title of the delete dialog -->
+    <string name="push_message">"Pushmeddelelse modtaget"</string>
+
+    <!-- XTIT: The Notification Text -->
+    <string name="push_text">"Underretning"</string>
+
+    <!-- XMSG: Detailed error description -->
+    <string name="push_token_upload_failed_detail">"Pushfunktionen virker ikke, da pushtoken ikke kunne uploades til SAP-serveren. Du modtager ikke pushmeddelelser."</string>
+
+    <!-- XMSG: Detailed error description -->
+    <string name="push_invalid_push_format">"Pushmeddelelse modtaget, men den kunne ikke behandles, da formatet er ugyldigt."</string>
+
+    <!-- XMSG: AlertDialog before navigation - Title -->
+    <string name="before_navigation_dialog_title">"Potentielt datatab"</string>
+
+    <!-- XMSG: AlertDialog before navigation - Message -->
+    <string name="before_navigation_dialog_message">"Hvis denne side forlades, bliver ingen data gemt."</string>
+
+    <!-- XMSG: AlertDialog before navigation - Positive button (navigation occurs) -->
+    <string name="before_navigation_dialog_positive_button">"Forlad"</string>
+
+    <!-- XMSG: AlertDialog before navigation - Negative button (cancelled navigation) -->
+    <string name="before_navigation_dialog_negative_button">"Bliv"</string>
+
+    <!-- XMSG: Detailed error description -->
+    <string name="server_auth_not_supported_saml">"Fejl: Denne applikation understøtter ikke SAML-autentifikation."</string>
+
+	<!-- XTIT: The title of the error dialog -->
+	<string name="bind_error">"Forbindelsesfejl"</string>
+	
+	<!-- XMSG: Detailed error description -->
+    <string name="bind_error_detail">"Forbindelse til offline-OData-synkroniseringsservice mislykkedes."</string>
+    
+	<!-- XTIT: The title of the error dialog -->
+	<string name="offline_provider_error">"Offline-initialiseringsfejl"</string>
+	
+ 	<!-- XMSG: Detailed error description -->   
+	<string name="offline_provider_error_detail">"Initialisering af offline-OData-provider mislykkedes."</string>
+
+    <!-- XTIT: The title of the error dialog -->
+    <string name="offline_initial_open_error">"Initial offline-åbningsfejl"</string>
+
+    <!-- XMSG: Detailed error description -->
+    <string name="offline_initial_open_error_detail">"Afslutning af initial åbning af offline-arkiv."</string>
+
+    <!-- XMSG: Detailed error description -->
+    <string name="offline_backend_big_data_error_detail">"Payload fra backend var for stort, standardstørrelsen på CPms-payload-begrænsningen er 64M. Du kan forsøge at løse problemet med en af følgende løsninger:\n\t1) Forøg størrelsesbegrænsningen i offline.ini;\n\t2) Implementer paginering på serversiden for at aktivere synkronisering af store datasets i chunks;\n\t3) Anvend $top-anmodninger til definition af forespørgsler eller filtre for at begrænse det samlede beløb af data, som klienten downloader."</string>
+
+    <!-- XMSG: Detailed error description -->
+    <string name="offline_backend_time_out_error_detail">"Forøg backend-forbindelsestimeout for denne applikation i CPms og forsøg igen."</string>
+
+    <!-- XTIT: The title of the error dialog -->
+	<string name="synchronize_failure">"Synkroniseringsfejl"</string>
+	
+	<!-- XMSG: Detailed error description -->    
+	<string name="synchronize_failure_detail">"Synkronisering med Mobile Services mislykkedes"</string>
+
+    <!-- XTIT: The title of the error dialog -->
+    <string name="offline_reset_store_error">"Fejl ved nulstilling af offline-arkiv"</string>
+
+    <!-- XMSG: Detailed error description -->
+    <string name="offline_reset_store_error_detail">"Kunne ikke nulstille/fjerne offline-dataarkiv."</string>
+    <!-- error messages -->
+
+    <!-- offline -->	
+	
+	<!-- XMSG: Advise user of delay when performing initial opening of offline store -->
+	<string name="initializing_offline_store">"Initialiserer offline-arkiv. Vent."</string>
+	
+    <!-- NOTR: No translation needed, Label for entity state in offline -->	
+	<string name="local_state">"Local"</string>
+	
+    <!-- NOTR: No translation needed, Label for entity state in offline -->	
+	<string name="error_state">"Error"</string>
+    
+	<!-- NOTR: No translation needed, Label for entity state in offline -->	
+	<string name="updated_state">"Updated"</string>
+    
+	<!-- NOTR: No translation needed, Label for entity state in offline -->	
+	<string name="download_state">"Download"</string>
+    
+    <!-- XMIT: Menu item to trigger synchronization -->
+	<string name="synchronize_action">"Synkroniser"</string>
+	
+    <!-- offline -->
+	
+    <!-- XTIT: The title of the settings dialog -->
+    <string name="settings_activity_name">"Indstillinger"</string>
+    <!-- XTIT: The title of the settings menu -->
+    <string name="menu_item_settings">"Indstillinger"</string>
+
+    <!-- XTIT: The title of the passcode group -->
+    <string name="passcode">"Adgangskode"</string>
+    <!-- XTIT: The title of the change passcode menu item -->
+    <string name="manage_passcode">"Ændr adgangskode"</string>
+    <!-- XTIT: The title of the reset group -->
+    <string name="reset">"Nulstil applikation"</string>
+    <!-- XTIT: The title of the reset app menu item -->
+    <string name="reset_app">"Ryd app-indstillinger"</string>
+    <!-- XTIT: The title of a confirmation dialog -->
+    <string name="reset_app_confirmation">"Alle tilknyttede oplysninger til denne applikation fjernes. Vil du fortsætte?"</string>
+    <!-- XMSG: The message of reset client -->
+    <string name="reset_client">"Nulstil klient"</string>
+
+    <!-- XTIT: The title of a menu item -->
+    <string name="upload_usage">"Upload anvendelsesdata"</string>
+    <!-- XTIT: The title of a menu item -->
+    <string name="set_usage_consent">"Samtykke til anvendelsesindsamling"</string>
+
+    <!-- XTIT: The title of a menu group -->
+    <string name="usage">"Anvendelse"</string>
+    <!-- XTIT: The title of a menu group -->
+    <string name="logging">"Protokollering"</string>
+    <!-- XTIT: The title of a menu item -->
+    <string name="upload_log">"Upload protokol"</string>
+    <!-- XTIT: The description of a menu item -->
+    <string name="upload_log_summary">"Upload protokol til serveren."</string>
+    <!-- XMSG: The message of a log level toast -->
+    <string name="log_level_changed">"Standardprotokolniveau ændret fra serverpolitikken til: %s"</string>
+    <!-- XMSG: The message of a log level toast -->
+    <string name="log_level_default">"Protokolpolitik er ikke angivet på serveren, standardprotokolniveau er angivet til: %s"</string>
+    <!-- XTIT: The title of a menu item -->
+    <string name="log_level">"Protokolniveau"</string>
+    <!-- XTIT: The title of a menu item -->
+    <string name="dialog_title_choose_log_level">"Vælg protokolniveau"</string>
+    <!-- XTIT: Log level title -->
+    <string name="log_level_none">"Intet"</string>
+    <!-- XTIT: Log level title -->
+    <string name="log_level_fatal">"Alvorlig"</string>
+    <!-- XTIT: Log level title -->
+    <string name="log_level_error">"Fejl"</string>
+    <!-- XTIT: Log level title -->
+    <string name="log_level_warning">"Advar"</string>
+    <!-- XTIT: Log level title -->
+    <string name="log_level_info">"Info"</string>
+    <!-- XTIT: Log level title -->
+    <string name="log_level_debug">"Fejlfind"</string>
+    <!-- XTIT: Log level title -->
+    <string name="log_level_path">"Sti"</string>
+    <!-- XMSG: Authentication error message -->
+    <string name="authentication_failed">"Godkendelse mislykkedes"</string>
+
+    <!-- restrictions -->
+
+    <!-- XTIT: The title of the error dialog -->
+    <string name="restriction_service_url_title">"Service-URL"</string>
+
+    <!-- XMSG: Detailed error description -->
+    <string name="restriction_service_url_description">"URL for OData-servicen."</string>
+    <!-- restrictions -->
+
+    <!-- XMSG: Detailed error description -->
+    <string name="error_back_navigation">"Applikationen er adgangskodebeskyttet. Den kan ikke åbnes uden den korrekte adgangskode."</string>
+
+</resources>

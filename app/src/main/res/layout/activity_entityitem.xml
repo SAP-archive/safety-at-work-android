@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/app_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:elevation="0dp"
+        android:theme="@style/AppTheme.AppBarOverlay"
+        app:elevation="0dp">
+
+        <com.google.android.material.appbar.CollapsingToolbarLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="bottom"
+            android:fitsSystemWindows="true"
+            app:contentScrim="?attr/colorPrimary"
+            app:expandedTitleGravity="left|start|top"
+            app:layout_scrollFlags="scroll|exitUntilCollapsed|snap"
+            app:titleEnabled="false">
+
+            <com.sap.cloud.mobile.fiori.object.ObjectHeader
+                android:id="@+id/objectHeader"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+                android:layout_marginTop="?attr/actionBarSize"
+                android:elevation="0dp"
+                android:paddingBottom="@dimen/md_keylines"
+                android:scrollbars="vertical"
+                app:body="@string/object_header_body"
+                app:description="@string/object_header_description"
+                app:footnote="@string/object_header_footnote"
+                app:headline="@string/object_header_headline"
+                app:statusWidth="60dp"
+                app:subheadline="@string/object_header_subheadline">
+
+                <com.sap.cloud.mobile.fiori.common.Tag
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/object_header_tag1"
+                    android:textColor="@color/darkGrey"
+                    app:layout_header_group="TAG" />
+
+                <com.sap.cloud.mobile.fiori.common.Tag
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/object_header_tag2"
+                    android:textColor="@color/darkGrey"
+                    app:layout_header_group="TAG" />
+
+                <com.sap.cloud.mobile.fiori.common.Tag
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/object_header_tag3"
+                    android:textColor="@color/darkGrey"
+                    app:layout_header_group="TAG" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:contentDescription="@string/error"
+                    android:src="@drawable/ic_error_black_24dp"
+                    android:tint="@color/white"
+                    app:layout_header_group="STATUS" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:ellipsize="end"
+                    android:lines="1"
+                    android:text="@string/object_header_status"
+                    android:textColor="@color/grey_300"
+                    app:layout_header_group="STATUS" />
+
+            </com.sap.cloud.mobile.fiori.object.ObjectHeader>
+
+            <androidx.appcompat.widget.Toolbar
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                android:background="?attr/colorPrimary"
+                android:minHeight="?attr/actionBarSize"
+                app:layout_collapseMode="pin"
+                app:popupTheme="@style/AppTheme.PopupOverlay"
+                app:titleTextColor="@color/colorWhite" />
+
+            <com.sap.cloud.mobile.fiori.indicator.FioriProgressBar
+                android:id="@+id/indeterminateBar"
+                style="@style/FioriProgressbar.Horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="?attr/colorPrimary"
+                android:visibility="invisible"
+                app:layout_anchor="@+id/toolbar"
+                app:layout_anchorGravity="bottom"
+                app:layout_collapseMode="pin" />
+
+        </com.google.android.material.appbar.CollapsingToolbarLayout>
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:baselineAligned="true"
+        android:divider="?android:attr/dividerHorizontal"
+        android:orientation="horizontal"
+        android:showDividers="middle"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <FrameLayout
+            android:id="@+id/masterFrame"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior" />
+
+    </LinearLayout>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

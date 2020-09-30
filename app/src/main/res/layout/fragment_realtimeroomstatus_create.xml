@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+    <data>
+        <import type="demo.sap.safetyandroid.databinding.simplepropertyformcell.Converter"/>
+        <import type="android.view.View"/>
+        <variable name="realTimeRoomStatusType" type="com.sap.cloud.android.odata.v2.RealTimeRoomStatusType"/>
+    </data>
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/white"
+            android:clickable="true">
+        <ScrollView
+                xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent">
+
+            <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/create_update_realtimeroomstatustype"
+                    android:orientation="vertical">
+
+                <com.sap.cloud.mobile.fiori.formcell.SimplePropertyFormCell
+                        xmlns:android="http://schemas.android.com/apk/res/android"
+                        xmlns:app="http://schemas.android.com/apk/res-auto"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/typeid"
+                        android:tag="Type"
+                        android:maxLength="@{50}"
+                        app:key="Type_"
+                        app:value="@={realTimeRoomStatusType.type_}">
+                </com.sap.cloud.mobile.fiori.formcell.SimplePropertyFormCell>
+                <com.sap.cloud.mobile.fiori.formcell.SimplePropertyFormCell
+                        xmlns:android="http://schemas.android.com/apk/res/android"
+                        xmlns:app="http://schemas.android.com/apk/res-auto"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/descriptionid"
+                        android:tag="Description"
+                        android:maxLength="@{200}"
+                        app:key="Description"
+                        app:value="@={realTimeRoomStatusType.description}">
+                </com.sap.cloud.mobile.fiori.formcell.SimplePropertyFormCell>
+                <com.sap.cloud.mobile.fiori.formcell.SimplePropertyFormCell
+                        xmlns:android="http://schemas.android.com/apk/res/android"
+                        xmlns:app="http://schemas.android.com/apk/res-auto"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/ownedbyid"
+                        android:tag="OwnedBy"
+                        android:maxLength="@{100}"
+                        app:key="OwnedBy"
+                        app:value="@={realTimeRoomStatusType.ownedBy}">
+                </com.sap.cloud.mobile.fiori.formcell.SimplePropertyFormCell>
+                <com.sap.cloud.mobile.fiori.formcell.SimplePropertyFormCell
+                        xmlns:android="http://schemas.android.com/apk/res/android"
+                        xmlns:app="http://schemas.android.com/apk/res-auto"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/capacityid"
+                        android:tag="Capacity"
+                        app:key="Capacity"
+                        app:value="@={Converter.toString(capacityid, realTimeRoomStatusType.capacity, realTimeRoomStatusType.capacity)}">
+                </com.sap.cloud.mobile.fiori.formcell.SimplePropertyFormCell>
+                <com.sap.cloud.mobile.fiori.formcell.SimplePropertyFormCell
+                        xmlns:android="http://schemas.android.com/apk/res/android"
+                        xmlns:app="http://schemas.android.com/apk/res-auto"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/distanceid"
+                        android:tag="Distance"
+                        app:key="Distance"
+                        app:value="@={Converter.toString(distanceid, realTimeRoomStatusType.distance, realTimeRoomStatusType.distance)}">
+                </com.sap.cloud.mobile.fiori.formcell.SimplePropertyFormCell>
+                <com.sap.cloud.mobile.fiori.formcell.SimplePropertyFormCell
+                        xmlns:android="http://schemas.android.com/apk/res/android"
+                        xmlns:app="http://schemas.android.com/apk/res-auto"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/createdatid"
+                        android:tag="CreatedAt"
+                        app:key="CreatedAt"
+                        app:value="@={Converter.toString(createdatid, realTimeRoomStatusType.createdAt, realTimeRoomStatusType.createdAt)}">
+                </com.sap.cloud.mobile.fiori.formcell.SimplePropertyFormCell>
+                <com.sap.cloud.mobile.fiori.formcell.SimplePropertyFormCell
+                        xmlns:android="http://schemas.android.com/apk/res/android"
+                        xmlns:app="http://schemas.android.com/apk/res-auto"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/tagsstringid"
+                        android:tag="TagsString"
+                        android:maxLength="@{2000}"
+                        app:key="TagsString"
+                        app:value="@={realTimeRoomStatusType.tagsString}">
+                </com.sap.cloud.mobile.fiori.formcell.SimplePropertyFormCell>
+                <com.sap.cloud.mobile.fiori.formcell.SimplePropertyFormCell
+                        xmlns:android="http://schemas.android.com/apk/res/android"
+                        xmlns:app="http://schemas.android.com/apk/res-auto"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/measuredpercentageid"
+                        android:tag="MeasuredPercentage"
+                        app:key="MeasuredPercentage"
+                        app:value="@={Converter.toString(measuredpercentageid, realTimeRoomStatusType.measuredPercentage, realTimeRoomStatusType.measuredPercentage)}">
+                </com.sap.cloud.mobile.fiori.formcell.SimplePropertyFormCell>
+                <com.sap.cloud.mobile.fiori.formcell.SimplePropertyFormCell
+                        xmlns:android="http://schemas.android.com/apk/res/android"
+                        xmlns:app="http://schemas.android.com/apk/res-auto"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/measuredid"
+                        android:tag="Measured"
+                        app:key="Measured"
+                        app:value="@={Converter.toString(measuredid, realTimeRoomStatusType.measured, realTimeRoomStatusType.measured)}">
+                </com.sap.cloud.mobile.fiori.formcell.SimplePropertyFormCell>
+            </LinearLayout>
+        </ScrollView>
+    </LinearLayout>
+</layout>

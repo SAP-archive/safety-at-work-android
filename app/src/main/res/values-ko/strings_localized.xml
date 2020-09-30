@@ -1,0 +1,297 @@
+<?xml version="1.0" encoding="UTF-8"?><resources>
+    <!-- XTIT: The title of the create Activity, will appear at the top of the screen -->
+    <string name="title_create_fragment">"%1$s 항목 생성"</string>
+
+    <!-- XTIT: The title of the update Activity, will appear at the top of the screen -->
+    <string name="title_update_fragment">"업데이트"</string>
+
+    <!-- XMSG: Error message for the mandatory input fields, will appear in the edit field left empty -->
+    <string name="mandatory_warning">"필수 필드입니다."</string>
+
+    <!-- XTIT: The title of the welcome screen, will appear at the top of the screen -->
+    <string name="welcome_screen_headline_label">"환영"</string>
+
+    <!-- YINS: Short description on the welcome screen -->
+    <string name="welcome_screen_detail_label">"이 앱에서 SAP Cloud Platform SDK for Android의 기능을 살펴보십시오."</string>
+
+    <!-- XFLD: label at the bottom of the welcome screen -->
+    <string name="welcome_screen_footnote_label">"데모 모드에서 SDK 기능을 사용해볼 수 있습니다."</string>
+
+    <!-- XFLD: label of the primary button on the welcome screen -->
+    <string name="welcome_screen_primary_button_label">"시작"</string>
+
+    <!-- XBUT: Text of the Save button -->
+    <string name="save">"저장"</string>
+
+    <!-- XBUT: Text of the Update button -->
+    <string name="update">"업데이트"</string>
+
+    <!-- XBUT: Text of the Delete button -->
+    <string name="delete">"삭제"</string>
+
+    <!-- XBUT: Text of the Cancel button -->
+    <string name="cancel">"취소"</string>
+
+    <!-- XBUT: Text of the OK button -->
+    <string name="ok">"확인"</string>
+
+    <!-- XBUT: Text of the Delete button -->
+    <string name="yes">"예"</string>
+
+    <!-- XTIT: The title of the delete dialog -->
+    <string name="delete_dialog_title">"삭제"</string>
+
+    <!-- XMSG: The message of the delete dialog -->
+    <string name="delete_one_item">"선택한 항목을 삭제하시겠습니까?"</string>
+
+    <!-- XMSG: The message of the delete dialog in case of multiple selection -->
+    <string name="delete_more_items">"선택한 항목을 삭제하시겠습니까?"</string>
+
+    <!-- XMSG: Error message, can be presented in a Toast or Dialog -->
+    <string name="entity_download_error">"백그라운드 작업 중에 오류가 발생했습니다."</string>
+
+    <!-- XMIT: Refresh menu item -->
+    <string name="menu_refresh">"새로 고침"</string>
+
+    <!-- XMIT: Refresh menu item -->
+    <string name="menu_home">"홈"</string>
+
+    <!-- XMIT: Update menu item -->
+    <string name="menu_update">"업데이트"</string>
+
+    <!-- XMIT: Delete menu item -->
+    <string name="menu_delete">"삭제"</string>
+
+    <!-- NOTR: No translation needed, just placeholder text -->
+    <string name="object_header_headline">"Headline"</string>
+
+    <!-- NOTR: No translation needed, just placeholder text -->
+    <string name="object_header_subheadline">"Subheadline"</string>
+
+    <!-- NOTR: No translation needed, just placeholder text -->
+    <string name="object_header_body">"Body text"</string>
+
+    <!-- NOTR: No translation needed, just placeholder text -->
+    <string name="object_header_footnote">"Footnote"</string>
+
+    <!-- NOTR: No translation needed, just placeholder text -->
+    <string name="object_header_tag1">"TAG1"</string>
+
+    <!-- NOTR: No translation needed, just placeholder text -->
+    <string name="object_header_tag2">"TAG2"</string>
+
+    <!-- NOTR: No translation needed, just placeholder text -->
+    <string name="object_header_tag3">"TAG3"</string>
+
+    <!-- NOTR: No translation needed, just placeholder text -->
+    <string name="object_header_description">"Item description"</string>
+
+    <!-- NOTR: No translation needed, just placeholder text -->
+    <string name="object_header_status">"Status"</string>
+
+    <!-- NOTR: No translation needed, just placeholder text -->
+    <string name="error">"Error"</string>
+
+    <!-- error messages -->
+
+    <!-- XTIT: The title of the delete dialog -->
+    <string name="read_failed">"다운로드 실패"</string>
+
+    <!-- XMSG: Detailed error description -->
+    <string name="format_error">"입력 값의 데이터 유형이 적절하지 않습니다."</string>
+
+    <!-- XMSG: Detailed error description -->
+    <string name="read_failed_detail">"다운로드 작업에 실패했습니다. 어플리케이션을 다시 시작해 보십시오."</string>
+
+    <!-- XTIT: The title of the delete dialog -->
+    <string name="create_failed">"생성 실패"</string>
+
+    <!-- XMSG: Detailed error description -->
+    <string name="create_failed_detail">"생성 작업에 실패했습니다. 나중에 다시 실행해 보십시오."</string>
+
+    <!-- XTIT: The title of the delete dialog -->
+    <string name="update_failed">"업데이트 실패"</string>
+    <string name="update_failed_detail">"업데이트 작업에 실패했습니다. 로컬 데이터를 새로 고친 후 나중에 다시 수행해 보십시오."</string>
+
+    <!-- XTIT: The title of the delete dialog -->
+    <string name="delete_failed">"삭제 실패"</string>
+
+    <!-- XMSG: Detailed error description -->
+    <string name="delete_failed_detail">"삭제 작업에 실패했습니다. 로컬 데이터를 새로 고친 후 나중에 다시 수행해 보십시오."</string>
+
+    <!-- XTIT: The message of the upload toast in case of success -->
+    <string name="log_upload_ok">"로그가 서버에 업로드되었습니다."</string>
+
+    <!-- XTIT: The message of the upload toast in case of failing -->
+    <string name="log_upload_failed">"로그 업로드 실패"</string>
+
+    <!-- XMSG: Detailed error description -->
+    <string name="log_upload_failed_detail">"로그 업로드 URL의 형식이 잘못되었습니다. 어플리케이션은 계속 작동할 수 있지만 로그가 서버에 업로드되지 않습니다."</string>
+
+    <!-- XTIT: The message of the upload toast in case of success -->
+    <string name="usage_upload_ok">"사용 데이터가 서버에 업로드됨"</string>
+
+    <!-- XTIT: The message of the upload toast in case of failing -->
+    <string name="usage_upload_failed">"사용 데이터 업로드 실패"</string>
+
+    <!-- XMSG: Detailed error description -->
+    <string name="usage_init_failed">"사용 초기화 실패"</string>
+
+    <!-- XTIT: The title of the delete dialog -->
+    <string name="push_error">"푸시 오류"</string>
+
+    <!-- XTIT: The title of the delete dialog -->
+    <string name="push_message">"푸시 메시지 받음"</string>
+
+    <!-- XTIT: The Notification Text -->
+    <string name="push_text">"알림"</string>
+
+    <!-- XMSG: Detailed error description -->
+    <string name="push_token_upload_failed_detail">"푸시 토큰을 SAP 서버에 업로드할 수 없어 푸시 기능이 작동하지 않으며 푸시 메시지가 수신되지 않습니다."</string>
+
+    <!-- XMSG: Detailed error description -->
+    <string name="push_invalid_push_format">"푸시 메시지를 받았지만 형식이 올바르지 않아 푸시 메시지를 처리할 수 없습니다."</string>
+
+    <!-- XMSG: AlertDialog before navigation - Title -->
+    <string name="before_navigation_dialog_title">"잠재적 데이터 손실"</string>
+
+    <!-- XMSG: AlertDialog before navigation - Message -->
+    <string name="before_navigation_dialog_message">"이 페이지를 나가면 데이터가 저장되지 않습니다."</string>
+
+    <!-- XMSG: AlertDialog before navigation - Positive button (navigation occurs) -->
+    <string name="before_navigation_dialog_positive_button">"나가기"</string>
+
+    <!-- XMSG: AlertDialog before navigation - Negative button (cancelled navigation) -->
+    <string name="before_navigation_dialog_negative_button">"머무르기"</string>
+
+    <!-- XMSG: Detailed error description -->
+    <string name="server_auth_not_supported_saml">"오류: 이 어플리케이션은 SAML 인증을 지원하지 않습니다."</string>
+
+	<!-- XTIT: The title of the error dialog -->
+	<string name="bind_error">"바인딩 오류"</string>
+	
+	<!-- XMSG: Detailed error description -->
+    <string name="bind_error_detail">"오프라인 OData 동기화 서비스에 바인딩할 수 없습니다."</string>
+    
+	<!-- XTIT: The title of the error dialog -->
+	<string name="offline_provider_error">"오프라인 초기화 오류"</string>
+	
+ 	<!-- XMSG: Detailed error description -->   
+	<string name="offline_provider_error_detail">"오프라인 OData 프로바이더를 초기화하지 못했습니다."</string>
+
+    <!-- XTIT: The title of the error dialog -->
+    <string name="offline_initial_open_error">"오프라인 개시 오류"</string>
+
+    <!-- XMSG: Detailed error description -->
+    <string name="offline_initial_open_error_detail">"오프라인 저장소 개시를 완료하지 못했습니다."</string>
+
+    <!-- XMSG: Detailed error description -->
+    <string name="offline_backend_big_data_error_detail">"백엔드의 페이로드가 너무 큽니다. CPms 페이로드의 기본 크기 제한은 64M입니다. 다음 방법 중 하나로 수정할 수 있습니다.\n\t1) offline.ini에서 크기 한도를 증가시킵니다.\n\t2) 청크의 큰 데이터 세트 동기화를 사용하기 위해 서버 측 페이지 매김을 구현합니다.\n\t3) 클라이언트가 다운로드하는 데이터 총량을 제한하는 쿼리나 필터를 정의하는 데 $top 요청을 사용합니다."</string>
+
+    <!-- XMSG: Detailed error description -->
+    <string name="offline_backend_time_out_error_detail">"CPms에서 이 어플리케이션의 백엔드 연결 시간 제한을 증가시킨 후에 다시 시도하십시오."</string>
+
+    <!-- XTIT: The title of the error dialog -->
+	<string name="synchronize_failure">"동기화 실패"</string>
+	
+	<!-- XMSG: Detailed error description -->    
+	<string name="synchronize_failure_detail">"Mobile Services와 동기화하지 못했습니다."</string>
+
+    <!-- XTIT: The title of the error dialog -->
+    <string name="offline_reset_store_error">"오프라인 저장소 재설정 실패"</string>
+
+    <!-- XMSG: Detailed error description -->
+    <string name="offline_reset_store_error_detail">"오프라인 데이터 저장소를 재설정/제거하지 못했습니다."</string>
+    <!-- error messages -->
+
+    <!-- offline -->	
+	
+	<!-- XMSG: Advise user of delay when performing initial opening of offline store -->
+	<string name="initializing_offline_store">"오프라인 저장소를 초기화하는 중입니다. 잠시 기다려 주십시오."</string>
+	
+    <!-- NOTR: No translation needed, Label for entity state in offline -->	
+	<string name="local_state">"Local"</string>
+	
+    <!-- NOTR: No translation needed, Label for entity state in offline -->	
+	<string name="error_state">"Error"</string>
+    
+	<!-- NOTR: No translation needed, Label for entity state in offline -->	
+	<string name="updated_state">"Updated"</string>
+    
+	<!-- NOTR: No translation needed, Label for entity state in offline -->	
+	<string name="download_state">"Download"</string>
+    
+    <!-- XMIT: Menu item to trigger synchronization -->
+	<string name="synchronize_action">"동기화"</string>
+	
+    <!-- offline -->
+	
+    <!-- XTIT: The title of the settings dialog -->
+    <string name="settings_activity_name">"설정"</string>
+    <!-- XTIT: The title of the settings menu -->
+    <string name="menu_item_settings">"설정"</string>
+
+    <!-- XTIT: The title of the passcode group -->
+    <string name="passcode">"패스코드"</string>
+    <!-- XTIT: The title of the change passcode menu item -->
+    <string name="manage_passcode">"패스코드 변경"</string>
+    <!-- XTIT: The title of the reset group -->
+    <string name="reset">"어플리케이션 재설정"</string>
+    <!-- XTIT: The title of the reset app menu item -->
+    <string name="reset_app">"앱 설정 지우기"</string>
+    <!-- XTIT: The title of a confirmation dialog -->
+    <string name="reset_app_confirmation">"이 어플리케이션과 연관된 모든 정보가 제거됩니다. 계속하시겠습니까?"</string>
+    <!-- XMSG: The message of reset client -->
+    <string name="reset_client">"클라이언트 재설정"</string>
+
+    <!-- XTIT: The title of a menu item -->
+    <string name="upload_usage">"사용 데이터 업로드"</string>
+    <!-- XTIT: The title of a menu item -->
+    <string name="set_usage_consent">"사용 수집 동의"</string>
+
+    <!-- XTIT: The title of a menu group -->
+    <string name="usage">"사용법"</string>
+    <!-- XTIT: The title of a menu group -->
+    <string name="logging">"로깅"</string>
+    <!-- XTIT: The title of a menu item -->
+    <string name="upload_log">"로그 업로드"</string>
+    <!-- XTIT: The description of a menu item -->
+    <string name="upload_log_summary">"로그를 서버에 업로드합니다."</string>
+    <!-- XMSG: The message of a log level toast -->
+    <string name="log_level_changed">"기본 로그 레벨이 서버 정책에서 %s(으)로 변경되었습니다."</string>
+    <!-- XMSG: The message of a log level toast -->
+    <string name="log_level_default">"서버에 로그 정책이 설정되지 않아 기본 로그 레벨이 %s(으)로 설정됩니다."</string>
+    <!-- XTIT: The title of a menu item -->
+    <string name="log_level">"로그 레벨"</string>
+    <!-- XTIT: The title of a menu item -->
+    <string name="dialog_title_choose_log_level">"로그 레벨 선택"</string>
+    <!-- XTIT: Log level title -->
+    <string name="log_level_none">"없음"</string>
+    <!-- XTIT: Log level title -->
+    <string name="log_level_fatal">"심각"</string>
+    <!-- XTIT: Log level title -->
+    <string name="log_level_error">"오류"</string>
+    <!-- XTIT: Log level title -->
+    <string name="log_level_warning">"경고"</string>
+    <!-- XTIT: Log level title -->
+    <string name="log_level_info">"정보"</string>
+    <!-- XTIT: Log level title -->
+    <string name="log_level_debug">"디버그"</string>
+    <!-- XTIT: Log level title -->
+    <string name="log_level_path">"경로"</string>
+    <!-- XMSG: Authentication error message -->
+    <string name="authentication_failed">"인증 실패"</string>
+
+    <!-- restrictions -->
+
+    <!-- XTIT: The title of the error dialog -->
+    <string name="restriction_service_url_title">"서비스 URL"</string>
+
+    <!-- XMSG: Detailed error description -->
+    <string name="restriction_service_url_description">"OData 서버의 URL입니다."</string>
+    <!-- restrictions -->
+
+    <!-- XMSG: Detailed error description -->
+    <string name="error_back_navigation">"어플리케이션이 패스코드로 보호되어 있습니다. 올바른 패스코드를 입력해야만 어플리케이션이 시작됩니다."</string>
+
+</resources>

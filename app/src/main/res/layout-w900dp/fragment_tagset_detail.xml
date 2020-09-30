@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        tools:context=".mdui.tagset.TagSetActivity">
+    <data>
+        <import type = "com.sap.cloud.android.odata.v2.TagSetType" />
+        <variable name="tagSetType" type="TagSetType"/>
+        <variable name="handler" type="demo.sap.safetyandroid.mdui.tagset.TagSetDetailFragment" />
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <com.sap.cloud.mobile.fiori.misc.KeyValueCell
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:keyText="Key_"
+            app:valueText="@{tagSetType.getOptionalValue(TagSetType.key_).toString()}" />
+
+        <com.sap.cloud.mobile.fiori.misc.KeyValueCell
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:keyText="Type_"
+            app:valueText="@{tagSetType.getOptionalValue(TagSetType.type_).toString()}" />
+
+        <com.sap.cloud.mobile.fiori.misc.KeyValueCell
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:keyText="Value"
+            app:valueText="@{tagSetType.getOptionalValue(TagSetType.value).toString()}" />
+
+    </LinearLayout>
+</layout>

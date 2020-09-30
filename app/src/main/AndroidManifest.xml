@@ -1,0 +1,240 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="demo.sap.safetyandroid">
+
+
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.BLUETOOTH" />
+    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.REQUEST_IGNORE_BATTERY_OPTIMIZATIONS" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <uses-permission android:name="android.permission.CALL_PHONE"/>
+
+    <uses-feature
+        android:name="android.hardware.bluetooth"
+        android:required="true" />
+    <uses-feature
+        android:name="android.hardware.bluetooth_le"
+        android:required="true" />
+    <uses-feature
+        android:name="android.hardware.location"
+        android:required="false" />
+
+
+
+    <application
+        android:name=".app.SAPWizardApplication"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/application_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme"
+        android:usesCleartextTraffic="true">
+        <activity android:name=".app.TraceReportActivity"></activity>
+        <activity android:name=".app.OnboardingActivity" />
+
+        <activity
+            android:name=".app.WelcomeActivity"
+            android:theme="@style/splashScreenTheme">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name=".app.MainBusinessActivity"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".mdui.EntitySetListActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:launchMode="singleTop"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".mdui.deviceset.DeviceSetActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:label="@string/application_name"
+            android:launchMode="singleTop"
+            android:parentActivityName=".mdui.EntitySetListActivity"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".mdui.EntitySetListActivity" />
+        </activity>
+        <activity
+            android:name=".mdui.devicetagset.DeviceTagSetActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:label="@string/application_name"
+            android:launchMode="singleTop"
+            android:parentActivityName=".mdui.EntitySetListActivity"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".mdui.EntitySetListActivity" />
+        </activity>
+        <activity
+            android:name=".mdui.deviceuserviewset.DeviceUserViewSetActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:label="@string/application_name"
+            android:launchMode="singleTop"
+            android:parentActivityName=".mdui.EntitySetListActivity"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".mdui.EntitySetListActivity" />
+        </activity>
+        <activity
+            android:name=".mdui.ephemeralidinfectedset.EphemeralIDInfectedSetActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:label="@string/application_name"
+            android:launchMode="singleTop"
+            android:parentActivityName=".mdui.EntitySetListActivity"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".mdui.EntitySetListActivity" />
+        </activity>
+        <activity
+            android:name=".mdui.ephemeralidset.EphemeralIDSetActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:label="@string/application_name"
+            android:launchMode="singleTop"
+            android:parentActivityName=".mdui.EntitySetListActivity"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".mdui.EntitySetListActivity" />
+        </activity>
+        <activity
+            android:name=".mdui.eventset.EventSetActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:label="@string/application_name"
+            android:launchMode="singleTop"
+            android:parentActivityName=".mdui.EntitySetListActivity"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".mdui.EntitySetListActivity" />
+        </activity>
+        <activity
+            android:name=".mdui.historydevicesstatus.HistoryDevicesStatusActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:label="@string/application_name"
+            android:launchMode="singleTop"
+            android:parentActivityName=".mdui.EntitySetListActivity"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".mdui.EntitySetListActivity" />
+        </activity>
+        <activity
+            android:name=".mdui.historydevicesstatusparameters.HistoryDevicesStatusParametersActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:label="@string/application_name"
+            android:launchMode="singleTop"
+            android:parentActivityName=".mdui.EntitySetListActivity"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".mdui.EntitySetListActivity" />
+        </activity>
+        <activity
+            android:name=".mdui.infectedset.InfectedSetActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:label="@string/application_name"
+            android:launchMode="singleTop"
+            android:parentActivityName=".mdui.EntitySetListActivity"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".mdui.EntitySetListActivity" />
+        </activity>
+        <activity
+            android:name=".mdui.proximitydetectedset.ProximityDetectedSetActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:label="@string/application_name"
+            android:launchMode="singleTop"
+            android:parentActivityName=".mdui.EntitySetListActivity"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".mdui.EntitySetListActivity" />
+        </activity>
+        <activity
+            android:name=".mdui.realtimeroomstatus.RealTimeRoomStatusActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:label="@string/application_name"
+            android:launchMode="singleTop"
+            android:parentActivityName=".mdui.EntitySetListActivity"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".mdui.EntitySetListActivity" />
+        </activity>
+        <activity
+            android:name=".mdui.realtimeroomstatusparameters.RealTimeRoomStatusParametersActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:label="@string/application_name"
+            android:launchMode="singleTop"
+            android:parentActivityName=".mdui.EntitySetListActivity"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".mdui.EntitySetListActivity" />
+        </activity>
+        <activity
+            android:name=".mdui.tagset.TagSetActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:label="@string/application_name"
+            android:launchMode="singleTop"
+            android:parentActivityName=".mdui.EntitySetListActivity"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".mdui.EntitySetListActivity" />
+        </activity>
+        <activity
+            android:name=".mdui.SettingsActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:label="@string/settings_activity_name"
+            android:launchMode="singleTop"
+            android:parentActivityName=".mdui.EntitySetListActivity"
+            android:screenOrientation="sensor"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.sap.cloud.mobile.foundation.authentication.OtpResponseActivity"
+            tools:node="replace">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data android:scheme="com.sap.safetyatwork.xcallbackurl" />
+            </intent-filter>
+        </activity>
+
+
+        <service
+            android:name="org.dpppt.android.sdk.internal.TracingService"
+            android:enabled="true"
+            android:foregroundServiceType="location" />
+
+        <receiver
+            android:name="org.dpppt.android.sdk.internal.TracingServiceBroadcastReceiver"
+            android:enabled="true">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+                <action android:name="android.intent.action.MY_PACKAGE_REPLACED" />
+            </intent-filter>
+        </receiver>
+
+        <meta-data android:name="telephone" android:value="tel:03968791" />
+        <meta-data android:name="beaconUUID" android:value="A2FA7357-C8CD-4B95-98FD-9D091CE43337" />
+    </application>
+
+</manifest>

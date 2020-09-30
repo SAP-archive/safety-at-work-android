@@ -1,0 +1,246 @@
+<resources xmlns:tools="http://schemas.android.com/tools" tools:ignore="MissingTranslation">
+    <string name="application_name">Safety@Work</string>
+    <string name="eset_deviceset">DeviceSet</string>
+    <string name="eset_deviceset_single">DeviceSetType</string>
+    <string name="eset_devicetagset">DeviceTagSet</string>
+    <string name="eset_devicetagset_single">DeviceTagSetType</string>
+    <string name="eset_deviceuserviewset">DeviceUserViewSet</string>
+    <string name="eset_deviceuserviewset_single">DeviceUserViewSetType</string>
+    <string name="eset_ephemeralidinfectedset">EphemeralIDInfectedSet</string>
+    <string name="eset_ephemeralidinfectedset_single">EphemeralIDInfectedSetType</string>
+    <string name="eset_ephemeralidset">EphemeralIDSet</string>
+    <string name="eset_ephemeralidset_single">EphemeralIDSetType</string>
+    <string name="eset_eventset">EventSet</string>
+    <string name="eset_eventset_single">EventSetType</string>
+    <string name="eset_historydevicesstatus">HistoryDevicesStatus</string>
+    <string name="eset_historydevicesstatus_single">HistoryDevicesStatusType</string>
+    <string name="eset_historydevicesstatusparameters">HistoryDevicesStatusParameters</string>
+    <string name="eset_historydevicesstatusparameters_single">HistoryDevicesStatusParametersType
+    </string>
+    <string name="eset_infectedset">InfectedSet</string>
+    <string name="eset_infectedset_single">InfectedSetType</string>
+    <string name="eset_proximitydetectedset">ProximityDetectedSet</string>
+    <string name="eset_proximitydetectedset_single">ProximityDetectedSetType</string>
+    <string name="eset_realtimeroomstatus">RealTimeRoomStatus</string>
+    <string name="eset_realtimeroomstatus_single">RealTimeRoomStatusType</string>
+    <string name="eset_realtimeroomstatusparameters">RealTimeRoomStatusParameters</string>
+    <string name="eset_realtimeroomstatusparameters_single">RealTimeRoomStatusParametersType
+    </string>
+    <string name="eset_tagset">TagSet</string>
+    <string name="eset_tagset_single">TagSetType</string>
+
+    <string name="dp3t_sdk_service_notification_channel">Safety@Work</string>
+    <string name="dp3t_sdk_service_notification_title">Safety@Work</string>
+    <string name="dp3t_sdk_service_notification_text">Looking for people nearby…</string>
+    <string name="dp3t_sdk_service_notification_errors">App can\'t function properly:</string>
+    <string name="dp3t_sdk_service_notification_error_location_permission">missing location permission</string>
+    <string name="dp3t_sdk_service_notification_error_location_service">location service disabled</string>
+    <string name="dp3t_sdk_service_notification_error_bluetooth_disabled">bluetooth is disabled</string>
+    <string name="dp3t_sdk_service_notification_error_battery_optimization">battery optimization enabled</string>
+    <string name="dp3t_sdk_service_notification_error_bluetooth_not_supported">bluetooth low-energy is not supported on this device</string>
+    <string name="dp3t_sdk_service_notification_error_bluetooth_internal_error">bluetooth system error, please restart device</string>
+    <string name="dp3t_sdk_service_notification_error_bluetooth_advertising_error">failing to broadcast with bluetooth</string>
+    <string name="dp3t_sdk_service_notification_error_bluetooth_scanner_error">failing to search for nearby bluetooth devices</string>
+    <string name="dp3t_sdk_service_notification_error_sync_server">failed to load new infection data (server error)</string>
+    <string name="dp3t_sdk_service_notification_error_sync_network">failed to load new infection data (network error)</string>
+    <string name="dp3t_sdk_service_notification_error_sync_database">failed to load new infection data (database error)</string>
+    <string name="dp3t_sdk_service_notification_error_sync_timing">device time does not match server time</string>
+    <string name="dp3t_sdk_service_notification_error_sync_signature">failed to load new infection data (invalid signature)</string>
+
+
+    <!-- Onboarding: Titel oben -->
+    <string name="onboarding_prinzip_heading">"The aim"</string>
+
+    <!-- Onboarding: Titel -->
+    <string name="onboarding_prinzip_title">"Staying one step ahead of the virus"</string>
+
+    <!-- Onboarding Prinzip Text -->
+    <string name="onboarding_prinzip_text1">"By using the app, we can all help to contain the spread of the new coronavirus."</string>
+
+    <!-- Onboarding Prinzip Text -->
+    <string name="onboarding_prinzip_text2">"The app provides information on suspected infections. In this way, the chain of infection can be broken."</string>
+
+    <!-- Onboarding Privacy: Titel oben -->
+    <string name="onboarding_privacy_heading">"Privacy by design"</string>
+
+    <!-- Onboarding Privacy: Titel -->
+    <string name="onboarding_privacy_title">"Protection of privacy guaranteed"</string>
+
+    <!-- Onboarding Privacy: Text -->
+    <string name="onboarding_privacy_text1">"Devices communicate anonymously."</string>
+
+    <!-- Onboarding Privacy: Text -->
+    <string name="onboarding_privacy_text2">"All data is encrypted and only saved locally on the smartphone."</string>
+
+    <!-- Onboarding Begegnungen: Titel oben -->
+    <string name="onboarding_begegnungen_heading">"What does the app do?"</string>
+
+    <!-- Onboarding Begegnungen: Titel -->
+    <string name="onboarding_begegnungen_title">"Recognising encounters using Bluetooth"</string>
+
+    <!-- Onboarding Begegnungen: Text -->
+    <string name="onboarding_begegnungen_text1">"The app automatically recognises when two users have been in close proximity for a certain time."</string>
+
+    <!-- Onboarding Begegnungen: Text -->
+    <string name="onboarding_begegnungen_text2">"It uses Bluetooth Low Energy (BLE) to do this. No GPS data are used."</string>
+
+    <!-- Onboarding Meldung: Text oben -->
+    <string name="onboarding_meldung_heading">"What does the app do?"</string>
+
+    <!-- Onboarding Meldung: Titel -->
+    <string name="onboarding_meldung_title">"Report of potential infection"</string>
+
+    <!-- Onboarding Meldung: Text -->
+    <string name="onboarding_meldung_text1">"The app notifies you if a potential infection is suspected."</string>
+
+    <!-- Onboarding Meldung: Text -->
+    <string name="onboarding_meldung_text2">"By responding appropriately, you can protect yourself and other people."</string>
+
+    <!-- Onboarding Bluetooth: Titel -->
+    <string name="onboarding_bluetooth_title">"Enable Bluetooth"</string>
+
+    <!-- Onboarding Bluetooth: Text -->
+    <string name="onboarding_bluetooth_text">"In order to use the app, you must enable Bluetooth."</string>
+
+    <!-- Onboarding Bluetooth: Button -->
+    <string name="onboarding_bluetooth_button">"Enable Bluetooth"</string>
+
+    <!-- Onboarding: Untetitel unten -->
+    <string name="onboarding_good_to_know">"GOOD TO KNOW"</string>
+
+    <!-- Onboarding Bluetooth: Titel unten -->
+    <string name="onboarding_bluetooth_gtk_title1">"You remain anonymous"</string>
+
+    <!-- Onboarding Bluetooth: Text unten -->
+    <string name="onboarding_bluetooth_gtk_text1">"No personal data is visible via Bluetooth."</string>
+
+    <!-- Onboarding Bluetooth: Titel unten -->
+    <string name="onboarding_bluetooth_gtk_title2">"Minor increase in battery usage"</string>
+
+    <!-- Onboarding Bluetooth: Text unten -->
+    <string name="onboarding_bluetooth_gtk_text2">"The app operates using as little energy as possible. There is only a minor increase in battery usage."</string>
+
+    <!-- Onboarding Mitteilungen: Titel -->
+    <string name="onboarding_push_title">"Allow messages"</string>
+
+    <!-- Onboarding Mitteilungen: Text -->
+    <string name="onboarding_push_text">"In order to receive notifications from the app, you must enable messages."</string>
+
+    <!-- Onboarding Mitteilungen: Button -->
+    <string name="onboarding_push_button">"Enable messages"</string>
+
+    <!-- Onboarding Mitteilungen: Titel Unten -->
+    <string name="onboarding_push_gtk_title1">"Notified immediately"</string>
+
+    <!-- Onboarding Mitteilungen: Text unten -->
+    <string name="onboarding_push_gtk_text1">"In the event of a potential infection, you will receive a message on the lock screen."</string>
+
+    <!-- Onboarding: Weiter Button Titel -->
+    <string name="onboarding_continue_button">"Continue"</string>
+
+    <!-- Onboarding: Fertig Button -->
+    <string name="onboarding_finish_button">"Finish"</string>
+    <!-- Titel auf dem letzen Onboarding Screen -->
+    <string name="onboarding_go_title">"The app is ready to go"</string>
+
+    <!-- Text auf dem letzten Onboarding Screen -->
+    <string name="onboarding_go_text">"Thank you for helping to protect yourself and others."</string>
+
+    <!-- Button-Label auf dem letzten Onboarding screen -->
+    <string name="onboarding_go_button">"Start"</string>
+
+    <!-- Titel auf Location-Permission Screen -->
+    <string name="android_onboarding_bt_permission_title">"Enable location for Bluetooth"</string>
+
+    <!-- Text auf Location-Permission Screen -->
+    <string name="android_onboarding_bt_permission_text">"For the app to work and for access to Bluetooth, you must enable the location function."</string>
+
+    <!-- Button-Text auf Location-Permission Screen -->
+    <string name="android_onboarding_bt_permission_button">"Allow"</string>
+
+    <!-- Label für Info-Section -->
+    <string name="android_onboarding_bt_permission_goodtoknow">"Good to know"</string>
+
+    <!-- Info-Titel 1 auf Location-Permission Screen -->
+    <string name="android_onboarding_bt_permission_info_1_title">"Your location remains secret"</string>
+
+    <!-- Info-Text 1 auf Location-Permission Screen -->
+    <string name="android_onboarding_bt_permission_info_1_text">"On Android devices, enabling Bluetooth requires you to enable the sharing of your location. This is why the location function must be enabled even if the app does not register your location at any time."</string>
+
+    <!-- Info-Titel 2 auf Location-Permission Screen -->
+    <string name="android_onboarding_bt_permission_info_2_title">"You remain anonymous"</string>
+
+    <!-- Info-Text 2 auf Location-Permission Screen -->
+    <string name="android_onboarding_bt_permission_info_2_text">"No personal data is visible via Bluetooth."</string>
+    <!-- Titel auf Battery-Permission Screen -->
+    <string name="android_onboarding_battery_permission_title">"Ignore battery optimisation"</string>
+
+    <!-- Text auf Battery-Permission Screen -->
+    <string name="android_onboarding_battery_permission_text">"To be able to recognise encounters at all times, the battery optimisation function for this app must be disabled."</string>
+
+    <!-- Button-Text auf Battery-Permission Screen -->
+    <string name="android_onboarding_battery_permission_button">"Allow"</string>
+
+    <!-- Info-Titel 1 auf Battery-Permission Screen -->
+    <string name="android_onboarding_battery_permission_info_1_title">"Only for this app"</string>
+
+    <!-- Info-Text 1 auf Battery-Permission Screen -->
+    <string name="android_onboarding_battery_permission_info_1_text">"For the app to work, it must also run in the background. Battery optimisation can be disabled for individual apps, so that this is possible."</string>
+
+    <!-- Info-Titel 2 auf Battery-Permission Screen -->
+    <string name="android_onboarding_battery_permission_info_2_title">"Minor increase in battery usage"</string>
+
+    <!-- Info-Text 2 auf Battery-Permission Screen -->
+    <string name="android_onboarding_battery_permission_info_2_text">"The app operates using as little energy as possible. There is only a minor increase in battery usage."</string>
+
+    <!-- Button-Text auf Location-Permission Screen - Zugelassen -->
+    <string name="android_onboarding_bt_permission_button_allowed">"Enabled"</string>
+
+    <!-- Button-Text auf Battery-Permission Screen - Deaktiviert -->
+    <string name="android_onboarding_battery_permission_button_deactivated">"Deactivated"</string>
+
+    <!-- Titel für Button um Ortung zu erlauben -->
+    <string name="android_button_permission_location">"Permit localisation"</string>
+
+    <!-- Okay Button Titel -->
+    <string name="android_button_ok">"Ok"</string>
+    <!-- Text der bei Android in der permanenten Notification immer angezeigt wird -->
+    <string name="android_foreground_service_notification_text">"Encounters will be registered anonymously on your device."</string>
+    <!-- Fehlertitel mit Foreground Service Notification -->
+    <string name="android_foreground_service_notification_errors">"App currently unable to function properly"</string>
+
+    <!-- Fehler Beschreibung -->
+    <string name="android_foreground_service_notification_error_network_sync">"An error occurred when loading the data"</string>
+
+    <!-- Fehler Beschreibung -->
+    <string name="android_foreground_service_notification_error_location_permission">"For the app to use Bluetooth, you must enable your location to be used. The app itself does not recognise your location at any time."</string>
+
+    <!-- Fehler Beschreibung Akku -->
+    <string name="android_foreground_service_notification_error_battery_optimization">"For tracing to work precisely, the app must also run in the background. This will cause a minor increase in battery usage."</string>
+
+    <!-- Titel für Push-Nachrichten, wenn erkannt wird, dass ein Nutzer exposed war -->
+    <string name="push_exposed_title">"New message"</string>
+
+    <!-- Titel für Push-Nachrichten, wenn erkannt wird, dass ein Nutzer exposed war -->
+    <string name="push_exposed_text">"Open the app to read the message"</string>
+    <string name="Tracciamento">Tracciamento</string>
+    <string name="tracciamentoattivo">tracciamento attivo</string>
+    <string name="tracciamentodisattivo">tracciamento disattivo</string>
+    <string name="preference_file_key">demo.safetywork.PREFERENCE_FILE_KEY</string>
+    <string name="notification_timestamp" />
+    <string name="Attenzione">Attenzione</string>
+    <string name="Mantieni_le_distanze">Mantieni le distanze</string>
+    <string name="Possibile_contagio">Possibile contagio</string>
+    <string name="Sospetto" >Sospetto di un possibile contagio. Hai manifestato sintomi?</string>
+    <string name="NessunaSegnalazione">Nessuna Segnalazione</string>
+    <string name="NoSegnalazioni">Al momento non ci sono segnalazioni</string>
+    <string name="ConsentiTracciamento">Consenti il tracciamento</string>
+    <string name="TRACCIAMENTOATTIVO">TRACCIAMENTO ATTIVO</string>
+    <string name="info">Le informazioni scambiate via bluetooth sono salvate in modo anonimo</string>
+    <string name="Segnalazioni">Segnalazioni</string>
+    <string name="goodtoKnow1">L\'app riconosce automaticamente quando due utenti sono stati in prossimità per un periodo di tempo sufficiente a ipotizzare un possibile contagio</string>
+    <string name="goodtoknow2">L\'app funziona utilizzando un livello molto basso di energia, il livello di incremento sull\'usop della batteria è inferiore all\'1%</string>
+    <string name="CallHR">Chiama HR</string>
+    <string name="Version">Version</string>
+
+</resources>

@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        tools:context=".mdui.ephemeralidinfectedset.EphemeralIDInfectedSetActivity">
+    <data>
+        <import type = "com.sap.cloud.android.odata.v2.EphemeralIDInfectedSetType" />
+        <variable name="ephemeralIDInfectedSetType" type="EphemeralIDInfectedSetType"/>
+        <variable name="handler" type="demo.sap.safetyandroid.mdui.ephemeralidinfectedset.EphemeralIDInfectedSetDetailFragment" />
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <com.sap.cloud.mobile.fiori.misc.KeyValueCell
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:keyText="Eid"
+            app:valueText="@{ephemeralIDInfectedSetType.getOptionalValue(EphemeralIDInfectedSetType.eid).toString()}" />
+
+        <com.sap.cloud.mobile.fiori.misc.KeyValueCell
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:keyText="InfectedID"
+            app:valueText="@{ephemeralIDInfectedSetType.getOptionalValue(EphemeralIDInfectedSetType.infectedID).toString()}" />
+
+        <RelativeLayout
+            style="@style/FioriButton.Flat"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/activity_horizontal_margin"
+            android:onClick="@{handler::onNavigationClickedToProximityDetectedSet_toPotentialInfectedEIDs}"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/link_label_to_topotentialinfectedeids"
+                style="@style/FioriButton.Flat"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_centerInParent="true"
+                android:clickable="false"
+                android:focusable="false"
+                android:paddingLeft="16dp"
+                android:text="ProximityDetectedSet" />
+
+            <Button
+                android:id="@+id/link_button_to_topotentialinfectedeids"
+                style="@style/FioriButton.Flat"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerInParent="true"
+                android:clickable="false"
+                android:drawableStart="@drawable/ic_arrow_forward_black_24dp"
+                android:enabled="true"
+                android:visibility="invisible"
+                android:focusable="false" />
+        </RelativeLayout>
+
+    </LinearLayout>
+</layout>

@@ -1,0 +1,17 @@
+   ______________________________
+ / \                             \.
+|   | This log file was created  |.
+ \_ | by the Wizard, it contains |.
+    | the configuration data     |.
+    | used for the application   |.
+    | generation.                |.
+    |                            |.
+    | It shouldn't be edited     |.
+    | manually, changing it      |.
+    | won't affect the generated |.
+    | sample.                    |.
+    |   _________________________|___
+    |  /                            /.
+    \_/____________________________/.
+
+{"projectName":"safetyAndroid","projectLocation":"/Users/i509534/AndroidStudioProjects/safetyAndroid","projectNamespace":"demo.sap.safetyandroid","serviceURL":"https://pocs-pocs-com-sap-safetyatwork.cfapps.eu10.hana.ondemand.com/","serverURL":"https://mobile-service-cockpit-web.cfapps.eu10.hana.ondemand.com/cockpit/v1/org/0c097d36-96eb-4e4f-811a-037b61bb3628/space/ec148bac-b2ce-4320-899c-168475413413/","applicationID":"com.sap.safetyatwork","applicationSecurityConfig":"OAUTH","jsonPath":null,"senderID":null,"serverKey":null,"isLogEnabled":true,"isLogUploadEnabled":true,"SAPSDKLocation":"MAVEN_LOCAL","useDiscoveryService":false,"generateJavaCode":true,"generateOnlineApp":true,"isUsageIncluded":false}

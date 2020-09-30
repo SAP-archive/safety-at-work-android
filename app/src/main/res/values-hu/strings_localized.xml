@@ -1,0 +1,297 @@
+<?xml version="1.0" encoding="UTF-8"?><resources>
+    <!-- XTIT: The title of the create Activity, will appear at the top of the screen -->
+    <string name="title_create_fragment">"%1$s tétel létrehozása"</string>
+
+    <!-- XTIT: The title of the update Activity, will appear at the top of the screen -->
+    <string name="title_update_fragment">"Frissítés"</string>
+
+    <!-- XMSG: Error message for the mandatory input fields, will appear in the edit field left empty -->
+    <string name="mandatory_warning">"A mező kitöltése kötelező"</string>
+
+    <!-- XTIT: The title of the welcome screen, will appear at the top of the screen -->
+    <string name="welcome_screen_headline_label">"Üdvözöljük"</string>
+
+    <!-- YINS: Short description on the welcome screen -->
+    <string name="welcome_screen_detail_label">"Ezzel a generált alkalmazással fedezze fel az Androidhoz készült SAP Cloud Platform SDK szoftverfejlesztői készletet"</string>
+
+    <!-- XFLD: label at the bottom of the welcome screen -->
+    <string name="welcome_screen_footnote_label">"A szoftverfejlesztői készlet funkcióit kipróbálhatja demó módban."</string>
+
+    <!-- XFLD: label of the primary button on the welcome screen -->
+    <string name="welcome_screen_primary_button_label">"Első lépések"</string>
+
+    <!-- XBUT: Text of the Save button -->
+    <string name="save">"Mentés"</string>
+
+    <!-- XBUT: Text of the Update button -->
+    <string name="update">"Frissítés"</string>
+
+    <!-- XBUT: Text of the Delete button -->
+    <string name="delete">"Törlés"</string>
+
+    <!-- XBUT: Text of the Cancel button -->
+    <string name="cancel">"Mégse"</string>
+
+    <!-- XBUT: Text of the OK button -->
+    <string name="ok">"OK"</string>
+
+    <!-- XBUT: Text of the Delete button -->
+    <string name="yes">"Igen"</string>
+
+    <!-- XTIT: The title of the delete dialog -->
+    <string name="delete_dialog_title">"TÖRLÉS"</string>
+
+    <!-- XMSG: The message of the delete dialog -->
+    <string name="delete_one_item">"Valóban törölni szeretné a kiválasztott tételeket?"</string>
+
+    <!-- XMSG: The message of the delete dialog in case of multiple selection -->
+    <string name="delete_more_items">"Valóban törölni szeretné a kiválasztott tételeket?"</string>
+
+    <!-- XMSG: Error message, can be presented in a Toast or Dialog -->
+    <string name="entity_download_error">"A háttérműveletek során hiba történt."</string>
+
+    <!-- XMIT: Refresh menu item -->
+    <string name="menu_refresh">"Frissítés"</string>
+
+    <!-- XMIT: Refresh menu item -->
+    <string name="menu_home">"Nyitólap"</string>
+
+    <!-- XMIT: Update menu item -->
+    <string name="menu_update">"Frissítés"</string>
+
+    <!-- XMIT: Delete menu item -->
+    <string name="menu_delete">"Törlés"</string>
+
+    <!-- NOTR: No translation needed, just placeholder text -->
+    <string name="object_header_headline">"Headline"</string>
+
+    <!-- NOTR: No translation needed, just placeholder text -->
+    <string name="object_header_subheadline">"Subheadline"</string>
+
+    <!-- NOTR: No translation needed, just placeholder text -->
+    <string name="object_header_body">"Body text"</string>
+
+    <!-- NOTR: No translation needed, just placeholder text -->
+    <string name="object_header_footnote">"Footnote"</string>
+
+    <!-- NOTR: No translation needed, just placeholder text -->
+    <string name="object_header_tag1">"TAG1"</string>
+
+    <!-- NOTR: No translation needed, just placeholder text -->
+    <string name="object_header_tag2">"TAG2"</string>
+
+    <!-- NOTR: No translation needed, just placeholder text -->
+    <string name="object_header_tag3">"TAG3"</string>
+
+    <!-- NOTR: No translation needed, just placeholder text -->
+    <string name="object_header_description">"Item description"</string>
+
+    <!-- NOTR: No translation needed, just placeholder text -->
+    <string name="object_header_status">"Status"</string>
+
+    <!-- NOTR: No translation needed, just placeholder text -->
+    <string name="error">"Error"</string>
+
+    <!-- error messages -->
+
+    <!-- XTIT: The title of the delete dialog -->
+    <string name="read_failed">"A letöltés sikertelen"</string>
+
+    <!-- XMSG: Detailed error description -->
+    <string name="format_error">"A megadott adat nem felel meg az adattípusnak"</string>
+
+    <!-- XMSG: Detailed error description -->
+    <string name="read_failed_detail">"A letöltési művelet sikertelen, kérjük, próbálja meg újraindítani az alkalmazást."</string>
+
+    <!-- XTIT: The title of the delete dialog -->
+    <string name="create_failed">"A létrehozás sikertelen"</string>
+
+    <!-- XMSG: Detailed error description -->
+    <string name="create_failed_detail">"A létrehozási művelet sikertelen, kérjük, később próbálja meg újra létrehozni."</string>
+
+    <!-- XTIT: The title of the delete dialog -->
+    <string name="update_failed">"A frissítés sikertelen"</string>
+    <string name="update_failed_detail">"A frissítési művelet sikertelen, kérjük, frissítse a helyi adatokat, és próbálja meg később újra elvégezni a műveletet."</string>
+
+    <!-- XTIT: The title of the delete dialog -->
+    <string name="delete_failed">"A törlés sikertelen"</string>
+
+    <!-- XMSG: Detailed error description -->
+    <string name="delete_failed_detail">"A törlési művelet sikertelen, kérjük, frissítse a helyi adatokat, és próbálja meg később újra elvégezni a műveletet."</string>
+
+    <!-- XTIT: The message of the upload toast in case of success -->
+    <string name="log_upload_ok">"A napló a szerverre feltöltésre került."</string>
+
+    <!-- XTIT: The message of the upload toast in case of failing -->
+    <string name="log_upload_failed">"A napló feltöltése sikertelen"</string>
+
+    <!-- XMSG: Detailed error description -->
+    <string name="log_upload_failed_detail">"A naplófeltöltéshez kapott URL formátuma hibás. Az alkalmazás továbbra is működik, de naplók nem kerülnek a szerverre feltöltésre."</string>
+
+    <!-- XTIT: The message of the upload toast in case of success -->
+    <string name="usage_upload_ok">"A használat a szerverre feltöltésre került"</string>
+
+    <!-- XTIT: The message of the upload toast in case of failing -->
+    <string name="usage_upload_failed">"A használat feltöltése sikertelen"</string>
+
+    <!-- XMSG: Detailed error description -->
+    <string name="usage_init_failed">"A használat inicializálása sikertelen"</string>
+
+    <!-- XTIT: The title of the delete dialog -->
+    <string name="push_error">"Push hiba"</string>
+
+    <!-- XTIT: The title of the delete dialog -->
+    <string name="push_message">"Push üzenet érkezett"</string>
+
+    <!-- XTIT: The Notification Text -->
+    <string name="push_text">"Értesítés"</string>
+
+    <!-- XMSG: Detailed error description -->
+    <string name="push_token_upload_failed_detail">"A push token SAP szerverre való feltöltése sikertelen, a push funkció nem fog működni. Nem fog push-üzenetet kapni."</string>
+
+    <!-- XMSG: Detailed error description -->
+    <string name="push_invalid_push_format">"Push-üzenet érkezett, de formátuma érvénytelen, ezért nem lehetett feldolgozni."</string>
+
+    <!-- XMSG: AlertDialog before navigation - Title -->
+    <string name="before_navigation_dialog_title">"Lehetséges adatvesztés"</string>
+
+    <!-- XMSG: AlertDialog before navigation - Message -->
+    <string name="before_navigation_dialog_message">"Ha elhagyja az oldalt, egyetlen adat sem lesz mentve."</string>
+
+    <!-- XMSG: AlertDialog before navigation - Positive button (navigation occurs) -->
+    <string name="before_navigation_dialog_positive_button">"Kilépés"</string>
+
+    <!-- XMSG: AlertDialog before navigation - Negative button (cancelled navigation) -->
+    <string name="before_navigation_dialog_negative_button">"Maradás"</string>
+
+    <!-- XMSG: Detailed error description -->
+    <string name="server_auth_not_supported_saml">"Hiba: Ez az alkalmazás nem támogatja az SAML hitelesítést."</string>
+
+	<!-- XTIT: The title of the error dialog -->
+	<string name="bind_error">"Kötéshiba"</string>
+	
+	<!-- XMSG: Detailed error description -->
+    <string name="bind_error_detail">"Nem sikerült az Offline OData Sync Service szolgáltatáshoz való hozzákötés."</string>
+    
+	<!-- XTIT: The title of the error dialog -->
+	<string name="offline_provider_error">"Offline inicializációs hiba"</string>
+	
+ 	<!-- XMSG: Detailed error description -->   
+	<string name="offline_provider_error_detail">"Az offline OData szolgáltató inicializálása nem sikerült."</string>
+
+    <!-- XTIT: The title of the error dialog -->
+    <string name="offline_initial_open_error">"Offline kezdeti megnyitási hiba"</string>
+
+    <!-- XMSG: Detailed error description -->
+    <string name="offline_initial_open_error_detail">"Az Offline tárolóhely kezdeti megnyitása sikertelen."</string>
+
+    <!-- XMSG: Detailed error description -->
+    <string name="offline_backend_big_data_error_detail">"A backendből származó payload túl nagy volt, a CPms alapértelmezett payloadjának korlátja 64M. Megpróbálhatja megjavítani a következő megoldások egyikével:\n\t1) Növelje a méretkorlátot az offline.ini-ben;\n\t2) Alkalmazza a szerveroldali lapszámozást annak érdekében, hogy aktiválja a nagyméretű adathalmazok szinkronizálását a tömbökben;\n\t3) Használjon $top kérelmeket a lekérdezések és szűrők definiálása során, hogy korlátozza a kliens által letöltött adatok teljes mennyiségét."</string>
+
+    <!-- XMSG: Detailed error description -->
+    <string name="offline_backend_time_out_error_detail">"Növelje az alkalmazásra vonatkozóan a backend kapcsolódás időkorlátját a CPms-ben, és próbálja meg újra."</string>
+
+    <!-- XTIT: The title of the error dialog -->
+	<string name="synchronize_failure">"Szinkronizálási hiba"</string>
+	
+	<!-- XMSG: Detailed error description -->    
+	<string name="synchronize_failure_detail">"A Mobil Szolgáltatásokkal való szinkronizálás sikertelen"</string>
+
+    <!-- XTIT: The title of the error dialog -->
+    <string name="offline_reset_store_error">"Offline tároló visszaállítási hiba"</string>
+
+    <!-- XMSG: Detailed error description -->
+    <string name="offline_reset_store_error_detail">"Az offline adattároló visszaállítása/eltávolítása sikertelen."</string>
+    <!-- error messages -->
+
+    <!-- offline -->	
+	
+	<!-- XMSG: Advise user of delay when performing initial opening of offline store -->
+	<string name="initializing_offline_store">"Az offline tárolóhely inicializálása. Kérjük, várjon."</string>
+	
+    <!-- NOTR: No translation needed, Label for entity state in offline -->	
+	<string name="local_state">"Local"</string>
+	
+    <!-- NOTR: No translation needed, Label for entity state in offline -->	
+	<string name="error_state">"Error"</string>
+    
+	<!-- NOTR: No translation needed, Label for entity state in offline -->	
+	<string name="updated_state">"Updated"</string>
+    
+	<!-- NOTR: No translation needed, Label for entity state in offline -->	
+	<string name="download_state">"Download"</string>
+    
+    <!-- XMIT: Menu item to trigger synchronization -->
+	<string name="synchronize_action">"Szinkronizálás"</string>
+	
+    <!-- offline -->
+	
+    <!-- XTIT: The title of the settings dialog -->
+    <string name="settings_activity_name">"Beállítások"</string>
+    <!-- XTIT: The title of the settings menu -->
+    <string name="menu_item_settings">"Beállítások"</string>
+
+    <!-- XTIT: The title of the passcode group -->
+    <string name="passcode">"Biztonsági kód"</string>
+    <!-- XTIT: The title of the change passcode menu item -->
+    <string name="manage_passcode">"Jelkód módosítása"</string>
+    <!-- XTIT: The title of the reset group -->
+    <string name="reset">"Alkalmazás visszaállítása"</string>
+    <!-- XTIT: The title of the reset app menu item -->
+    <string name="reset_app">"Alkalmazás visszaállítása"</string>
+    <!-- XTIT: The title of a confirmation dialog -->
+    <string name="reset_app_confirmation">"Minden, az ehhez az alkalmazáshoz kapcsolódó információ eltávolításra kerül. Folytatja?"</string>
+    <!-- XMSG: The message of reset client -->
+    <string name="reset_client">"Kliens visszaállítása"</string>
+
+    <!-- XTIT: The title of a menu item -->
+    <string name="upload_usage">"Használati adatok feltöltése"</string>
+    <!-- XTIT: The title of a menu item -->
+    <string name="set_usage_consent">"Adathasználati hozzájárulás begyűjtése"</string>
+
+    <!-- XTIT: The title of a menu group -->
+    <string name="usage">"Használat"</string>
+    <!-- XTIT: The title of a menu group -->
+    <string name="logging">"Naplózás"</string>
+    <!-- XTIT: The title of a menu item -->
+    <string name="upload_log">"Napló feltöltése"</string>
+    <!-- XTIT: The description of a menu item -->
+    <string name="upload_log_summary">"Napló feltöltése a szerverre"</string>
+    <!-- XMSG: The message of a log level toast -->
+    <string name="log_level_changed">"Az alapértelmezett naplószint a szerver szabályzatról a következőre változik: %s"</string>
+    <!-- XMSG: The message of a log level toast -->
+    <string name="log_level_default">"A napló szabályzat nem a szerveren kerül beállításra, a beállított alapértelmezett naplószint: %s"</string>
+    <!-- XTIT: The title of a menu item -->
+    <string name="log_level">"Naplószint"</string>
+    <!-- XTIT: The title of a menu item -->
+    <string name="dialog_title_choose_log_level">"Válassza ki a naplószintet"</string>
+    <!-- XTIT: Log level title -->
+    <string name="log_level_none">"Nincs"</string>
+    <!-- XTIT: Log level title -->
+    <string name="log_level_fatal">"Súlyos"</string>
+    <!-- XTIT: Log level title -->
+    <string name="log_level_error">"Hiba"</string>
+    <!-- XTIT: Log level title -->
+    <string name="log_level_warning">"Figyelmeztetés"</string>
+    <!-- XTIT: Log level title -->
+    <string name="log_level_info">"Infó"</string>
+    <!-- XTIT: Log level title -->
+    <string name="log_level_debug">"Hibakeresés"</string>
+    <!-- XTIT: Log level title -->
+    <string name="log_level_path">"Elérési út"</string>
+    <!-- XMSG: Authentication error message -->
+    <string name="authentication_failed">"A hitelesítés nem sikerült"</string>
+
+    <!-- restrictions -->
+
+    <!-- XTIT: The title of the error dialog -->
+    <string name="restriction_service_url_title">"Szolgáltatás URL"</string>
+
+    <!-- XMSG: Detailed error description -->
+    <string name="restriction_service_url_description">"Az OData szolgáltatás URL-je."</string>
+    <!-- restrictions -->
+
+    <!-- XMSG: Detailed error description -->
+    <string name="error_back_navigation">"Az alkalmazást biztonsági kód védi, a megfelelő biztonsági kód megadása nélkül nem indul el."</string>
+
+</resources>

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+        <PreferenceCategory
+        android:key="category_log"
+        android:title="@string/logging">
+        <ListPreference
+            android:defaultValue="@string/log_level_warning"
+            android:dialogTitle="@string/dialog_title_choose_log_level"
+            android:key="@string/log_level"
+            android:title="@string/log_level"/>
+        <Preference
+            android:key="@string/upload_log"
+            android:title="@string/upload_log"/>
+    </PreferenceCategory>
+
+    <PreferenceCategory
+        android:key="category_passcode"
+        android:title="@string/passcode">
+        <Preference
+            android:key="@string/manage_passcode"
+            android:title="@string/manage_passcode"/>
+    </PreferenceCategory>
+
+    <PreferenceCategory
+        android:key="category_reset"
+        android:title="@string/reset">
+        <Preference
+            android:key="@string/reset_app"
+            android:title="@string/reset_app"/>
+    </PreferenceCategory>
+</PreferenceScreen>

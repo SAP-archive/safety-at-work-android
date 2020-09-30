@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    tools:context=".app.MainBusinessActivity">
+
+    <TextView
+        android:id="@+id/init_offline_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="48dp"
+        android:layout_marginEnd="48dp"
+        android:visibility="invisible"
+        android:text="@string/initializing_offline_store"
+        android:textColor="@color/black"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ProgressBar
+        android:id="@+id/main_bus_progress_bar"
+        style="?android:attr/progressBarStyleLarge"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="36dp"
+        android:indeterminate="true"
+        android:indeterminateTint="@color/onboarding_progress_bar"
+        app:layout_constraintEnd_toEndOf="@+id/init_offline_label"
+        app:layout_constraintStart_toStartOf="@+id/init_offline_label"
+        app:layout_constraintTop_toBottomOf="@+id/init_offline_label" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
