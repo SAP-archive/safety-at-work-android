@@ -1,18 +1,18 @@
-# Safety@work for iOS
+# Safety@work for Android
 ![Safety@Work header](readmeImg/header.png)
 
 [![Swift Package Manager compatible](https://img.shields.io/badge/SPM-%E2%9C%93-brightgreen.svg?style=flat)](https://github.com/apple/swift-package-manager) 
 [![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
 
 
-Heavily based on project DP3T (https://github.com/DP-3T/dp3t-sdk-ios)
+Heavily based on [project DP3T](https://github.com/DP-3T/dp3t-sdk-android/tree/prestandard)
 
 
 Table of contents
 =================
 
 <!--ts-->
-- [Safety@work for iOS](#safetywork-for-ios)
+- [Safety@work for Android](#safetywork-for-android)
 - [Table of contents](#table-of-contents)
 - [DP3T](#dp3t)
   - [Introduction of DP3T](#introduction-of-dp3t)
@@ -139,7 +139,7 @@ In background the app scan for sepcifice bluetooth service and broadcast ephemer
 
 EphemeralID broadcasted is a token like this **24 b5 a4 17 0b b1 55 3d ba de 10 f3 d1 d5 e5 7e** and for security reason change every 15 minutes. the ephemeralID doesn't contain information about device or user.
 
-This application is an enterprise application so work in a centralized mode, when background task is woke up by iOS send to backend:
+This application is an enterprise application so work in a centralized mode, when background task is woke up:
 
     1 my ephemeral ID brodacasted in the current day
     2 the ephemeral IDs with whom I have been in contact for more than 5 minutes and with a distance (based on RSSI) sufficient for the infection 
@@ -194,9 +194,9 @@ That application must have following feature assigned:
   
 - **Mobile connectivity** - this feature is the "core" one: it is mandatory to properly configure destinations that point to back-end business logic (see next section for a deep dive into configuration details);
   
-- **Mobile push notification** - in order to push back-end messages, this feature must be in place and, a valid `.p12 certificate` must be configured properly (in order to communicate with APNS);
+- **Mobile push notification** - in order to push back-end messages, this feature must be in place and properly configured;
   
-- **Mobile Settings exchange** - necessary to properly manage all additional settings of the app (e.g. pincode structure, biometric features, etc...).
+- **Mobile Settings exchange** - necessary to manage all additional settings of the app (e.g. pincode structure, biometric features, etc...).
 
 About **Mobile connectivity** feature, two destinations must be configured, as depicted in following picture:
 
