@@ -182,11 +182,11 @@ SCP Mobile Services app configuration
 =====================================
 On mobile services a new `Native application` must be created and linked to the existing project. Below picture shows the application available within SCP Mobile services.
 
-![Mobile services apps page](readmeImg/readmeImages/ms01_scpms_main.png)
+![Mobile services apps page](readmeImg/ms01_scpms_main.png)
 
 That application must have following feature assigned:
 
-![Native app assigned features](readmeImg/readmeImages/ms02_app_details_features.png)
+![Native app assigned features](readmeImg/ms02_app_details_features.png)
 
 - **Mobile client log upload** - in order to submit all logs stored in mobile app;
   
@@ -200,7 +200,7 @@ That application must have following feature assigned:
 
 About **Mobile connectivity** feature, two destinations must be configured, as depicted in following picture:
 
-![Mobile connectivity details](readmeImg/readmeImages/ms03_connectivity_details.png)
+![Mobile connectivity details](readmeImg/ms03_connectivity_details.png)
 
 Paths to destinations must be:
 
@@ -211,11 +211,11 @@ xsjsFunctions | https://*\<cv-19-tracing-xsjs module path\>*/xsjs/functions.xsjs
 
 Where `<cv-19-tracing-xsjs module path>` is the path to the **xsjs** module of back-end MTA app:
 
-![CF Spaces CV19-tracing back-end modules](readmeImg/readmeImages/ms04_scp_cockpit_xsjs_srv.png)
+![CF Spaces CV19-tracing back-end modules](readmeImg/ms04_scp_cockpit_xsjs_srv.png)
 
 Once accessed the application in the CF Space cockpit, the url can be found in the **Application routes** section:
 
-![CV19-tracing back-end xsjs module application](readmeImg/readmeImages/ms05_xsjs_srv_url.png)
+![CV19-tracing back-end xsjs module application](readmeImg/ms05_xsjs_srv_url.png)
 
 Tutorials for SAP Cloud Platform mobile services and SDK for Android
 ====================================================================
