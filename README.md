@@ -52,11 +52,11 @@ Safety@work has 3 main functionalities:
 2. contact tracing (DP3T heavily based)
 3. Beacon integration protocol (for real time meeting room and common space monitoring)
 
-The app takes advantage on SAP Cloud Platform mobile services and is built using SAP Cloud Platform SDK for Android version 3.1.2,
+The app takes advantage on SAP Cloud Platform mobile services and is built using SAP Cloud Platform SDK for Android version 3.1.2.
 
-Onboarding is developed using SAP CLoud Platform SDK for Android 
+Onboarding is developed using SAP CLoud Platform SDK for Android.
 
-Proxy Class generation for Odata service are developed by SAP Cloud Platform SDK for Android 
+Proxy Class generation for Odata service are developed by SAP Cloud Platform SDK for Android.
 
 
 ## Prerequisites
@@ -225,7 +225,7 @@ Check out these tutorials and courses for deep-dives into various areas
 * [Community Tutorials](https://developers.sap.com/topics/cloud-platform-sdk-for-android.html)
 * [openSAP course](https://open.sap.com/courses/mobile3/items/47lDRNar7EzN2vY7QGm1tM)
 
-TechEd on mobility
+SAP TechEd on mobility
 ==================
 
 Watch SAP TechEd sessions on mobility online at [SAP Teched Online](http://www.sapteched.com/online).
