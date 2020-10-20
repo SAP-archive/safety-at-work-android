@@ -69,7 +69,7 @@ dependencies are managed with gradle
 Application leverage on:
 
 - **Notification**
-- **CoreBluetooth**
+- **Bluetooth**
 - **Location** (only for Beacons monitoring, app doesn't trace the GPS user location)
 - **SQLite** to store EphemeralID received from others devices
 - **Service for background task** include the name of your service in the Android manifest file.
