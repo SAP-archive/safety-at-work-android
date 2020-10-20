@@ -112,6 +112,8 @@ public class BleClient {
 	private NotificationManagerCompat notificationManager;
 	private static final String NOTIFICATION_CHANNEL_ID = "dp3t_tracing_service";
 
+	private boolean sendingInroom = false;
+
 	public BleClient(Context context) {
 		this.context = context;
 		gattConnectionThread = new GattConnectionThread();
@@ -125,7 +127,7 @@ public class BleClient {
 
 			//TEST to turn on bluetooth
 
-			if (!bluetoothAdapter.isEnabled()) {
+			if (bluetoothAdapter!=null && !bluetoothAdapter.isEnabled()) {
 				Log.i(TAG,"BLUETOOTH OFF A");
 				bluetoothAdapter.enable();
 			}
@@ -158,7 +160,7 @@ public class BleClient {
 		ByteBuffer mManufacturerData = ByteBuffer.allocate(23);
 		ByteBuffer mManufacturerDataMask = ByteBuffer.allocate(24);
 
-		String uuidset="A2FA7357-C8CD-4B95-98FD-9D091CE43337"; //example
+		String uuidset="2D7A9F0C-E0E8-4CC9-A71B-A21DB2D034A1"; //example
 		try {
 			ApplicationInfo ai = context.getPackageManager().getApplicationInfo(context.getPackageName(), PackageManager.GET_META_DATA);
 			Bundle bundle = ai.metaData;
@@ -188,6 +190,7 @@ public class BleClient {
 				.setReportDelay(0)
 				.setNumOfMatches(ScanSettings.MATCH_NUM_MAX_ADVERTISEMENT)
 				.setCallbackType(ScanSettings.CALLBACK_TYPE_ALL_MATCHES);
+
 		if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
 			settingsBuilder
 					.setPhy(ScanSettings.PHY_LE_ALL_SUPPORTED)
@@ -477,7 +480,7 @@ public class BleClient {
 
 
 					NotificationCompat.Builder builder = new NotificationCompat.Builder(context, NOTIFICATION_CHANNEL_ID)
-							.setSmallIcon(R.drawable.logo2)
+							.setSmallIcon(R.mipmap.ic_launcher_round)
 							.setContentTitle(context.getResources().getString(R.string.Attenzione))
 							.setContentText(context.getResources().getString(R.string.Mantieni_le_distanze))
 							.setContentIntent(intent)
@@ -511,7 +514,7 @@ public class BleClient {
 
 
 				NotificationCompat.Builder builder = new NotificationCompat.Builder(context, NOTIFICATION_CHANNEL_ID)
-						.setSmallIcon(R.drawable.logo2)
+						.setSmallIcon(R.mipmap.ic_launcher_round)
 						.setContentTitle(context.getResources().getString(R.string.Attenzione))
 						.setContentText(context.getResources().getString(R.string.Mantieni_le_distanze))
 						.setContentIntent(intent)
@@ -584,6 +587,8 @@ public class BleClient {
 			System.arraycopy(scanRecord, startByte + 4, uuidBytes, 0, 16);
 			String hexString = bytesToHex(uuidBytes);
 
+			//remove space
+			 hexString = hexString.replaceAll("\\s","");
 			//UUID detection
 			String uuid = hexString.substring(0, 8) + "-" +
 					hexString.substring(8, 12) + "-" +
@@ -601,25 +606,6 @@ public class BleClient {
 
 			//call iminroom if UUID is equal to the UUID set on device hardware and on androidmanifest.xml
 
-			//TEST
-
-			NotificationCompat.Builder builder = new NotificationCompat.Builder(context, NOTIFICATION_CHANNEL_ID)
-					.setSmallIcon(R.drawable.logo2)
-					.setContentTitle("INROOM")
-					.setContentText("UUID: " + uuid )
-
-					.setStyle(new NotificationCompat.BigTextStyle()
-							.bigText("UUID: " + uuid ))
-					.setPriority(NotificationCompat.PRIORITY_MAX)
-					.setVisibility(NotificationCompat.VISIBILITY_PUBLIC)
-					.setDefaults(NotificationCompat.DEFAULT_ALL);
-
-
-
-			// notificationId is a unique int for each notification that you must define
-			notificationManager.notify(1001, builder.build());
-
-			//END TEST
 
 			String uuidset="A2FA7357-C8CD-4B95-98FD-9D091CE43337"; //example
 			try {
@@ -630,19 +616,213 @@ public class BleClient {
 				Log.e(TAG, "Unable to load meta-data: " + e.getMessage());
 			}
 
+
 			if(uuid.equalsIgnoreCase(uuidset)) {
-				try {
-					Iminroom(uuid, rssi);
-				} catch (IOException e) {
-					e.printStackTrace();
-				}
+
+					sendIminroom(uuid.toUpperCase()+"|"+major+"|"+minor, rssi);
+
 			}
 
 		}
 	}
 
 
+	public void sendIminroom(String uuid,int distance)  {
+		Log.i("TRACING_SERVICE","send inroom");
+		SAPWizardApplication app= (SAPWizardApplication)context.getApplicationContext();
+		if(app.getAppConfig()!=null) {
+			String serviceRoot = app.getAppConfig().getHost();
+			Log.i("TRACING_SERVICE",serviceRoot);
+			try{
+				SharedPreferences sharedPref = context.getApplicationContext().getSharedPreferences(String.valueOf(R.string.preference_file_key), Context.MODE_PRIVATE);
 
+				long ephidsBatch_timestamp = sharedPref.getLong("lastInroom",0);
+				if(ephidsBatch_timestamp != 0){
+
+					java.util.Date date = new java.util.Date();
+					Timestamp timestamp1 = new Timestamp(date.getTime()); //now
+					Timestamp timestamp2 = new Timestamp(ephidsBatch_timestamp);
+
+					long diff =	timestamp1.getTime()-timestamp2.getTime();
+
+					if (diff > 60*1000) {
+						//more than 1 day
+						if(!sendingInroom) {
+							sendingInroom = true;
+							postCallInroom(uuid, distance);
+						}
+					}
+				}
+				else{
+					//first time
+					if(!sendingInroom) {
+						sendingInroom = true;
+						postCallInroom(uuid, distance);
+					}
+				}
+
+
+
+			}
+			catch (IOException e) {
+				e.printStackTrace();
+			}
+		}
+
+	}
+
+	public void postCallInroom(String uuid,int distance) throws IOException {
+
+		SAPWizardApplication app= (SAPWizardApplication)context.getApplicationContext();
+		Log.i("TRACING_SERVICE","send inroom post call");
+		if(app.getAppConfig()!=null) {
+			String serviceRoot = app.getAppConfig().getHost();
+			Log.i("TRACING_SERVICE", serviceRoot);
+			try {
+
+
+				AppConfig appconfig = app.getAppConfig();
+				String clientID = ((OAuthClient) ((OAuth) appconfig.getAuth().get(0)).getConfig().getOAuthClients().get(0)).getClientID();
+				String authUrl = ((OAuth) appconfig.getAuth().get(0)).getConfig().getAuthorizationEndpoint();
+				String tokenUrl = ((OAuth) appconfig.getAuth().get(0)).getConfig().getTokenEndpoint();
+
+				String serviceUrl = app.getAppConfig().getServiceUrl();
+
+
+				MediaType MEDIA_TYPE = MediaType.parse("application/json");
+				String url = serviceUrl + "xsjsFunctions";
+
+				OkHttpClient client = new OkHttpClient();
+
+				// Server side OAuth2 configuration
+				OAuth2Configuration oauthConfiguration = new OAuth2Configuration.Builder(context.getApplicationContext())
+						.clientId(clientID)
+						.responseType("code")
+						.authUrl(authUrl)
+						.tokenUrl(tokenUrl)
+						.redirectUrl(serviceUrl)
+						.build();
+
+// Storage for OAuth2 tokens
+				OAuth2TokenStore tokenStore = new OAuth2TokenInMemoryStore();
+
+// Create an OKHttp intercepter to listen for challenges
+				OkHttpClient okHttpClient = new OkHttpClient.Builder()
+						.addInterceptor(new OAuth2Interceptor(new OAuth2BrowserProcessor(oauthConfiguration), tokenStore))
+						.cookieJar(new WebkitCookieJar())
+						.build();
+
+// Set global OKHttpClient. The OAuth flow will use this for requesting the token.
+				ClientProvider.set(okHttpClient);
+
+				CryptoModule crypto = CryptoModule.getInstance(context);
+
+
+
+				SharedPreferences sharedPref = context.getApplicationContext().getSharedPreferences(String.valueOf(R.string.preference_file_key), Context.MODE_PRIVATE);
+				SimpleDateFormat changeFormat = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
+
+
+				JSONArray events = new JSONArray();
+				EphId myeph = crypto.getCurrentEphId();
+
+					JSONObject event = new JSONObject();
+					try {
+						String date = changeFormat.format(new Date());
+						event.put("CreatedAt", date);
+
+						String ephemeral = bytesToHex(myeph.getData());
+						event.put("SourceEID", ephemeral);
+
+						event.put("TargetIED", uuid);
+						event.put("Distance", distance);
+					} catch (JSONException e) {
+						// TODO Auto-generated catch block
+						e.printStackTrace();
+					}
+
+					events.put(event);
+
+
+
+				JSONObject eventsJson = new JSONObject();
+				try {
+					eventsJson.put("events", events);
+
+				} catch (JSONException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}
+
+
+				JSONObject postdata = new JSONObject();
+				try {
+					postdata.put("function", "importEvents");
+					postdata.put("payload", eventsJson);
+
+				} catch (JSONException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}
+
+				RequestBody body = RequestBody.create(MEDIA_TYPE, postdata.toString());
+
+				Request request = new Request.Builder()
+						.url(url)
+						.post(body)
+						.header("Accept", "application/json")
+						.header("Content-Type", "application/json")
+						.build();
+
+
+				okHttpClient.newCall(request).enqueue(new Callback() {
+					@Override
+					public void onFailure(Call call, IOException e) {
+						String mMessage = e.getMessage().toString();
+						Log.w("failure Response", mMessage);
+						//call.cancel();
+						sendingInroom = false;
+					}
+
+					@Override
+					public void onResponse(Call call, Response response) throws IOException {
+
+						String mMessage = response.body().string();
+						sharedPref.edit().putLong("lastInroom", System.currentTimeMillis()).apply();
+						Log.i("SENT SUCCESS","SENT inroom SUCCESS");
+						Log.i("SENT SUCCESS",mMessage);
+						Log.e(TAG, mMessage);
+						//TEST
+
+						NotificationCompat.Builder builder = new NotificationCompat.Builder(context, NOTIFICATION_CHANNEL_ID)
+								.setSmallIcon(R.mipmap.ic_launcher_round)
+								.setContentTitle("INROOM")
+								.setContentTitle("INROOM")
+								.setContentText("UUID: " + uuid )
+
+								.setStyle(new NotificationCompat.BigTextStyle()
+										.bigText("UUID: " + uuid ))
+								.setPriority(NotificationCompat.PRIORITY_MAX)
+								.setVisibility(NotificationCompat.VISIBILITY_PUBLIC)
+								.setDefaults(NotificationCompat.DEFAULT_ALL);
+
+
+
+						// notificationId is a unique int for each notification that you must define
+						notificationManager.notify(1001, builder.build());
+
+						//END TEST
+						sendingInroom = false;
+					}
+				});
+			} catch (Exception e) {
+				Log.i("TRACING_SERVICE", "ERROR send inroom");
+				e.printStackTrace();
+			}
+		}
+	}
+
+//OBSOLETE
 	public void Iminroom(String uuid,int distance) throws IOException {
 
 		SAPWizardApplication app= (SAPWizardApplication)context.getApplicationContext();
@@ -669,11 +849,13 @@ public class BleClient {
 			StrictMode.setThreadPolicy(policy);
 		}
 		SAPServiceManager sapServiceManager = app.getSAPServiceManager();
+
 		try {
 			sapServiceManager.getv2().createEntity(event);
+			Log.e("SEND ROOM EVENT","INVIATO");
 		} catch (Exception e) {
 			e.printStackTrace();
-			Log.e("SEND EVENT",e.getLocalizedMessage());
+			Log.e("SEND ROOM EVENT",e.getLocalizedMessage());
 		}
 
 

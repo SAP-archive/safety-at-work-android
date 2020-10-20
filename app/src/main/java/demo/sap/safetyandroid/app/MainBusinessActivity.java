@@ -83,8 +83,8 @@ public class MainBusinessActivity extends AppCompatActivity {
         UserInfo is a parcelable object so, if you wish, this can
         be passed through bundle to different activities
         */
-                               Log.i("User Name", o.getUserName());
-                               Log.i("User Id", o.getId());
+
+
 //                               String[] roles = o.getRoles();
 //                               Log.i("UserInfo: ", "User has the following Roles");
 //                               for (int i = 0; i < roles.length; i++) {

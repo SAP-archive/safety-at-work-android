@@ -9,14 +9,26 @@ import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Build;
+import android.util.Log;
 
+import androidx.annotation.NonNull;
 import androidx.core.app.NotificationCompat;
 import androidx.preference.PreferenceManager;
 
 import demo.sap.safetyandroid.app.storage.SecureStorage;
+import demo.sap.safetyandroid.fcm.FCMPushCallbackListenner;
 import demo.sap.safetyandroid.service.SAPServiceManager;
+
+import com.google.firebase.FirebaseApp;
+import com.google.firebase.iid.FirebaseInstanceId;
+import com.google.firebase.messaging.FirebaseMessaging;
 import com.sap.cloud.mobile.foundation.authentication.AppLifecycleCallbackHandler;
 import com.sap.cloud.mobile.flowv2.model.AppConfig;
+import com.sap.cloud.mobile.foundation.networking.HttpException;
+import com.sap.cloud.mobile.foundation.remotenotification.PushRemoteMessage;
+import com.sap.cloud.mobile.foundation.remotenotification.PushService;
+import com.sap.cloud.mobile.foundation.remotenotification.RemoteNotificationClient;
+import com.sap.cloud.mobile.foundation.remotenotification.RemoteNotificationParameters;
 
 import org.dpppt.android.sdk.DP3T;
 import org.dpppt.android.sdk.InfectionStatus;
@@ -25,6 +37,7 @@ import org.dpppt.android.sdk.internal.database.models.ExposureDay;
 import org.dpppt.android.sdk.internal.util.ProcessUtil;
 import org.dpppt.android.sdk.util.SignatureUtil;
 
+import java.net.MalformedURLException;
 import java.security.PublicKey;
 
 import demo.sap.safetyandroid.repository.RepositoryFactory;
@@ -49,10 +62,13 @@ public class SAPWizardApplication extends Application {
      */
     private SAPServiceManager sapServiceManager;
 
+
     /**
      * Application-wide RepositoryFactory
      */
     private RepositoryFactory repositoryFactory;
+
+    public PushRemoteMessage notificationMessage;
 
     /**
      * Returns the application-wide service manager.
@@ -84,6 +100,29 @@ public class SAPWizardApplication extends Application {
         isApplicationUnlocked = false;
         repositoryFactory.reset();
 
+
+        resetPushNotifications();
+        notificationMessage = null;
+
+    }
+
+    /**
+     * Resets the push registrations on both Firebase (Google) and SCP servers.
+     */
+    private void resetPushNotifications() {
+
+        // reset push token on Firebase and remove push token from CP server
+        PushService.unregisterPushSync(new RemoteNotificationClient.CallbackListener() {
+            @Override
+            public void onSuccess() {
+
+
+            }
+
+            @Override
+            public void onError(@NonNull Throwable throwable) {
+            }
+        });
     }
 
     @Override
@@ -102,6 +141,12 @@ public class SAPWizardApplication extends Application {
                     .build();
             DP3T.setCertificatePinner(certificatePinner);
         }
+        PushService.setPushCallbackListenner(new FCMPushCallbackListenner());
+
+
+
+
+
 
 
     }

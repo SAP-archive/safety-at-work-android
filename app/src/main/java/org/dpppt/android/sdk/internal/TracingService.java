@@ -238,7 +238,7 @@ public class TracingService extends Service {
 
 		NotificationCompat.Builder builder = new NotificationCompat.Builder(this, NOTIFICATION_CHANNEL_ID)
 				.setOngoing(true)
-				.setSmallIcon(R.drawable.logo2)
+				.setSmallIcon(R.mipmap.ic_launcher_round)
 				.setContentIntent(contentIntent);
 
 		if (status.getErrors().size() > 0) {
@@ -907,7 +907,7 @@ public class TracingService extends Service {
 
 
 									NotificationCompat.Builder builder = new NotificationCompat.Builder(getApplicationContext(), NOTIFICATION_CHANNEL_ID)
-											.setSmallIcon(R.drawable.logo2)
+											.setSmallIcon(R.mipmap.ic_launcher_round)
 											.setContentTitle(String.valueOf(R.string.Attenzione))
 											.setContentText(getResources().getString(R.string.Possibile_contagio))
 											.setContentIntent(intent)

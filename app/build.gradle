@@ -1,5 +1,6 @@
 apply plugin: 'com.android.application'
 apply plugin: 'com.sap.odata.android'
+apply plugin: 'com.google.gms.google-services'
 
 buildscript {
 
@@ -84,6 +85,7 @@ dependencies {
     // JUnit dependency
     implementation 'androidx.appcompat:appcompat:1.2.0'
     implementation 'androidx.constraintlayout:constraintlayout:2.0.1'
+    implementation 'com.google.firebase:firebase-messaging:17.3.4'
     testImplementation 'junit:junit:4.13'
 
     // SAP Cloud Android SDK dependencies
@@ -136,5 +138,5 @@ dependencies {
     implementation 'androidx.core:core:1.2.0'
     implementation 'androidx.work:work-runtime:2.3.4'
 
-
+    implementation 'org.altbeacon:android-beacon-library:2.17.1'
 }

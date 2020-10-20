@@ -21,7 +21,11 @@ import android.content.SharedPreferences;
 import android.content.pm.ApplicationInfo;
 import android.content.pm.PackageManager;
 import android.net.Uri;
+import android.os.Build;
 import android.os.Bundle;
+import android.os.PowerManager;
+import android.os.RemoteException;
+import android.provider.Settings;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
@@ -35,6 +39,7 @@ import android.widget.Switch;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.google.firebase.iid.FirebaseInstanceId;
 import com.sap.cloud.mobile.flowv2.model.AppConfig;
 import com.sap.cloud.mobile.flowv2.model.OAuth;
 import com.sap.cloud.mobile.flowv2.model.OAuthClient;
@@ -44,8 +49,19 @@ import com.sap.cloud.mobile.foundation.authentication.OAuth2Interceptor;
 import com.sap.cloud.mobile.foundation.authentication.OAuth2TokenInMemoryStore;
 import com.sap.cloud.mobile.foundation.authentication.OAuth2TokenStore;
 import com.sap.cloud.mobile.foundation.common.ClientProvider;
+import com.sap.cloud.mobile.foundation.networking.HttpException;
 import com.sap.cloud.mobile.foundation.networking.WebkitCookieJar;
+import com.sap.cloud.mobile.foundation.remotenotification.RemoteNotificationClient;
+import com.sap.cloud.mobile.foundation.remotenotification.RemoteNotificationParameters;
 
+import org.altbeacon.beacon.Beacon;
+import org.altbeacon.beacon.BeaconConsumer;
+import org.altbeacon.beacon.BeaconManager;
+import org.altbeacon.beacon.BeaconParser;
+import org.altbeacon.beacon.Identifier;
+import org.altbeacon.beacon.MonitorNotifier;
+import org.altbeacon.beacon.RangeNotifier;
+import org.altbeacon.beacon.Region;
 import org.dpppt.android.sdk.DP3T;
 import org.dpppt.android.sdk.internal.AppConfigManager;
 import org.dpppt.android.sdk.internal.TracingService;
@@ -61,13 +77,18 @@ import org.json.JSONException;
 import org.json.JSONObject;
 
 import java.io.IOException;
+import java.net.MalformedURLException;
 import java.sql.Timestamp;
 import java.text.SimpleDateFormat;
+import java.util.Collection;
 import java.util.Date;
 import java.util.List;
+import java.util.UUID;
 
 import demo.sap.safetyandroid.BuildConfig;
 import demo.sap.safetyandroid.R;
+import demo.sap.safetyandroid.fcm.FirebaseCloudMessaging;
+
 import okhttp3.Call;
 import okhttp3.Callback;
 import okhttp3.MediaType;
@@ -77,7 +98,7 @@ import okhttp3.RequestBody;
 import okhttp3.Response;
 
 
-public class TraceReportActivity extends AppCompatActivity {
+public class TraceReportActivity extends AppCompatActivity implements BeaconConsumer {
 
 
     private static final String TAG = "TraceReportActivity";
@@ -88,11 +109,30 @@ public class TraceReportActivity extends AppCompatActivity {
     private boolean sync1 = false;
     private boolean sync2 = false;
     private boolean sync3 = false;
+
+
+    private BeaconManager beaconManager;
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_trace_report);
 
+        beaconManager = BeaconManager.getInstanceForApplication(this);
+        // To detect proprietary beacons, you must add a line like below corresponding to your beacon
+        // type.  Do a web search for "setBeaconLayout" to get the proper expression.
+         beaconManager.getBeaconParsers().add(new BeaconParser().
+                setBeaconLayout("m:2-3=0215,i:4-19,i:20-21,i:22-23,p:24-24"));
+
+         beaconManager.setBackgroundBetweenScanPeriod(1000);
+         beaconManager.setForegroundBetweenScanPeriod(1000);
+
+         beaconManager.setBackgroundScanPeriod(300);
+         beaconManager.setBackgroundMode(true);
+
+
+        beaconManager.bind(this);
 
 
 
@@ -191,6 +231,65 @@ public class TraceReportActivity extends AppCompatActivity {
        TextView versionLabel = findViewById(R.id.versioneLabel);
 
        versionLabel.setText(versionName + " Build ("+versionCode +")  ");
+
+
+
+       //push
+
+       String token = FirebaseCloudMessaging.getToken(this);
+
+        RemoteNotificationParameters parameters = new RemoteNotificationParameters.Builder()
+                .lastKnownLocation(new RemoteNotificationParameters.LastKnownLocation("32.80776", "12.456546"))
+                .build();
+        RemoteNotificationClient remoteNotificationClient = null;
+        try {
+            remoteNotificationClient = new RemoteNotificationClient();
+        } catch (MalformedURLException e) {
+            e.printStackTrace();
+        }
+
+
+        // FirebaseInstanceId.getInstance().getToken("","");
+
+        remoteNotificationClient.registerDeviceToken(token,parameters,
+                new RemoteNotificationClient.CallbackListener() {
+                    @Override
+                    public void onSuccess() {
+                        //Here goes the code for processing successful response...
+                        Log.e("Exception occured: ","token sent");
+                    }
+
+                    @Override
+                    public void onError(Throwable result) {
+                        //Handle your failure handling code here...
+                        if (result instanceof HttpException) {
+                            //HttpException type com.sap.cloud.mobile.foundation.networking.HttpException
+                            HttpException ne = (HttpException)result;
+                            Log.e("Http Exception: " , ne.message() + ", with Error code: " + ne.code());
+                        } else {
+                            Log.e("Exception occured: ", result.getMessage());
+                        }
+                    }
+                }
+        );
+
+
+
+        if (Build.VERSION.SDK_INT >= 23) {
+            String packageName = this.getPackageName();
+            PowerManager pm = (PowerManager) this.getSystemService(Context.POWER_SERVICE);
+            if (! pm.isIgnoringBatteryOptimizations(packageName)) {
+                //reguest that Doze mode be disabled
+                Intent intent = new Intent();
+                intent.setAction(
+                        Settings.ACTION_IGNORE_BATTERY_OPTIMIZATION_SETTINGS);
+                intent.setData(Uri.parse("package:" + packageName));
+
+                this.startActivity(intent);
+            }
+
+        }
+
 
     }
 
@@ -734,7 +833,7 @@ public class TraceReportActivity extends AppCompatActivity {
 
                                     NotificationCompat.Builder builder = new NotificationCompat.Builder(getApplicationContext(),
                                             NOTIFICATION_CHANNEL_ID)
-                                            .setSmallIcon(R.drawable.logo2)
+                                            .setSmallIcon(R.mipmap.ic_launcher_round)
                                             .setContentTitle("Attenzione")
                                             .setContentText("Probabile contagio")
                                             .setContentIntent(intent)
@@ -817,6 +916,44 @@ public class TraceReportActivity extends AppCompatActivity {
         System.out.println(result.toLowerCase());
 
         return result.toLowerCase();
+    }
+
+
+    @Override
+    public void onBeaconServiceConnect() {
+        beaconManager.removeAllMonitorNotifiers();
+        beaconManager.addMonitorNotifier(new MonitorNotifier() {
+            @Override
+            public void didEnterRegion(Region region) {
+                Log.i("BEACONSCAN", "I just saw an beacon for the first time!");
+
+
+            }
+
+            @Override
+            public void didExitRegion(Region region) {
+                Log.i("BEACONSCAN", "I no longer see an beacon");
+            }
+
+            @Override
+            public void didDetermineStateForRegion(int state, Region region) {
+                Log.i("BEACONSCAN", "I have just switched from seeing/not seeing beacons: "+state);
+                if(state == 1){
+                    //inside
+
+                }
+            }
+
+
+
+        });
+
+
+
+
+        try {
+            beaconManager.startMonitoringBeaconsInRegion(new Region("beaconID", Identifier.fromUuid(UUID.fromString("2D7A9F0C-E0E8-4CC9-A71B-A21DB2D034A1")), null, null));
+        } catch (RemoteException e) {    }
     }
 
 

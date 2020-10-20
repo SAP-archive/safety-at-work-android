@@ -13,6 +13,7 @@
     <uses-permission android:name="android.permission.WAKE_LOCK" />
     <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
     <uses-permission android:name="android.permission.CALL_PHONE"/>
+    <uses-permission android:name="android.permission.ACCESS_BACKGROUND_LOCATION" />
 
     <uses-feature
         android:name="android.hardware.bluetooth"
@@ -33,8 +34,33 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         android:usesCleartextTraffic="true">
-        <activity android:name=".app.TraceReportActivity"></activity>
+
+        <activity android:name=".app.TraceReportActivity">
+            <intent-filter android:autoVerify="false">
+                <action android:name="android.intent.action.VIEW" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+                <data android:scheme="https"
+                    android:host="sawprod-italy-it-sap-safetyatwork.cfapps.eu10.hana.ondemand.com/"
+                    android:path="/networking_oauth_https_redirect/oauth2redirect" />
+            </intent-filter>
+        </activity>
         <activity android:name=".app.OnboardingActivity" />
+
+
+
+        <activity android:name="com.sap.cloud.mobile.foundation.authentication.OAuth2RedirectActivity">
+            <intent-filter android:autoVerify="false">
+                <action android:name="android.intent.action.VIEW" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+                <data android:scheme="https"
+                    android:host="sawprod-italy-it-sap-safetyatwork.cfapps.eu10.hana.ondemand.com/"
+                    android:path="/networking_oauth_https_redirect/oauth2redirect" />
+            </intent-filter>
+        </activity>
+
+
 
         <activity
             android:name=".app.WelcomeActivity"
@@ -218,6 +244,11 @@
             </intent-filter>
         </activity>
 
+        <activity
+            android:name=".fcm.PushNotificationActivity"
+            android:configChanges="orientation|screenSize|screenLayout"
+            android:theme="@style/AppTheme.Transparent" >
+        </activity>
 
         <service
             android:name="org.dpppt.android.sdk.internal.TracingService"
@@ -234,7 +265,11 @@
         </receiver>
 
         <meta-data android:name="telephone" android:value="tel:03968791" />
-        <meta-data android:name="beaconUUID" android:value="A2FA7357-C8CD-4B95-98FD-9D091CE43337" />
+        <meta-data android:name="beaconUUID" android:value="2D7A9F0C-E0E8-4CC9-A71B-A21DB2D034A1" />
+
+
+
+
     </application>
 
 </manifest>

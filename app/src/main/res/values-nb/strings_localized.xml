@@ -164,65 +164,6 @@
     <!-- XMSG: AlertDialog before navigation - Negative button (cancelled navigation) -->
     
 
-    <!-- XTIT: The title of the error dialog -->
-    <string name="policy_download_failed">"Nedlasting av retningslinjer mislyktes"</string>
-
-    <!-- XMSG: Detailed error description -->
-    <string name="policy_download_failed_details">"Nedlasting av klientretningslinjer fra serveren mislyktes. En standardretningslinje vil bli brukt."</string>
-
-    <!-- XTIT: The title of an error dialog -->
-    <string name="configuration_invalid">"Ugyldig konfigurasjon"</string>
-
-    <!-- XMSG: Detailed error description -->
-    <string name="configuration_contained_malformed_url">"Konfigurasjonen inneholdt en misformet URL: %s"</string>
-
-    <!-- XTIT: The title of the error dialog -->
-    <string name="secure_store_error">"Feil ved sikkert lager"</string>
-
-    <!-- XMSG: Detailed error description -->
-    <string name="secure_store_open_default_error_detail">"Kan ikke åpne sikkert lager med standardkode."</string>
-
-    <!-- XTIT: The title of the error dialog -->
-    <string name="passcode_change_error">"Feil ved endring av kode"</string>
-
-    <!-- XMSG: Detailed error description -->
-    <string name="passcode_change_error_detail">"Kan ikke endre koden for sikkert lager. Applikasjonen fungerer fremdeles med siste kode."</string>
-
-    <!-- XMSG: Detailed error description -->
-    <string name="passcode_change_error_detail_default">"Kan ikke definere standardkode. Applikasjonen fungerer fremdeles med siste brukerkode."</string>
-
-    <!-- XTIT: The title of the error dialog -->
-    <string name="config_data_error_title">"Kan ikke hente konfigurasjonsdata fra persistent lager"</string>
-
-    <!-- XMSG: Detailed error description -->
-    <string name="config_data_bad_field_description">"Kan ikke ekstrahere et oppgitt datafelt."</string>
-
-    <!-- XMSG: Detailed error description -->
-    <string name="config_data_bad_service_url_description">"Verdien for tjeneste-URL, \"%s\", er ikke en gyldig URL."</string>
-
-    <!-- XMSG: Detailed error description -->
-    <string name="config_data_build_json_description">"Kan ikke bygge JSON-objektet."</string>
-
-    <!-- XMSG: Detailed error description -->
-    <string name="config_data_no_data_description">"Konfigurasjonsdata fantes ikke i det persistente lageret."</string>
-
-    <!-- XMSG: Detailed error description -->
-    <string name="config_data_reflection_exception">"Bruk getInstance og ikke gjenspeiling til å instansiere denne klassen."</string>
-
-    <!-- XTIT: The title of the error dialog -->
-    <string name="config_loader_complete_error_title">"Kan ikke laste konfigurasjonsdata"</string>
-
-    <!-- XMSG: Detailed error description -->
-    <string name="config_loader_complete_error_description">"Konfigurasjonslaster kan ikke hente konfigurasjonsdata."</string>
-
-    <!-- XTIT: The title of the error dialog -->
-    <string name="config_loader_on_error_title">"Feil ved konfigurasjonsleverandør"</string>
-
-    <!-- XMSG: Detailed error description -->
-    <string name="config_loader_on_error_description">"Konfigurasjonsleverandøren, \"%1$s\", oppdaget en feil. %2$s"</string>
-
-    <!-- XMSG: Detailed error description -->
-    <string name="config_data_corrupted_description">"Tidligere lagrede data er skadet og kan ikke lastes."</string>
 
     <!-- XMSG: Detailed error description -->
     <string name="server_auth_not_supported_saml">"Feil: Denne applikasjonen støtter ikke SAML-autentisering."</string>
@@ -295,34 +236,8 @@
     <string name="reset_app">"Tilbakestill appinnstillinger"</string>
     <!-- XTIT: The title of a confirmation dialog -->
     <string name="reset_app_confirmation">"All informasjon tilknyttet denne applikasjonen blir fjernet. Vil du fortsette?"</string>
-    <!-- XTIT: The title of an error dialog -->
-    <string name="invalid_passcode">"Ugyldig kode"</string>
-    <!-- XTIT: The title of an error dialog -->
-    <string name="passcode_error">"Kodefeil"</string>
-    <!-- XTIT: The title of an error dialog -->
-    <string name="failed_to_change_passcode">"Kan ikke endre kode"</string>
-    <!-- XTIT: The title of an error dialog -->
-    <string name="successful_passcode_change">"Koden er endret"</string>
-    <!-- XMSG: Detailed error description -->
-    <string name="disabled_passcode">"Standardkoden kan ikke låse opp det sikre lageret når koden er deaktivert."</string>
-    <!-- XMSG: Detailed error description -->
-    <string name="invalid_passcode_detail">"Oppgitt kode kan ikke brukes til å opprette det sikre lageret."</string>
-    <!-- XTIT: The title of an alert dialog for when the current passcode doesn't satisfy the new passcode policy, or the passcode has expired -->
-    <string name="new_passcode_required">"Ny kode er nødvendig"</string>
-    <!-- XMSG: The message of an alert dialog for when the current passcode doesn't satisfy the new passcode policy, or the passcode has expired -->
-    <string name="new_passcode_required_detail">"Koden er utløpt eller koderetningslinjene er endret. Du må definere en ny kode."</string>
-    <!-- XTIT: The title of an alert dialog for when no passcode is set but the new policy requires one -->
-    <string name="passcode_required">"Kode er nødvendig"</string>
-    <!-- XMSG: The message of an alert dialog for when no passcode is set but the new policy requires one -->
-    <string name="passcode_required_detail">"Koderetningslinjene er endret. Du må definere en kode."</string>
-    <!-- XTIT: The title of a dialog informing the user the passcode policy has changed and they need to take action -->
-    <string name="policy_changed">"Retningslinjene er endret"</string>
-    <!-- XMSG: The message of a dialog informing the user they can no longer use fingerprint to unlock the app because the new passcode policy doesn't allow it -->
-    <string name="fingerprint_no_longer_allowed">"Bruk av fingeravtrykk for å låse opp denne appen er deaktivert i henhold til de nye retningslinjene. Fra nå av må du oppgi en kode i stedet."</string>
-    <!-- XTIT: The title of a dialog -->
-    <string name="max_retries_title">"For mange forsøk"</string>
-    <!-- XMSG: The message of a dialog -->
-    <string name="max_retries_message">"Maksimalt antall nye forsøk er nådd. Appen blir nå tilbakestilt."</string>
+
+
     <!-- XMSG: The message of reset client -->
     <string name="reset_client">"Tilbakestill klient"</string>
 
@@ -373,24 +288,7 @@
     <string name="restriction_service_url_description">"URL for OData-tjenesten."</string>
     <!-- restrictions -->
 
-    <!-- XBUT: Text of the Skip button on the Create Passcode Screen -->
-    <string name="skip_passcode">"Hopp over"</string>
 
-    <!-- XMSG: Detailed Usage data collection description -->
-    <string name="get_usage_permission_explanation">"Detaljert tekst om databeskyttelse i denne appen og hvorfor det er viktig for brukeren å aktivere denne funksjonaliteten"</string>
-    <!-- XTIT: The title of usage consent screen -->
-    <string name="get_usage_permission_title">"Analysedatainnhenting"</string>
-    <!-- XBUT: Text of a button -->
-    <string name="usage_permission_allow">"OK"</string>
-    <!-- XBUT: Text of a button -->
-    <string name="usage_permission_deny">"Ikke nå"</string>
-    <!-- XTIT: The header of usage consent screen -->
-    <string name="get_usage_permission_activity_name">"Datainnhenting for appbruk"</string>
-
-    <!-- XBUT: Text of the Skip button on the Fingerprint Screen -->
-    <string name="skip_fingerprint">"Hopp over fingeravtrykk"</string>
-    <!-- XBUT: button text giving the option to use a passcode (instead of a fingerprint) to unlock the app -->
-    <string name="use_passcode">"Bruk kode"</string>
 
     <!-- XMSG: Detailed error description -->
     <string name="error_back_navigation">"Applikasjonen er kodebeskyttet. Den starter ikke uten at riktig kode er oppgitt."</string>

@@ -239,7 +239,7 @@
     <string name="info">Le informazioni scambiate via bluetooth sono salvate in modo anonimo</string>
     <string name="Segnalazioni">Segnalazioni</string>
     <string name="goodtoKnow1">L\'app riconosce automaticamente quando due utenti sono stati in prossimità per un periodo di tempo sufficiente a ipotizzare un possibile contagio</string>
-    <string name="goodtoknow2">L\'app funziona utilizzando un livello molto basso di energia, il livello di incremento sull\'usop della batteria è inferiore all\'1%</string>
+    <string name="goodtoknow2">L\'app funziona utilizzando un livello molto basso di energia, il livello di incremento sull\'uso della batteria è inferiore all\'1%</string>
     <string name="CallHR">Chiama HR</string>
     <string name="Version">Version</string>
 

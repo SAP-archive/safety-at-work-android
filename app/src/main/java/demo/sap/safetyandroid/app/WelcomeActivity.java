@@ -116,14 +116,14 @@ public class WelcomeActivity extends AppCompatActivity {
 
     private static AppConfig prepareAppConfig() throws MalformedURLException {
         OAuthConfig oauthConfig = new OAuthConfig.Builder()
-                .authorizationEndpoint("https://pocs-pocs-com-sap-safetyatwork.cfapps.eu10.hana.ondemand.com/oauth2/api/v1/authorize")
-                .tokenEndpoint("https://pocs-pocs-com-sap-safetyatwork.cfapps.eu10.hana.ondemand.com/oauth2/api/v1/token")
-                .addClient(new OAuthClient.Builder().clientID("bbf958ea-c794-44e7-999c-a0c3a1762cd4").redirectURL("https://pocs-pocs-com-sap-safetyatwork.cfapps.eu10.hana.ondemand.com").grantType("code").build())
+                .authorizationEndpoint("https://sawprod-italy-it-sap-safetyatwork.cfapps.eu10.hana.ondemand.com/oauth2/api/v1/authorize")
+                .tokenEndpoint("https://sawprod-italy-it-sap-safetyatwork.cfapps.eu10.hana.ondemand.com/oauth2/api/v1/token")
+                .addClient(new OAuthClient.Builder().clientID("e4a7d9b8-c98d-49af-b9ea-b9696235164a").redirectURL("https://sawprod-italy-it-sap-safetyatwork.cfapps.eu10.hana.ondemand.com").grantType("code").build())
                 .build();
 
         return new AppConfig.Builder()
-                .applicationId("com.sap.safetyatwork")
-                .host(new URL("https://pocs-pocs-com-sap-safetyatwork.cfapps.eu10.hana.ondemand.com/").getHost())
+                .applicationId("it.sap.safetyatwork")
+                .host(new URL("https://sawprod-italy-it-sap-safetyatwork.cfapps.eu10.hana.ondemand.com/").getHost())
                 .addAuth(new OAuth.Builder().config(oauthConfig).build())
                 .build();
         }
