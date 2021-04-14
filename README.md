@@ -27,8 +27,8 @@ Table of contents
     - [Main](#main)
     - [Main Infected](#main-infected)
   - [Languages supported](#languages-supported)
-- [SCP Mobile Services app configuration](#scp-mobile-services-app-configuration)
-- [Tutorials for SAP Cloud Platform mobile services and SDK for Android](#tutorials-for-sap-cloud-platform-mobile-services-and-sdk-for-android)
+- [BTP Mobile Services app configuration](#btp-mobile-services-app-configuration)
+- [Tutorials for SAP Business Technology Platform mobile services and SDK for Android](#tutorials-for-sap-business-technology-platform-mobile-services-and-sdk-for-android)
 - [TechEd on mobility](#teched-on-mobility)
 - [License](#license)
 <!--te-->
@@ -52,11 +52,11 @@ Safety@work has 3 main functionalities:
 2. contact tracing (DP3T heavily based)
 3. Beacon integration protocol (for real time meeting room and common space monitoring)
 
-The app takes advantage on SAP Cloud Platform mobile services and is built using SAP Cloud Platform SDK for Android version 3.1.2,
+The app takes advantage on SAP Business Technology Platform mobile services and is built using SAP Business Technology Platform SDK for Android version 3.1.2,
 
-Onboarding is developed using SAP CLoud Platform SDK for Android 
+Onboarding is developed using SAP Business Technology Platform SDK for Android 
 
-Proxy Class generation for Odata service are developed by SAP Cloud Platform SDK for Android 
+Proxy Class generation for Odata service are developed by SAP Business Technology Platform SDK for Android 
 
 
 ## Prerequisites
@@ -81,7 +81,7 @@ Project structure
 
 
 
-If you installed backend on Sap Cloud Platform services you have to modify some properties in
+If you installed backend on SAP Business Technology Platform services you have to modify some properties in
 
     Appconfig class pointe 
     -Application identifier
@@ -93,7 +93,7 @@ and
     -telephone in AndroidManifest.xml
 
     in welcomeActivity class (Appfongi Builder)
-    -appid (id of your app on SCP)
+    -appid (id of your app on BTP)
     -host (host of mobile services)
 
 to match your appID or your host.
@@ -178,9 +178,9 @@ In this way on the backend facility administrator knows in real time how many pe
     Italian
     English
 
-SCP Mobile Services app configuration
+BTP Mobile Services app configuration
 =====================================
-On mobile services a new `Native application` must be created and linked to the existing project. Below picture shows the application available within SCP Mobile services.
+On mobile services a new `Native application` must be created and linked to the existing project. Below picture shows the application available within BTP Mobile services.
 
 ![Mobile services apps page](readmeImg/ms01_scpms_main.png)
 
@@ -190,7 +190,7 @@ That application must have following feature assigned:
 
 - **Mobile client log upload** - in order to submit all logs stored in mobile app;
   
-- **Mobile client usage and feedbacks** - necessary to keep track of user activities, within SCP Mobile services, in interacting with the app;
+- **Mobile client usage and feedbacks** - necessary to keep track of user activities, within BTP Mobile services, in interacting with the app;
   
 - **Mobile connectivity** - this feature is the "core" one: it is mandatory to properly configure destinations that point to back-end business logic (see next section for a deep dive into configuration details);
   
@@ -217,7 +217,7 @@ Once accessed the application in the CF Space cockpit, the url can be found in t
 
 ![CV19-tracing back-end xsjs module application](readmeImg/ms05_xsjs_srv_url.png)
 
-Tutorials for SAP Cloud Platform mobile services and SDK for Android
+Tutorials for SAP Business Technology Platform mobile services and SDK for Android
 ====================================================================
 
 Check out these tutorials and courses for deep-dives into various areas
