@@ -1,7 +1,7 @@
 # Safety@work for Android
 ![Safety@Work header](readmeImg/header.png)
 
-[![Swift Package Manager compatible](https://img.shields.io/badge/SPM-%E2%9C%93-brightgreen.svg?style=flat)](https://github.com/apple/swift-package-manager) 
+[![REUSE status](https://api.reuse.software/badge/github.com/SAP-samples/safety-at-work-android)](https://api.reuse.software/info/github.com/SAP-samples/safety-at-work-android)
 [![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
 
 
@@ -29,7 +29,7 @@ Table of contents
   - [Languages supported](#languages-supported)
 - [BTP Mobile Services app configuration](#btp-mobile-services-app-configuration)
 - [Tutorials for SAP Business Technology Platform mobile services and SDK for Android](#tutorials-for-sap-business-technology-platform-mobile-services-and-sdk-for-android)
-- [TechEd on mobility](#teched-on-mobility)
+- [SAP TechEd on mobility](#sap-teched-on-mobility)
 - [License](#license)
 <!--te-->
 
@@ -225,7 +225,7 @@ Check out these tutorials and courses for deep-dives into various areas
 * [Community Tutorials](https://developers.sap.com/topics/cloud-platform-sdk-for-android.html)
 * [openSAP course](https://open.sap.com/courses/mobile3/items/47lDRNar7EzN2vY7QGm1tM)
 
-TechEd on mobility
+SAP TechEd on mobility
 ==================
 
 Watch SAP TechEd sessions on mobility online at [SAP Teched Online](http://www.sapteched.com/online).
